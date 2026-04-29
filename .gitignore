@@ -1,0 +1,48 @@
+# Secrets — NEVER commit
+.env
+.env.local
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML artifacts (produced by train.py, don't commit)
+layer1_ml/model.pkl
+layer1_ml/*.joblib
+
+# Cached market data (for demo fallback)
+layer3_agentic/etf_cache.json
+
+# Decision log (runtime data)
+decisions.csv
+layer4_respai/decisions.csv
+
+# Bias audit outputs (regenerate from source)
+layer4_respai/bias_audit_chart.png
+layer4_respai/bias_audit_output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Streamlit
+.streamlit/secrets.toml

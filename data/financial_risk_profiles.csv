@@ -1,0 +1,2001 @@
+age,annual_income_usd,savings_rate_pct,debt_to_income_ratio,investment_horizon_years,investment_experience,investment_goal,risk_tier
+60,90000,12.1,0.43,20,Advanced,Retirement,Medium
+50,60000,9.8,0.2,30,Beginner,Retirement,High
+36,45000,15.9,0.45,5,Intermediate,Income,Low
+64,45000,17.9,0.3,15,Advanced,Retirement,Medium
+29,45000,7.8,0.35,15,Beginner,Wealth building,Medium
+42,90000,10.8,0.08,20,Beginner,Wealth building,Medium
+60,90000,12.4,0.31,10,Intermediate,Wealth building,Medium
+40,75000,14.0,0.18,10,Beginner,Retirement,Medium
+44,75000,13.0,0.35,15,Beginner,Wealth building,Medium
+32,90000,19.3,0.5,30,Advanced,Education,High
+32,30000,0.8,0.32,25,Intermediate,Retirement,Medium
+45,60000,2.2,0.14,20,Advanced,Education,Medium
+57,180000,15.5,0.37,25,Advanced,Emergency fund,Medium
+61,90000,9.2,0.34,10,Beginner,Emergency fund,Low
+45,60000,21.1,0.59,25,Beginner,Emergency fund,Medium
+24,75000,23.4,0.32,20,Beginner,Retirement,High
+43,60000,15.9,0.19,15,Beginner,Wealth building,Medium
+23,75000,5.4,0.4,25,Intermediate,Education,Medium
+45,45000,22.4,0.26,25,Intermediate,Retirement,High
+65,45000,15.6,0.29,25,Intermediate,Wealth building,Medium
+51,45000,2.1,0.14,10,Beginner,Retirement,Low
+59,140000,2.8,0.26,30,Beginner,Emergency fund,Medium
+23,90000,26.1,0.28,30,Intermediate,Wealth building,High
+42,45000,24.8,0.26,15,Intermediate,Wealth building,High
+54,45000,0.0,0.19,5,Beginner,Retirement,Low
+33,90000,3.1,0.32,10,Intermediate,Income,Medium
+43,45000,23.1,0.14,30,Beginner,Retirement,High
+65,60000,13.9,0.11,20,Beginner,Emergency fund,Low
+46,180000,19.6,0.39,15,Intermediate,Wealth building,Medium
+48,60000,13.5,0.37,15,Beginner,Education,Medium
+63,90000,19.2,0.08,10,Intermediate,Retirement,Low
+49,180000,14.0,0.01,20,Beginner,Education,High
+37,60000,10.5,0.13,15,Beginner,Wealth building,Medium
+36,30000,22.5,0.26,30,Beginner,Wealth building,High
+65,60000,15.6,0.45,20,Advanced,Emergency fund,Medium
+24,110000,19.2,0.26,25,Intermediate,Education,High
+58,110000,15.3,0.16,15,Advanced,Emergency fund,Medium
+28,110000,10.1,0.3,5,Intermediate,Education,Medium
+42,45000,26.9,0.26,20,Intermediate,Retirement,High
+30,110000,16.8,0.07,15,Beginner,Income,High
+60,140000,11.2,0.07,10,Beginner,Retirement,Low
+39,90000,24.2,0.08,30,Beginner,Emergency fund,High
+25,140000,3.4,0.65,15,Beginner,Wealth building,Medium
+46,110000,31.9,0.41,10,Intermediate,Wealth building,Medium
+35,90000,12.6,0.19,10,Beginner,Retirement,Medium
+30,75000,3.9,0.45,15,Beginner,Wealth building,Medium
+47,60000,29.2,0.19,30,Beginner,Retirement,High
+23,45000,10.3,0.44,10,Intermediate,Wealth building,Medium
+41,90000,15.9,0.29,15,Intermediate,Retirement,Medium
+49,60000,19.7,0.18,20,Advanced,Wealth building,Medium
+28,110000,23.5,0.38,15,Beginner,Retirement,High
+65,180000,16.4,0.3,10,Beginner,Retirement,Medium
+29,90000,8.8,0.34,10,Beginner,Retirement,Medium
+56,45000,15.8,0.31,15,Advanced,Wealth building,Medium
+35,60000,10.6,0.31,10,Beginner,Education,Medium
+38,45000,16.0,0.4,5,Intermediate,Income,Medium
+57,90000,27.0,0.67,25,Intermediate,Retirement,Medium
+61,110000,20.0,0.47,10,Beginner,Emergency fund,Medium
+25,140000,15.7,0.31,25,Beginner,Emergency fund,High
+23,75000,19.9,0.23,25,Beginner,Wealth building,High
+27,140000,20.5,0.25,20,Advanced,Emergency fund,High
+63,110000,5.4,0.09,15,Intermediate,Retirement,Medium
+25,60000,14.3,0.38,10,Intermediate,Wealth building,Medium
+50,110000,34.5,0.13,25,Intermediate,Wealth building,Medium
+39,60000,23.7,0.22,20,Intermediate,Retirement,High
+47,60000,10.0,0.38,20,Intermediate,Emergency fund,Medium
+65,90000,9.2,0.24,5,Beginner,Wealth building,Low
+55,60000,8.9,0.21,30,Beginner,Retirement,Medium
+31,90000,20.9,0.1,5,Beginner,Wealth building,Medium
+57,90000,26.9,0.46,15,Intermediate,Education,Medium
+35,75000,18.7,0.16,15,Beginner,Education,Medium
+52,75000,15.3,0.19,5,Intermediate,Emergency fund,Medium
+36,75000,10.4,0.01,20,Beginner,Wealth building,High
+29,90000,16.6,0.28,25,Advanced,Wealth building,High
+35,75000,7.4,0.23,25,Beginner,Wealth building,Medium
+44,75000,0.0,0.31,25,Beginner,Retirement,Medium
+61,30000,27.1,0.1,20,Advanced,Wealth building,Medium
+42,90000,6.0,0.39,20,Intermediate,Wealth building,Medium
+37,45000,11.4,0.0,5,Advanced,Wealth building,Medium
+66,90000,19.3,0.27,20,Beginner,Income,Medium
+39,90000,25.5,0.3,10,Beginner,Education,Medium
+45,75000,16.1,0.29,15,Intermediate,Retirement,Medium
+47,75000,4.5,0.3,15,Advanced,Retirement,Medium
+46,140000,11.6,0.4,15,Beginner,Retirement,Medium
+66,110000,8.6,0.48,20,Advanced,Emergency fund,Low
+62,140000,13.7,0.26,30,Intermediate,Emergency fund,High
+50,110000,23.9,0.13,15,Advanced,Income,Medium
+36,45000,0.0,0.36,30,Beginner,Wealth building,Medium
+66,45000,10.7,0.24,25,Beginner,Education,Medium
+22,75000,10.1,0.47,20,Advanced,Wealth building,Medium
+46,60000,3.9,0.19,20,Advanced,Education,Medium
+28,75000,18.7,0.15,10,Intermediate,Emergency fund,Medium
+30,75000,2.7,0.3,25,Beginner,Emergency fund,Medium
+45,75000,3.6,0.02,20,Beginner,Wealth building,Medium
+22,90000,20.8,0.21,30,Intermediate,Emergency fund,High
+65,90000,26.0,0.23,20,Beginner,Wealth building,Medium
+29,75000,13.4,0.31,25,Beginner,Retirement,Medium
+45,110000,4.3,0.13,25,Beginner,Retirement,Medium
+32,75000,8.4,0.15,15,Intermediate,Wealth building,Medium
+38,140000,22.1,0.45,10,Beginner,Wealth building,Medium
+29,30000,14.9,0.28,15,Intermediate,Retirement,Medium
+56,140000,13.2,0.41,15,Intermediate,Retirement,Medium
+56,90000,16.5,0.2,10,Intermediate,Retirement,Low
+54,75000,13.7,0.27,30,Intermediate,Wealth building,Medium
+26,45000,26.4,0.31,20,Beginner,Retirement,High
+63,75000,8.0,0.54,30,Intermediate,Retirement,Medium
+60,45000,7.1,0.25,25,Advanced,Retirement,Medium
+62,45000,2.9,0.26,20,Intermediate,Retirement,Medium
+49,90000,9.7,0.44,30,Advanced,Education,Medium
+28,75000,5.3,0.22,20,Intermediate,Retirement,Medium
+30,90000,15.7,0.32,30,Intermediate,Emergency fund,High
+29,140000,14.2,0.43,15,Beginner,Wealth building,Medium
+33,75000,5.4,0.19,15,Intermediate,Income,Medium
+55,90000,18.7,0.33,15,Intermediate,Retirement,Medium
+54,45000,26.1,0.54,20,Beginner,Retirement,Medium
+44,90000,16.9,0.42,20,Intermediate,Retirement,Medium
+45,75000,0.0,0.32,20,Beginner,Retirement,Medium
+58,180000,29.9,0.25,15,Intermediate,Emergency fund,Medium
+56,110000,20.0,0.19,30,Intermediate,Retirement,High
+65,75000,29.7,0.13,20,Intermediate,Retirement,Medium
+61,45000,22.7,0.51,15,Advanced,Education,Medium
+43,110000,24.3,0.48,20,Beginner,Wealth building,Medium
+48,110000,15.6,0.18,25,Beginner,Retirement,Medium
+56,45000,11.9,0.33,30,Beginner,Retirement,Medium
+22,60000,17.0,0.3,20,Advanced,Retirement,High
+56,110000,8.3,0.46,10,Intermediate,Income,Low
+58,45000,17.5,0.34,15,Intermediate,Education,Medium
+35,140000,0.0,0.28,15,Beginner,Education,Medium
+24,75000,14.3,0.2,30,Intermediate,Income,High
+22,45000,24.8,0.33,15,Beginner,Wealth building,High
+26,110000,14.8,0.23,30,Intermediate,Retirement,High
+47,60000,27.8,0.31,20,Advanced,Wealth building,High
+35,75000,11.9,0.27,30,Intermediate,Emergency fund,High
+60,45000,22.0,0.22,5,Intermediate,Education,Low
+48,30000,7.0,0.13,30,Intermediate,Wealth building,High
+30,90000,21.7,0.36,30,Intermediate,Wealth building,High
+36,75000,15.9,0.29,30,Intermediate,Income,High
+36,90000,12.2,0.55,5,Intermediate,Retirement,Low
+47,110000,0.0,0.13,10,Beginner,Education,Low
+63,90000,12.0,0.37,20,Beginner,Retirement,Medium
+34,45000,15.7,0.27,5,Intermediate,Wealth building,Medium
+53,60000,20.6,0.59,5,Intermediate,Retirement,Low
+60,140000,26.5,0.36,10,Beginner,Emergency fund,Medium
+53,110000,30.3,0.33,20,Intermediate,Wealth building,High
+25,75000,24.0,0.27,20,Beginner,Wealth building,High
+51,60000,9.5,0.17,5,Beginner,Education,Low
+58,60000,11.6,0.33,10,Intermediate,Emergency fund,Low
+44,90000,19.9,0.07,20,Intermediate,Emergency fund,High
+60,110000,18.2,0.08,20,Intermediate,Retirement,Medium
+66,90000,27.0,0.43,10,Intermediate,Education,Medium
+36,110000,33.8,0.02,15,Advanced,Retirement,High
+64,110000,32.1,0.23,30,Intermediate,Retirement,Medium
+50,45000,26.0,0.12,30,Beginner,Retirement,High
+57,75000,18.2,0.22,30,Beginner,Wealth building,Medium
+34,45000,24.8,0.31,30,Beginner,Education,High
+53,60000,27.3,0.43,15,Advanced,Retirement,Medium
+28,110000,12.8,0.46,20,Beginner,Wealth building,Medium
+43,75000,9.7,0.14,15,Beginner,Education,Medium
+49,75000,7.9,0.21,20,Beginner,Emergency fund,Medium
+23,45000,7.0,0.89,15,Advanced,Education,Medium
+63,60000,2.9,0.24,20,Beginner,Retirement,Low
+66,60000,16.0,0.15,20,Advanced,Emergency fund,Medium
+27,60000,6.0,0.17,5,Beginner,Retirement,Medium
+49,90000,7.7,0.24,25,Beginner,Income,Medium
+49,60000,19.6,0.22,5,Beginner,Wealth building,Medium
+65,90000,15.5,0.24,15,Advanced,Emergency fund,Medium
+65,30000,17.4,0.28,5,Advanced,Retirement,Low
+41,45000,24.9,0.28,15,Beginner,Retirement,Medium
+51,60000,20.9,0.14,5,Beginner,Retirement,Medium
+32,90000,26.2,0.34,30,Intermediate,Wealth building,High
+49,90000,14.6,0.3,15,Beginner,Retirement,Medium
+46,75000,26.9,0.35,15,Beginner,Emergency fund,Medium
+60,75000,16.9,0.02,15,Beginner,Retirement,Medium
+54,90000,15.3,0.3,20,Beginner,Education,Medium
+22,30000,25.7,0.0,25,Beginner,Retirement,High
+48,60000,7.0,0.25,20,Beginner,Retirement,Medium
+34,110000,30.2,0.38,25,Beginner,Education,High
+62,90000,11.7,0.44,30,Advanced,Emergency fund,Medium
+24,60000,4.3,0.33,25,Beginner,Wealth building,Medium
+60,140000,19.2,0.38,20,Intermediate,Retirement,Medium
+27,110000,11.0,0.24,10,Beginner,Emergency fund,Medium
+29,60000,30.2,0.2,20,Intermediate,Wealth building,High
+48,90000,10.5,0.68,20,Beginner,Retirement,Low
+30,90000,16.5,0.4,25,Intermediate,Emergency fund,High
+58,75000,2.6,0.1,25,Beginner,Wealth building,Medium
+54,60000,20.5,0.02,25,Advanced,Retirement,High
+63,60000,7.8,0.21,25,Beginner,Income,Medium
+65,90000,19.5,0.46,5,Beginner,Education,Low
+45,75000,10.6,0.29,5,Advanced,Retirement,Low
+36,110000,0.0,0.0,10,Intermediate,Wealth building,Medium
+53,90000,15.0,0.25,30,Beginner,Retirement,High
+53,30000,14.7,0.28,25,Advanced,Education,Medium
+45,90000,21.0,0.0,20,Beginner,Emergency fund,High
+62,60000,26.4,0.28,25,Beginner,Retirement,Medium
+33,90000,29.3,0.13,25,Advanced,Retirement,High
+60,90000,20.9,0.0,30,Beginner,Retirement,High
+23,60000,16.2,0.52,25,Advanced,Wealth building,High
+24,75000,2.6,0.12,20,Beginner,Emergency fund,Medium
+58,45000,15.6,0.18,20,Intermediate,Retirement,Medium
+38,30000,15.7,0.18,10,Intermediate,Retirement,Medium
+23,60000,12.4,0.28,20,Advanced,Retirement,High
+23,60000,19.1,0.54,15,Intermediate,Retirement,Medium
+49,180000,23.0,0.1,10,Beginner,Wealth building,Medium
+44,75000,7.5,0.23,25,Intermediate,Wealth building,High
+58,60000,7.3,0.3,20,Beginner,Emergency fund,Low
+53,90000,12.9,0.15,30,Intermediate,Income,High
+54,45000,9.1,0.23,15,Advanced,Income,Medium
+22,180000,0.9,0.37,20,Intermediate,Wealth building,High
+40,90000,6.0,0.17,15,Intermediate,Emergency fund,Medium
+23,90000,4.1,0.23,10,Beginner,Income,Medium
+65,45000,23.7,0.22,15,Intermediate,Retirement,Low
+47,75000,27.6,0.26,15,Beginner,Retirement,Medium
+53,75000,5.2,0.32,10,Intermediate,Retirement,Low
+27,110000,18.4,0.37,15,Beginner,Wealth building,Medium
+53,30000,21.0,0.57,10,Intermediate,Education,Low
+25,60000,2.1,0.0,25,Beginner,Wealth building,High
+32,180000,15.3,0.25,5,Intermediate,Wealth building,Medium
+38,75000,34.3,0.08,20,Beginner,Wealth building,High
+59,75000,19.4,0.22,25,Advanced,Retirement,Medium
+45,45000,12.0,0.41,20,Beginner,Retirement,Medium
+26,180000,9.5,0.46,30,Intermediate,Retirement,High
+55,30000,0.0,0.47,25,Beginner,Retirement,Medium
+27,90000,17.8,0.47,25,Intermediate,Education,High
+43,110000,29.6,0.25,10,Beginner,Education,Medium
+32,60000,7.5,0.49,25,Intermediate,Education,High
+37,90000,0.0,0.52,25,Beginner,Emergency fund,Medium
+54,45000,8.7,0.3,15,Intermediate,Education,Medium
+30,60000,21.1,0.46,10,Beginner,Emergency fund,Medium
+27,110000,10.6,0.29,15,Beginner,Emergency fund,Medium
+37,110000,7.4,0.49,25,Intermediate,Emergency fund,Medium
+50,90000,14.2,0.26,15,Beginner,Wealth building,Medium
+24,75000,15.8,0.19,25,Beginner,Wealth building,High
+41,45000,2.9,0.11,10,Advanced,Emergency fund,Medium
+57,30000,12.3,0.25,25,Advanced,Retirement,Medium
+40,45000,10.0,0.29,10,Intermediate,Wealth building,Medium
+47,60000,8.9,0.14,10,Beginner,Wealth building,Low
+24,60000,5.9,0.24,20,Beginner,Retirement,High
+40,75000,21.5,0.2,5,Intermediate,Income,Medium
+41,60000,8.8,0.12,5,Beginner,Retirement,Medium
+53,60000,0.0,0.44,10,Advanced,Retirement,Low
+28,75000,16.1,0.46,20,Beginner,Retirement,High
+62,110000,19.8,0.43,30,Advanced,Education,Medium
+54,60000,7.6,0.27,25,Intermediate,Wealth building,Medium
+61,140000,9.5,0.28,20,Intermediate,Emergency fund,Medium
+60,110000,8.8,0.12,5,Beginner,Education,Low
+39,45000,11.2,0.34,20,Advanced,Retirement,High
+61,110000,22.9,0.31,25,Beginner,Retirement,Medium
+22,75000,13.1,0.71,15,Intermediate,Retirement,Medium
+32,75000,20.7,0.44,10,Advanced,Emergency fund,Medium
+49,75000,6.2,0.33,10,Beginner,Emergency fund,Low
+46,75000,10.9,0.27,25,Intermediate,Retirement,High
+44,75000,21.6,0.43,15,Intermediate,Retirement,Medium
+52,75000,7.6,0.14,25,Beginner,Retirement,Medium
+51,90000,22.1,0.45,15,Intermediate,Emergency fund,Medium
+63,90000,9.0,0.12,10,Beginner,Retirement,Low
+56,75000,11.4,0.2,15,Beginner,Retirement,Medium
+28,90000,27.4,0.0,15,Intermediate,Wealth building,High
+37,45000,10.5,0.37,5,Intermediate,Emergency fund,Low
+47,60000,15.2,0.32,10,Beginner,Emergency fund,Low
+23,110000,18.9,0.2,10,Advanced,Wealth building,High
+22,60000,15.8,0.14,10,Advanced,Emergency fund,High
+33,30000,16.0,0.49,15,Intermediate,Wealth building,Medium
+26,45000,13.5,0.26,30,Intermediate,Income,High
+58,60000,3.6,0.16,20,Beginner,Retirement,Medium
+53,140000,16.8,0.57,20,Intermediate,Emergency fund,Medium
+30,75000,8.1,0.18,15,Intermediate,Wealth building,Medium
+62,140000,20.2,0.45,15,Beginner,Retirement,Medium
+56,75000,25.0,0.11,5,Intermediate,Emergency fund,Low
+40,75000,0.0,0.23,20,Beginner,Retirement,Medium
+37,60000,25.0,0.36,20,Beginner,Wealth building,Medium
+24,90000,10.7,0.27,10,Intermediate,Wealth building,Medium
+41,45000,13.0,0.32,25,Intermediate,Retirement,Medium
+45,140000,6.7,0.2,20,Intermediate,Wealth building,Medium
+54,110000,15.5,0.04,15,Intermediate,Wealth building,Medium
+45,60000,14.5,0.5,10,Advanced,Emergency fund,Medium
+32,140000,22.6,0.21,20,Intermediate,Education,High
+29,110000,8.1,0.32,25,Intermediate,Retirement,Medium
+57,90000,27.3,0.39,15,Beginner,Wealth building,Medium
+59,45000,19.3,0.33,10,Beginner,Education,Low
+61,75000,14.7,0.17,20,Beginner,Retirement,Medium
+41,75000,12.6,0.45,10,Intermediate,Wealth building,Medium
+56,60000,11.5,0.36,20,Intermediate,Education,Medium
+46,30000,12.1,0.31,20,Beginner,Emergency fund,Medium
+56,110000,15.3,0.31,5,Beginner,Retirement,Medium
+46,45000,12.3,0.53,5,Beginner,Wealth building,Low
+50,90000,8.9,0.17,20,Beginner,Wealth building,Medium
+39,140000,15.4,0.34,15,Advanced,Income,Medium
+67,110000,7.3,0.2,5,Intermediate,Retirement,Low
+39,60000,16.6,0.0,25,Beginner,Income,High
+23,110000,12.2,0.0,15,Intermediate,Wealth building,High
+56,30000,19.6,0.13,15,Intermediate,Retirement,Medium
+37,30000,21.9,0.18,10,Intermediate,Wealth building,Medium
+62,90000,21.9,0.61,20,Beginner,Emergency fund,Medium
+57,60000,16.5,0.38,15,Intermediate,Retirement,Medium
+54,75000,17.5,0.4,30,Beginner,Retirement,High
+25,75000,11.4,0.18,25,Advanced,Education,High
+54,45000,19.4,0.29,10,Intermediate,Income,Medium
+35,60000,20.3,0.63,15,Intermediate,Retirement,Medium
+42,75000,1.5,0.1,15,Beginner,Retirement,Medium
+41,90000,17.0,0.35,20,Beginner,Education,Medium
+29,90000,24.9,0.52,25,Beginner,Emergency fund,High
+28,60000,11.1,0.42,20,Advanced,Retirement,High
+24,75000,9.4,0.55,5,Beginner,Income,Medium
+38,45000,10.6,0.31,20,Beginner,Retirement,Medium
+54,30000,2.0,0.37,5,Advanced,Emergency fund,Low
+33,110000,15.0,0.3,25,Intermediate,Wealth building,High
+43,60000,14.2,0.36,20,Intermediate,Wealth building,Medium
+43,45000,15.6,0.14,15,Beginner,Retirement,Medium
+67,90000,17.3,0.4,15,Intermediate,Emergency fund,Low
+51,90000,7.6,0.32,25,Beginner,Income,Medium
+59,90000,16.2,0.29,25,Intermediate,Wealth building,Medium
+59,60000,17.5,0.54,15,Beginner,Wealth building,Low
+66,60000,10.1,0.24,15,Intermediate,Retirement,Low
+29,60000,17.4,0.46,20,Intermediate,Education,High
+48,45000,14.6,0.48,5,Intermediate,Income,Low
+48,90000,9.0,0.41,5,Intermediate,Education,Low
+55,110000,16.3,0.14,10,Beginner,Wealth building,Low
+42,90000,11.7,0.33,10,Beginner,Income,Medium
+51,110000,19.6,0.57,20,Intermediate,Retirement,Medium
+54,75000,12.1,0.01,30,Intermediate,Wealth building,High
+49,90000,3.7,0.25,20,Advanced,Wealth building,Medium
+54,60000,16.1,0.45,5,Intermediate,Wealth building,Medium
+26,75000,15.8,0.26,20,Intermediate,Education,High
+40,75000,5.4,0.4,20,Advanced,Emergency fund,Medium
+25,45000,20.0,0.49,10,Beginner,Retirement,Medium
+56,75000,19.6,0.31,30,Intermediate,Retirement,Medium
+38,180000,7.0,0.36,15,Beginner,Retirement,Medium
+65,60000,8.7,0.29,30,Beginner,Wealth building,Medium
+49,45000,12.9,0.32,15,Intermediate,Retirement,Medium
+51,75000,7.9,0.6,20,Intermediate,Retirement,Medium
+50,110000,19.1,0.27,10,Intermediate,Emergency fund,Medium
+67,90000,15.2,0.23,15,Intermediate,Education,Medium
+27,90000,5.3,0.44,10,Intermediate,Income,Medium
+56,45000,7.4,0.15,25,Beginner,Income,Medium
+62,90000,23.5,0.19,25,Intermediate,Education,Medium
+58,60000,26.3,0.19,25,Intermediate,Retirement,High
+45,110000,18.3,0.24,25,Advanced,Education,High
+50,90000,12.3,0.25,25,Beginner,Wealth building,Medium
+67,45000,10.5,0.38,10,Beginner,Emergency fund,Low
+52,30000,18.4,0.23,15,Intermediate,Wealth building,Medium
+56,30000,14.6,0.39,20,Advanced,Education,Medium
+54,60000,1.1,0.41,20,Intermediate,Wealth building,Low
+42,60000,22.3,0.18,25,Intermediate,Retirement,High
+53,90000,24.8,0.41,10,Advanced,Wealth building,Medium
+44,75000,19.9,0.42,5,Advanced,Retirement,Medium
+54,60000,5.3,0.02,30,Intermediate,Income,High
+24,45000,8.9,0.32,20,Intermediate,Wealth building,Medium
+39,45000,0.0,0.2,10,Beginner,Wealth building,Medium
+46,110000,26.8,0.48,25,Advanced,Income,High
+63,60000,11.1,0.2,30,Intermediate,Emergency fund,Medium
+52,90000,32.7,0.08,10,Advanced,Retirement,Medium
+24,110000,29.6,0.28,25,Beginner,Retirement,High
+61,90000,6.8,0.15,30,Intermediate,Wealth building,Medium
+67,110000,8.3,0.41,30,Intermediate,Education,Medium
+45,75000,17.7,0.16,30,Intermediate,Education,High
+53,140000,0.0,0.28,20,Beginner,Income,Medium
+43,45000,10.5,0.51,15,Intermediate,Retirement,Medium
+44,45000,9.7,0.44,5,Intermediate,Retirement,Low
+23,90000,28.8,0.35,5,Intermediate,Retirement,Medium
+48,140000,15.3,0.26,15,Beginner,Education,Medium
+63,110000,11.7,0.34,15,Intermediate,Retirement,Medium
+23,30000,8.9,0.38,10,Beginner,Retirement,Medium
+47,60000,21.2,0.13,15,Beginner,Wealth building,Medium
+38,140000,10.0,0.41,10,Intermediate,Wealth building,Medium
+61,60000,13.6,0.11,25,Advanced,Emergency fund,Medium
+54,110000,8.9,0.37,15,Intermediate,Wealth building,Medium
+30,110000,1.9,0.11,20,Intermediate,Wealth building,High
+64,75000,6.0,0.57,20,Beginner,Wealth building,Medium
+60,75000,10.0,0.39,5,Intermediate,Education,Low
+50,75000,11.9,0.05,30,Beginner,Wealth building,High
+63,60000,12.2,0.28,20,Advanced,Retirement,Medium
+47,140000,13.3,0.2,15,Advanced,Retirement,Medium
+56,75000,10.1,0.18,10,Intermediate,Retirement,Medium
+46,140000,24.8,0.3,15,Intermediate,Education,Medium
+45,45000,21.6,0.14,5,Intermediate,Retirement,Medium
+34,180000,12.9,0.39,15,Intermediate,Income,Medium
+28,75000,16.0,0.39,20,Beginner,Retirement,Medium
+57,30000,11.0,0.33,25,Beginner,Education,Medium
+66,30000,0.0,0.28,20,Intermediate,Education,Medium
+41,90000,14.2,0.38,10,Advanced,Wealth building,Medium
+22,90000,16.4,0.4,10,Beginner,Emergency fund,Medium
+29,110000,1.1,0.35,15,Beginner,Retirement,Medium
+67,45000,18.0,0.08,10,Intermediate,Wealth building,Medium
+37,30000,11.8,0.16,5,Advanced,Retirement,Medium
+35,75000,16.7,0.24,25,Beginner,Wealth building,High
+33,75000,12.0,0.06,5,Beginner,Education,Medium
+44,75000,24.0,0.31,25,Intermediate,Retirement,Medium
+36,180000,15.8,0.49,10,Intermediate,Education,Medium
+49,180000,22.0,0.47,30,Beginner,Wealth building,High
+55,140000,22.7,0.39,20,Beginner,Wealth building,Medium
+23,110000,5.0,0.39,25,Intermediate,Income,High
+53,60000,8.1,0.61,10,Intermediate,Emergency fund,Low
+44,75000,17.6,0.41,25,Advanced,Emergency fund,High
+43,75000,11.1,0.42,25,Intermediate,Emergency fund,High
+46,110000,12.1,0.06,20,Beginner,Income,Medium
+43,30000,24.3,0.48,20,Intermediate,Retirement,Medium
+43,75000,11.5,0.34,25,Intermediate,Emergency fund,Medium
+63,45000,6.2,0.27,5,Beginner,Wealth building,Low
+27,75000,7.3,0.23,20,Advanced,Retirement,High
+36,140000,31.5,0.2,25,Advanced,Retirement,High
+64,110000,12.6,0.47,15,Beginner,Retirement,Low
+58,60000,3.1,0.28,10,Beginner,Wealth building,Low
+54,180000,0.0,0.2,15,Beginner,Education,Medium
+29,90000,9.0,0.16,25,Beginner,Education,High
+65,30000,12.4,0.31,10,Intermediate,Wealth building,Low
+65,60000,21.6,0.23,10,Intermediate,Retirement,Medium
+26,60000,20.8,0.19,10,Advanced,Retirement,High
+60,30000,13.9,0.07,25,Beginner,Wealth building,Medium
+25,140000,10.4,0.42,5,Intermediate,Emergency fund,Medium
+27,75000,16.7,0.26,20,Advanced,Retirement,High
+66,140000,0.0,0.12,15,Intermediate,Wealth building,Medium
+53,60000,29.8,0.24,25,Beginner,Income,Medium
+51,45000,19.2,0.36,30,Beginner,Emergency fund,High
+56,75000,20.9,0.28,10,Beginner,Education,Medium
+61,45000,5.4,0.31,15,Advanced,Emergency fund,Low
+37,75000,24.3,0.29,25,Advanced,Retirement,High
+34,140000,10.3,0.09,10,Advanced,Retirement,High
+63,75000,6.4,0.42,10,Advanced,Education,Low
+51,90000,13.7,0.02,25,Beginner,Emergency fund,Medium
+40,45000,13.5,0.35,30,Advanced,Wealth building,High
+38,30000,5.4,0.37,20,Advanced,Retirement,Medium
+40,45000,6.8,0.25,10,Beginner,Emergency fund,Low
+49,90000,6.2,0.33,15,Beginner,Retirement,Medium
+47,45000,6.3,0.24,10,Intermediate,Retirement,Medium
+58,60000,10.9,0.33,25,Beginner,Retirement,Medium
+47,75000,2.9,0.43,25,Beginner,Wealth building,Medium
+44,75000,8.5,0.16,25,Advanced,Retirement,High
+30,45000,22.4,0.38,5,Advanced,Retirement,Medium
+33,60000,20.6,0.53,20,Beginner,Emergency fund,Medium
+22,140000,5.6,0.32,10,Intermediate,Wealth building,Medium
+22,90000,21.7,0.2,15,Advanced,Wealth building,High
+55,75000,0.0,0.62,25,Intermediate,Wealth building,Medium
+53,30000,33.4,0.29,10,Beginner,Income,Medium
+46,180000,24.4,0.31,20,Intermediate,Retirement,High
+61,90000,9.5,0.32,20,Advanced,Retirement,Medium
+66,60000,17.1,0.35,30,Advanced,Emergency fund,High
+22,110000,2.8,0.23,25,Beginner,Retirement,Medium
+37,60000,14.5,0.31,25,Beginner,Wealth building,Medium
+60,75000,12.5,0.42,20,Advanced,Wealth building,Medium
+26,90000,7.3,0.22,10,Beginner,Income,Medium
+43,60000,10.3,0.22,15,Intermediate,Education,Medium
+50,180000,9.5,0.24,20,Beginner,Income,Medium
+24,90000,4.9,0.12,20,Beginner,Retirement,Medium
+33,75000,7.1,0.18,20,Intermediate,Education,Medium
+47,45000,2.5,0.17,15,Beginner,Retirement,Medium
+37,30000,20.9,0.28,10,Advanced,Emergency fund,Medium
+58,60000,6.5,0.41,10,Beginner,Emergency fund,Low
+43,90000,4.2,0.5,20,Advanced,Retirement,Medium
+50,60000,20.7,0.29,20,Advanced,Emergency fund,Medium
+35,75000,17.0,0.35,20,Beginner,Retirement,Medium
+49,90000,20.4,0.32,15,Intermediate,Retirement,Medium
+26,45000,21.3,0.0,10,Beginner,Income,Medium
+51,90000,29.5,0.11,25,Intermediate,Retirement,High
+67,45000,12.8,0.39,25,Intermediate,Retirement,Medium
+26,180000,2.3,0.41,15,Beginner,Wealth building,Medium
+33,75000,16.2,0.41,20,Intermediate,Education,Medium
+37,45000,8.6,0.25,15,Intermediate,Retirement,Medium
+47,60000,6.3,0.0,25,Advanced,Wealth building,High
+47,75000,14.8,0.13,25,Beginner,Education,Medium
+42,90000,20.9,0.15,20,Intermediate,Retirement,Medium
+60,90000,7.3,0.37,20,Beginner,Retirement,Medium
+57,90000,24.2,0.23,15,Advanced,Education,Medium
+54,45000,6.1,0.53,20,Beginner,Wealth building,Medium
+51,45000,12.0,0.5,20,Intermediate,Education,Medium
+58,45000,17.1,0.53,20,Beginner,Retirement,Low
+44,75000,10.9,0.14,20,Intermediate,Income,High
+31,110000,0.0,0.35,5,Advanced,Income,Medium
+26,75000,21.4,0.21,30,Intermediate,Retirement,High
+57,45000,9.0,0.33,25,Intermediate,Retirement,Medium
+55,75000,20.0,0.16,15,Intermediate,Income,Medium
+52,110000,3.9,0.46,20,Advanced,Wealth building,Medium
+31,90000,5.3,0.16,5,Intermediate,Wealth building,Medium
+40,140000,20.9,0.0,5,Advanced,Emergency fund,Medium
+53,60000,16.7,0.59,10,Intermediate,Education,Low
+22,45000,10.5,0.35,20,Intermediate,Education,Medium
+26,110000,16.8,0.12,25,Beginner,Retirement,High
+66,90000,6.4,0.26,20,Intermediate,Retirement,Low
+25,60000,14.9,0.19,20,Beginner,Education,Medium
+37,90000,15.0,0.28,15,Advanced,Education,Medium
+45,110000,11.0,0.4,10,Intermediate,Emergency fund,Low
+37,90000,7.3,0.38,10,Advanced,Income,Medium
+23,90000,14.6,0.32,25,Beginner,Emergency fund,High
+49,60000,13.6,0.28,30,Beginner,Retirement,High
+53,75000,10.3,0.44,15,Advanced,Education,Medium
+48,75000,5.7,0.0,20,Beginner,Wealth building,Medium
+41,110000,14.1,0.17,30,Intermediate,Retirement,High
+45,110000,10.3,0.13,5,Advanced,Retirement,Medium
+33,110000,5.7,0.43,25,Intermediate,Education,High
+56,30000,14.3,0.17,20,Beginner,Income,Medium
+54,90000,26.9,0.09,20,Advanced,Retirement,Medium
+54,90000,11.1,0.36,15,Beginner,Retirement,Low
+64,90000,26.0,0.14,20,Advanced,Wealth building,Medium
+58,90000,30.9,0.23,25,Beginner,Education,Medium
+33,110000,6.4,0.64,10,Intermediate,Emergency fund,Medium
+24,75000,14.1,0.4,20,Beginner,Wealth building,High
+22,75000,30.8,0.25,10,Intermediate,Emergency fund,High
+54,45000,13.0,0.26,25,Beginner,Retirement,Medium
+61,75000,14.3,0.42,20,Advanced,Wealth building,Medium
+31,90000,0.6,0.38,25,Intermediate,Retirement,Medium
+64,110000,9.7,0.29,15,Beginner,Education,Low
+65,60000,18.4,0.3,10,Intermediate,Retirement,Low
+50,45000,33.4,0.06,5,Intermediate,Emergency fund,Medium
+34,90000,12.4,0.03,15,Beginner,Retirement,Medium
+33,30000,0.7,0.25,10,Beginner,Wealth building,Low
+52,45000,2.8,0.19,20,Intermediate,Retirement,Medium
+67,30000,13.7,0.37,5,Beginner,Retirement,Low
+23,45000,23.4,0.31,20,Beginner,Retirement,High
+56,45000,19.1,0.16,15,Beginner,Education,Medium
+44,75000,17.7,0.3,20,Intermediate,Wealth building,Medium
+38,75000,24.5,0.22,25,Intermediate,Emergency fund,High
+47,110000,8.2,0.59,20,Beginner,Wealth building,Medium
+29,75000,14.2,0.34,30,Advanced,Wealth building,High
+50,90000,9.8,0.05,10,Advanced,Wealth building,Medium
+47,45000,11.8,0.55,15,Beginner,Income,Medium
+31,60000,5.9,0.19,15,Beginner,Wealth building,Medium
+47,90000,11.2,0.13,15,Advanced,Retirement,Medium
+55,30000,13.8,0.6,20,Intermediate,Income,Medium
+62,75000,11.0,0.33,20,Beginner,Retirement,Medium
+28,90000,12.7,0.39,20,Intermediate,Education,High
+25,90000,17.2,0.39,15,Intermediate,Retirement,High
+66,30000,23.9,0.25,30,Beginner,Emergency fund,Medium
+32,60000,24.5,0.19,30,Intermediate,Retirement,High
+50,90000,20.1,0.22,15,Intermediate,Income,Medium
+57,45000,3.9,0.52,10,Intermediate,Wealth building,Low
+46,90000,11.1,0.31,25,Advanced,Retirement,High
+42,90000,11.8,0.48,30,Beginner,Retirement,Medium
+57,180000,8.7,0.27,15,Intermediate,Wealth building,Medium
+31,60000,16.7,0.17,15,Intermediate,Emergency fund,Medium
+58,110000,1.2,0.06,30,Intermediate,Wealth building,High
+30,75000,27.5,0.38,25,Beginner,Retirement,High
+45,60000,23.6,0.53,15,Beginner,Wealth building,Medium
+56,45000,17.8,0.15,20,Beginner,Wealth building,Medium
+56,90000,13.5,0.36,30,Beginner,Retirement,Medium
+57,60000,23.8,0.07,25,Beginner,Retirement,High
+39,60000,19.5,0.2,25,Intermediate,Emergency fund,High
+60,30000,22.9,0.32,25,Beginner,Income,Medium
+53,110000,13.5,0.02,10,Intermediate,Retirement,Medium
+45,110000,28.3,0.28,25,Beginner,Education,High
+44,90000,23.3,0.15,10,Beginner,Retirement,Medium
+53,60000,18.1,0.37,30,Beginner,Wealth building,Medium
+58,45000,24.0,0.26,15,Beginner,Wealth building,Medium
+33,90000,10.6,0.42,25,Intermediate,Retirement,High
+34,75000,4.7,0.24,10,Beginner,Wealth building,Medium
+44,45000,16.6,0.08,20,Advanced,Education,High
+46,90000,13.5,0.06,10,Advanced,Income,Medium
+56,180000,12.4,0.0,20,Intermediate,Retirement,High
+62,90000,23.7,0.37,25,Intermediate,Retirement,Medium
+51,90000,15.3,0.66,25,Beginner,Income,Medium
+38,140000,16.1,0.35,20,Intermediate,Retirement,Medium
+41,60000,11.4,0.53,5,Intermediate,Emergency fund,Low
+46,75000,21.0,0.45,30,Beginner,Retirement,High
+43,180000,19.6,0.2,25,Beginner,Wealth building,High
+34,45000,21.0,0.47,25,Beginner,Retirement,Medium
+40,90000,10.0,0.21,25,Intermediate,Education,High
+57,90000,24.4,0.21,25,Intermediate,Education,Medium
+33,90000,28.7,0.25,15,Beginner,Retirement,High
+62,90000,20.7,0.26,25,Intermediate,Education,Medium
+40,140000,7.5,0.38,20,Intermediate,Wealth building,High
+33,110000,7.6,0.18,25,Intermediate,Retirement,High
+30,30000,11.0,0.41,25,Beginner,Education,High
+28,110000,9.5,0.41,5,Intermediate,Wealth building,Medium
+49,60000,13.4,0.33,15,Intermediate,Retirement,Medium
+35,60000,19.1,0.57,5,Intermediate,Retirement,Medium
+52,75000,16.3,0.47,10,Intermediate,Income,Medium
+40,75000,15.6,0.44,20,Intermediate,Education,Medium
+37,75000,12.1,0.29,25,Beginner,Education,Medium
+26,140000,13.4,0.33,10,Intermediate,Retirement,Medium
+56,90000,20.4,0.36,15,Advanced,Education,Medium
+33,90000,0.0,0.28,30,Intermediate,Retirement,High
+46,30000,13.9,0.22,25,Beginner,Income,Medium
+42,140000,16.3,0.0,20,Beginner,Retirement,High
+57,140000,20.3,0.39,25,Advanced,Wealth building,Medium
+44,110000,5.9,0.44,20,Beginner,Wealth building,Medium
+37,30000,5.5,0.11,10,Beginner,Education,Medium
+60,30000,18.7,0.37,10,Beginner,Education,Low
+66,60000,0.0,0.19,10,Advanced,Wealth building,Low
+63,45000,24.7,0.23,15,Beginner,Wealth building,Medium
+60,75000,15.8,0.48,30,Intermediate,Education,Medium
+35,140000,26.5,0.13,25,Intermediate,Retirement,High
+52,75000,5.3,0.13,15,Beginner,Education,Medium
+26,30000,10.5,0.55,20,Advanced,Income,Medium
+56,60000,0.0,0.26,10,Intermediate,Retirement,Low
+44,30000,7.6,0.47,25,Intermediate,Retirement,Medium
+50,30000,12.5,0.04,25,Advanced,Retirement,Medium
+64,60000,0.0,0.05,10,Advanced,Retirement,Low
+32,60000,10.8,0.14,5,Intermediate,Wealth building,Medium
+39,110000,0.0,0.21,20,Beginner,Emergency fund,Medium
+33,180000,11.9,0.07,20,Advanced,Wealth building,High
+30,60000,23.2,0.34,15,Intermediate,Retirement,Medium
+31,75000,13.7,0.35,20,Advanced,Emergency fund,High
+65,110000,27.3,0.15,20,Advanced,Emergency fund,Medium
+38,60000,20.3,0.16,10,Beginner,Income,Medium
+59,45000,24.8,0.18,15,Advanced,Retirement,Medium
+28,110000,7.9,0.11,15,Beginner,Emergency fund,Medium
+67,30000,7.7,0.0,30,Intermediate,Income,Medium
+34,90000,16.8,0.27,30,Beginner,Wealth building,High
+61,75000,1.4,0.22,30,Advanced,Wealth building,Medium
+63,60000,17.8,0.23,25,Intermediate,Retirement,Medium
+30,60000,11.4,0.13,20,Intermediate,Education,High
+48,110000,24.6,0.4,20,Advanced,Wealth building,Medium
+23,45000,19.4,0.64,30,Intermediate,Income,High
+26,60000,22.8,0.15,10,Intermediate,Education,Medium
+50,90000,8.0,0.49,20,Advanced,Wealth building,Medium
+58,75000,22.4,0.33,20,Intermediate,Wealth building,Medium
+59,45000,25.6,0.29,20,Advanced,Retirement,Medium
+40,140000,13.7,0.23,10,Advanced,Retirement,Medium
+29,75000,8.1,0.27,20,Beginner,Emergency fund,Medium
+66,110000,8.2,0.45,25,Intermediate,Emergency fund,Medium
+22,110000,23.9,0.11,15,Beginner,Wealth building,High
+43,90000,35.5,0.24,25,Intermediate,Education,High
+38,75000,6.1,0.47,15,Beginner,Retirement,Medium
+28,180000,5.5,0.43,30,Intermediate,Wealth building,High
+46,45000,21.4,0.11,20,Beginner,Wealth building,Medium
+66,90000,8.0,0.25,20,Beginner,Retirement,Low
+25,45000,22.1,0.39,5,Beginner,Income,Medium
+57,60000,17.7,0.38,10,Beginner,Emergency fund,Low
+27,60000,13.8,0.43,20,Intermediate,Wealth building,Medium
+52,140000,17.5,0.34,15,Beginner,Wealth building,Medium
+40,180000,17.0,0.36,20,Beginner,Retirement,Medium
+65,45000,12.6,0.33,5,Beginner,Wealth building,Low
+60,30000,0.0,0.52,25,Intermediate,Emergency fund,Low
+48,90000,15.4,0.22,25,Advanced,Income,High
+31,75000,26.6,0.29,10,Beginner,Education,Medium
+47,45000,1.1,0.13,20,Intermediate,Retirement,Medium
+40,90000,6.3,0.1,25,Intermediate,Wealth building,High
+60,75000,17.4,0.33,20,Beginner,Retirement,Medium
+24,180000,14.3,0.17,15,Intermediate,Retirement,High
+66,60000,17.3,0.27,20,Beginner,Wealth building,Medium
+34,75000,8.4,0.52,10,Intermediate,Wealth building,Medium
+49,75000,23.3,0.51,15,Beginner,Retirement,Low
+41,110000,14.4,0.61,10,Advanced,Emergency fund,Medium
+49,75000,19.6,0.53,20,Beginner,Emergency fund,Medium
+29,90000,16.6,0.64,10,Intermediate,Retirement,Medium
+62,60000,15.4,0.35,30,Advanced,Education,Medium
+60,110000,19.0,0.14,15,Beginner,Retirement,Low
+22,75000,15.5,0.13,10,Intermediate,Wealth building,Medium
+24,45000,4.5,0.49,20,Beginner,Education,Medium
+34,90000,22.7,0.29,10,Intermediate,Wealth building,Medium
+49,60000,20.5,0.3,20,Beginner,Income,Medium
+46,45000,0.0,0.2,15,Beginner,Retirement,Medium
+54,110000,8.8,0.22,10,Intermediate,Wealth building,Medium
+59,75000,22.3,0.34,10,Intermediate,Wealth building,Medium
+27,90000,0.0,0.12,15,Intermediate,Emergency fund,Medium
+65,60000,21.5,0.32,5,Beginner,Education,Low
+66,110000,12.9,0.51,25,Beginner,Emergency fund,Medium
+53,45000,24.7,0.0,20,Intermediate,Education,Medium
+66,60000,14.0,0.05,20,Intermediate,Retirement,Medium
+42,180000,8.2,0.38,20,Beginner,Wealth building,Medium
+37,110000,16.5,0.48,20,Beginner,Emergency fund,Medium
+42,75000,13.8,0.21,30,Beginner,Wealth building,High
+32,60000,7.5,0.0,5,Beginner,Income,Medium
+58,110000,31.7,0.49,5,Beginner,Retirement,Low
+57,75000,6.2,0.16,10,Beginner,Wealth building,Low
+56,90000,0.0,0.23,10,Intermediate,Wealth building,Medium
+40,90000,26.7,0.33,10,Intermediate,Education,Medium
+41,30000,9.3,0.18,20,Beginner,Income,Medium
+39,45000,11.6,0.15,15,Beginner,Retirement,Medium
+62,90000,11.1,0.15,30,Beginner,Retirement,Medium
+35,45000,9.4,0.56,10,Intermediate,Wealth building,Medium
+36,60000,7.9,0.45,15,Advanced,Wealth building,Medium
+52,140000,6.0,0.37,30,Intermediate,Income,High
+22,75000,14.5,0.0,25,Intermediate,Wealth building,High
+24,90000,10.8,0.37,15,Advanced,Retirement,High
+37,75000,19.8,0.36,20,Beginner,Wealth building,High
+44,75000,17.9,0.09,25,Beginner,Wealth building,High
+32,45000,6.6,0.32,20,Intermediate,Education,Medium
+33,60000,14.9,0.44,10,Beginner,Retirement,Medium
+31,60000,10.7,0.37,25,Intermediate,Retirement,High
+53,75000,6.1,0.18,20,Intermediate,Income,Medium
+37,110000,19.5,0.28,10,Intermediate,Retirement,Medium
+29,60000,13.0,0.39,20,Beginner,Emergency fund,Medium
+59,75000,10.7,0.29,15,Intermediate,Wealth building,Medium
+33,75000,7.2,0.47,25,Intermediate,Wealth building,Medium
+45,45000,5.8,0.34,10,Advanced,Retirement,Medium
+49,75000,29.9,0.39,25,Intermediate,Retirement,High
+29,45000,16.7,0.4,20,Advanced,Wealth building,High
+49,45000,5.3,0.12,15,Beginner,Retirement,Medium
+57,45000,16.3,0.29,10,Intermediate,Wealth building,Low
+47,60000,22.5,0.23,25,Beginner,Retirement,Medium
+29,90000,15.3,0.44,30,Beginner,Emergency fund,High
+49,60000,25.0,0.35,15,Advanced,Income,Medium
+49,60000,1.7,0.25,10,Advanced,Retirement,Medium
+58,90000,0.0,0.09,20,Beginner,Retirement,Medium
+62,45000,16.1,0.04,25,Beginner,Education,Medium
+57,140000,16.2,0.33,5,Beginner,Emergency fund,Low
+48,75000,0.0,0.17,20,Advanced,Retirement,Medium
+38,75000,9.0,0.38,20,Beginner,Wealth building,Medium
+30,75000,5.9,0.03,15,Beginner,Retirement,Medium
+54,45000,2.9,0.52,15,Beginner,Retirement,Low
+41,90000,5.9,0.38,10,Intermediate,Income,Low
+34,60000,18.8,0.29,25,Advanced,Education,Medium
+49,140000,5.9,0.53,20,Beginner,Emergency fund,Medium
+50,45000,6.1,0.42,20,Intermediate,Retirement,Medium
+34,75000,1.0,0.21,15,Beginner,Retirement,Medium
+67,90000,24.2,0.29,15,Intermediate,Education,Medium
+56,30000,17.5,0.0,25,Intermediate,Retirement,Medium
+27,60000,0.0,0.44,15,Beginner,Wealth building,Medium
+39,90000,6.1,0.24,20,Beginner,Retirement,Medium
+26,110000,18.2,0.0,20,Advanced,Wealth building,High
+46,60000,24.3,0.1,15,Beginner,Retirement,Medium
+23,110000,20.7,0.41,10,Intermediate,Retirement,Medium
+31,180000,11.2,0.52,10,Beginner,Education,Medium
+51,110000,0.0,0.28,5,Beginner,Emergency fund,Low
+66,45000,21.0,0.13,25,Intermediate,Retirement,Medium
+26,90000,11.6,0.07,10,Advanced,Emergency fund,Medium
+54,60000,14.6,0.49,5,Intermediate,Retirement,Low
+22,180000,12.6,0.35,25,Beginner,Wealth building,High
+39,75000,3.2,0.23,10,Intermediate,Emergency fund,Medium
+53,45000,16.9,0.19,20,Intermediate,Retirement,Medium
+32,90000,15.8,0.38,15,Intermediate,Wealth building,Medium
+42,60000,10.6,0.38,10,Intermediate,Emergency fund,Medium
+47,180000,17.8,0.15,15,Beginner,Income,Medium
+46,180000,3.0,0.11,5,Intermediate,Wealth building,Medium
+43,90000,11.8,0.12,25,Intermediate,Retirement,Medium
+48,45000,14.2,0.21,20,Beginner,Retirement,Medium
+34,90000,0.1,0.18,10,Intermediate,Wealth building,Medium
+54,45000,13.5,0.52,10,Beginner,Retirement,Low
+55,30000,19.9,0.2,15,Beginner,Wealth building,Medium
+62,110000,11.6,0.09,10,Advanced,Emergency fund,Medium
+56,60000,13.7,0.1,10,Beginner,Retirement,Medium
+22,60000,18.5,0.25,20,Beginner,Retirement,Medium
+42,180000,10.9,0.01,25,Intermediate,Wealth building,High
+27,60000,11.6,0.27,15,Advanced,Retirement,Medium
+49,60000,4.6,0.08,25,Advanced,Income,Medium
+38,140000,13.9,0.45,25,Intermediate,Wealth building,High
+26,45000,11.3,0.3,10,Beginner,Education,Medium
+52,90000,18.0,0.6,25,Advanced,Education,Medium
+26,180000,18.5,0.25,25,Intermediate,Education,High
+59,140000,20.3,0.0,15,Beginner,Retirement,Medium
+24,90000,9.9,0.5,30,Advanced,Income,High
+44,60000,0.0,0.36,10,Beginner,Retirement,Low
+58,60000,19.9,0.38,10,Beginner,Retirement,Low
+58,110000,17.4,0.13,25,Advanced,Wealth building,High
+31,110000,8.9,0.27,15,Intermediate,Retirement,Medium
+31,75000,18.4,0.31,15,Beginner,Retirement,Medium
+40,60000,2.4,0.24,10,Beginner,Retirement,Medium
+38,45000,22.2,0.02,25,Intermediate,Retirement,High
+42,45000,11.3,0.7,25,Beginner,Emergency fund,Medium
+35,90000,7.4,0.41,20,Beginner,Retirement,Medium
+30,75000,9.0,0.34,30,Intermediate,Wealth building,High
+67,140000,12.1,0.48,15,Advanced,Income,Medium
+22,90000,13.9,0.38,10,Intermediate,Wealth building,Medium
+66,45000,14.4,0.18,20,Intermediate,Emergency fund,Medium
+34,90000,10.6,0.47,25,Intermediate,Income,High
+25,75000,15.6,0.41,10,Intermediate,Retirement,Medium
+22,75000,14.1,0.18,5,Beginner,Wealth building,Medium
+61,90000,8.8,0.4,25,Advanced,Education,Medium
+53,110000,7.6,0.24,30,Intermediate,Income,Medium
+55,110000,18.9,0.31,20,Beginner,Emergency fund,Medium
+49,60000,18.2,0.37,10,Beginner,Retirement,Medium
+52,30000,14.5,0.49,30,Intermediate,Income,Medium
+29,90000,21.4,0.18,30,Beginner,Retirement,High
+60,45000,0.0,0.33,20,Beginner,Wealth building,Medium
+47,60000,9.5,0.58,25,Intermediate,Wealth building,Medium
+55,30000,4.7,0.25,25,Advanced,Wealth building,Medium
+24,90000,32.1,0.31,30,Intermediate,Education,High
+33,45000,19.7,0.58,25,Beginner,Education,Medium
+22,90000,13.4,0.38,20,Beginner,Emergency fund,High
+65,180000,20.3,0.06,20,Intermediate,Retirement,Medium
+26,30000,22.9,0.16,15,Beginner,Wealth building,Medium
+51,30000,22.8,0.38,20,Intermediate,Emergency fund,Medium
+51,60000,21.4,0.34,25,Beginner,Wealth building,Medium
+38,110000,11.9,0.3,30,Advanced,Income,High
+44,60000,10.0,0.6,15,Intermediate,Education,Medium
+36,60000,6.3,0.19,20,Beginner,Emergency fund,Medium
+58,30000,18.0,0.27,15,Advanced,Retirement,Medium
+42,110000,12.7,0.0,20,Beginner,Emergency fund,Medium
+35,75000,10.7,0.45,20,Beginner,Income,Medium
+23,90000,10.2,0.16,5,Advanced,Wealth building,Medium
+32,140000,25.6,0.44,20,Beginner,Education,High
+60,60000,21.6,0.42,5,Intermediate,Retirement,Low
+59,110000,28.6,0.63,5,Beginner,Wealth building,Medium
+55,30000,18.2,0.38,25,Beginner,Emergency fund,Medium
+59,140000,14.5,0.23,10,Beginner,Emergency fund,Medium
+55,90000,13.8,0.35,15,Intermediate,Education,Medium
+39,110000,5.8,0.17,5,Intermediate,Retirement,Medium
+51,30000,3.9,0.33,10,Beginner,Retirement,Low
+36,45000,18.1,0.25,25,Beginner,Emergency fund,Medium
+48,75000,6.5,0.27,20,Advanced,Retirement,Medium
+55,60000,15.7,0.15,30,Advanced,Wealth building,High
+59,60000,22.9,0.33,15,Intermediate,Retirement,Medium
+54,75000,8.7,0.4,10,Advanced,Retirement,Medium
+45,45000,30.1,0.03,15,Intermediate,Emergency fund,High
+36,75000,6.1,0.18,25,Beginner,Emergency fund,Medium
+51,110000,21.9,0.31,20,Beginner,Retirement,Medium
+63,75000,17.4,0.0,30,Beginner,Retirement,Medium
+38,30000,23.6,0.54,20,Advanced,Retirement,Medium
+26,75000,5.1,0.17,20,Intermediate,Wealth building,High
+50,30000,32.5,0.14,25,Intermediate,Retirement,High
+25,180000,12.6,0.25,30,Beginner,Wealth building,High
+31,45000,19.4,0.3,15,Intermediate,Emergency fund,Medium
+38,90000,25.6,0.17,10,Intermediate,Emergency fund,Medium
+31,180000,9.2,0.43,20,Advanced,Retirement,High
+38,110000,20.6,0.34,20,Beginner,Emergency fund,High
+41,90000,7.8,0.15,30,Intermediate,Income,High
+45,110000,25.2,0.2,15,Beginner,Retirement,Medium
+26,180000,7.9,0.05,5,Intermediate,Retirement,Medium
+55,90000,14.3,0.09,30,Intermediate,Wealth building,High
+27,75000,16.4,0.34,25,Beginner,Retirement,High
+23,90000,20.3,0.16,10,Intermediate,Emergency fund,High
+34,75000,29.7,0.55,30,Beginner,Education,High
+64,90000,10.4,0.29,15,Advanced,Wealth building,Medium
+64,75000,23.1,0.08,15,Beginner,Emergency fund,Medium
+32,60000,29.8,0.11,30,Intermediate,Emergency fund,High
+44,45000,15.3,0.44,20,Advanced,Retirement,Medium
+37,30000,9.6,0.27,10,Beginner,Retirement,Medium
+52,60000,0.2,0.43,15,Intermediate,Education,Medium
+32,30000,29.1,0.23,25,Intermediate,Income,High
+37,75000,12.0,0.2,10,Beginner,Education,Medium
+29,60000,6.0,0.45,20,Intermediate,Income,High
+25,110000,3.1,0.15,20,Intermediate,Retirement,High
+61,30000,6.0,0.35,15,Advanced,Retirement,Low
+25,60000,21.4,0.25,20,Advanced,Wealth building,High
+46,90000,22.5,0.41,30,Intermediate,Retirement,High
+24,90000,19.2,0.55,15,Intermediate,Education,High
+53,30000,15.1,0.22,15,Advanced,Income,Medium
+24,110000,4.0,0.2,10,Intermediate,Education,Medium
+48,110000,8.2,0.38,20,Beginner,Wealth building,Medium
+50,60000,5.1,0.12,25,Intermediate,Retirement,Medium
+53,60000,18.6,0.52,15,Advanced,Retirement,Medium
+40,180000,5.5,0.5,15,Intermediate,Wealth building,Medium
+42,90000,8.3,0.13,15,Intermediate,Emergency fund,Medium
+26,75000,12.5,0.04,20,Beginner,Wealth building,High
+39,110000,0.6,0.11,10,Advanced,Income,Medium
+49,60000,14.4,0.11,25,Intermediate,Education,High
+63,75000,13.1,0.4,15,Intermediate,Retirement,Low
+43,60000,23.5,0.51,25,Beginner,Retirement,Medium
+42,110000,7.4,0.4,20,Beginner,Emergency fund,Medium
+27,75000,3.6,0.24,20,Intermediate,Retirement,Medium
+22,90000,11.0,0.33,10,Advanced,Education,Medium
+26,60000,5.2,0.15,25,Beginner,Wealth building,Medium
+62,60000,14.3,0.44,10,Beginner,Retirement,Low
+33,75000,0.0,0.34,10,Beginner,Wealth building,Medium
+47,90000,9.2,0.4,20,Beginner,Wealth building,Medium
+67,75000,6.6,0.17,25,Beginner,Education,Medium
+55,30000,18.5,0.25,5,Intermediate,Retirement,Low
+35,110000,7.5,0.39,5,Advanced,Education,Medium
+47,30000,0.1,0.5,25,Beginner,Emergency fund,Medium
+66,140000,12.4,0.19,25,Intermediate,Emergency fund,Medium
+48,30000,16.6,0.4,10,Beginner,Retirement,Low
+30,90000,11.8,0.17,20,Beginner,Emergency fund,Medium
+47,45000,9.1,0.6,15,Beginner,Wealth building,Medium
+43,140000,8.6,0.22,20,Intermediate,Wealth building,High
+51,75000,14.9,0.38,25,Beginner,Education,Medium
+64,45000,6.9,0.3,5,Intermediate,Wealth building,Low
+38,60000,11.4,0.67,25,Beginner,Education,Medium
+47,45000,20.0,0.31,20,Beginner,Retirement,Medium
+57,45000,3.6,0.2,20,Beginner,Education,Medium
+22,140000,13.7,0.38,20,Advanced,Retirement,High
+29,75000,0.0,0.37,30,Intermediate,Education,High
+56,110000,15.8,0.26,5,Advanced,Income,Medium
+36,90000,6.2,0.12,5,Beginner,Retirement,Low
+43,90000,22.2,0.2,10,Beginner,Wealth building,Medium
+35,45000,2.2,0.41,30,Beginner,Emergency fund,Medium
+47,60000,17.5,0.02,25,Beginner,Retirement,High
+49,110000,23.8,0.24,20,Intermediate,Wealth building,Medium
+44,180000,5.8,0.43,5,Beginner,Wealth building,Low
+35,60000,7.1,0.27,25,Beginner,Education,High
+45,60000,6.4,0.61,25,Intermediate,Education,Medium
+23,75000,10.1,0.02,20,Intermediate,Emergency fund,High
+66,180000,18.1,0.14,15,Advanced,Emergency fund,Medium
+47,60000,9.5,0.0,5,Beginner,Emergency fund,Low
+35,75000,5.0,0.58,20,Intermediate,Wealth building,Medium
+28,140000,0.0,0.14,25,Beginner,Wealth building,Medium
+24,30000,26.8,0.0,5,Advanced,Wealth building,Medium
+44,30000,27.4,0.19,20,Intermediate,Income,Medium
+67,90000,18.5,0.07,15,Intermediate,Emergency fund,Medium
+64,140000,7.5,0.19,25,Beginner,Wealth building,Medium
+66,60000,20.0,0.29,20,Intermediate,Education,Medium
+39,75000,21.6,0.4,10,Beginner,Wealth building,Medium
+59,75000,12.0,0.25,20,Intermediate,Emergency fund,Medium
+56,75000,14.3,0.28,15,Advanced,Wealth building,Low
+36,90000,23.9,0.19,10,Advanced,Retirement,High
+46,75000,0.9,0.05,25,Intermediate,Emergency fund,Medium
+58,75000,22.0,0.0,5,Advanced,Emergency fund,Medium
+49,75000,11.5,0.23,15,Beginner,Wealth building,Medium
+31,90000,5.1,0.29,5,Advanced,Wealth building,Medium
+60,75000,5.8,0.21,5,Intermediate,Emergency fund,Low
+38,110000,7.1,0.01,15,Intermediate,Education,High
+60,30000,4.3,0.31,5,Advanced,Education,Low
+43,110000,28.2,0.52,20,Advanced,Wealth building,High
+47,110000,17.9,0.26,5,Beginner,Income,Low
+65,60000,22.5,0.19,25,Intermediate,Emergency fund,Medium
+46,75000,18.5,0.27,5,Beginner,Education,Low
+38,75000,14.5,0.11,5,Advanced,Emergency fund,Medium
+34,60000,14.6,0.1,15,Intermediate,Retirement,Medium
+41,75000,10.8,0.35,30,Beginner,Retirement,Medium
+46,30000,11.5,0.43,20,Intermediate,Emergency fund,Medium
+25,60000,2.7,0.26,25,Intermediate,Wealth building,Medium
+31,110000,22.7,0.0,10,Intermediate,Emergency fund,High
+24,60000,0.0,0.33,25,Beginner,Wealth building,High
+62,110000,5.5,0.59,5,Beginner,Retirement,Low
+66,75000,30.1,0.24,10,Intermediate,Retirement,Medium
+39,110000,15.1,0.25,20,Beginner,Emergency fund,Medium
+57,75000,15.4,0.15,15,Intermediate,Retirement,Medium
+43,30000,19.1,0.35,30,Intermediate,Emergency fund,Medium
+55,90000,1.7,0.18,5,Beginner,Wealth building,Medium
+29,30000,2.8,0.43,30,Intermediate,Education,High
+61,75000,10.4,0.18,20,Intermediate,Retirement,Medium
+65,140000,6.8,0.33,20,Intermediate,Retirement,Medium
+40,45000,13.4,0.27,5,Beginner,Emergency fund,Low
+63,75000,17.9,0.51,10,Intermediate,Wealth building,Low
+62,90000,25.1,0.34,30,Beginner,Retirement,Medium
+58,140000,20.5,0.49,15,Advanced,Income,Medium
+27,90000,6.0,0.3,20,Beginner,Retirement,Medium
+47,60000,11.0,0.25,30,Advanced,Wealth building,Medium
+55,90000,8.8,0.27,10,Intermediate,Retirement,Medium
+66,60000,5.9,0.16,20,Advanced,Wealth building,Medium
+27,90000,4.0,0.36,20,Intermediate,Wealth building,Medium
+58,140000,27.3,0.18,10,Beginner,Retirement,Medium
+54,90000,14.1,0.3,10,Advanced,Education,Medium
+43,110000,12.2,0.41,15,Beginner,Wealth building,Medium
+42,30000,17.9,0.52,15,Beginner,Emergency fund,Medium
+27,90000,18.3,0.3,25,Beginner,Retirement,High
+27,110000,23.0,0.41,5,Advanced,Wealth building,Medium
+25,30000,8.1,0.39,30,Intermediate,Retirement,High
+51,110000,17.2,0.22,5,Intermediate,Education,Low
+32,60000,6.7,0.6,20,Intermediate,Emergency fund,Medium
+51,90000,12.5,0.19,20,Intermediate,Education,Medium
+52,110000,14.5,0.29,10,Intermediate,Wealth building,Medium
+45,90000,15.2,0.5,10,Beginner,Education,Low
+30,45000,14.9,0.49,25,Advanced,Emergency fund,Medium
+24,90000,20.4,0.28,30,Beginner,Retirement,High
+52,75000,9.2,0.43,15,Beginner,Retirement,Low
+61,140000,15.5,0.25,15,Intermediate,Wealth building,Medium
+58,75000,7.9,0.21,15,Intermediate,Emergency fund,Low
+57,60000,37.4,0.1,5,Intermediate,Retirement,Medium
+45,90000,6.7,0.39,20,Beginner,Emergency fund,Medium
+52,75000,8.4,0.4,25,Beginner,Wealth building,Medium
+27,90000,21.1,0.19,15,Intermediate,Wealth building,High
+23,90000,10.6,0.32,30,Intermediate,Retirement,High
+41,140000,21.1,0.68,5,Beginner,Wealth building,Medium
+49,90000,15.2,0.45,20,Intermediate,Retirement,Medium
+32,75000,10.8,0.14,15,Beginner,Retirement,Medium
+25,45000,8.0,0.43,15,Beginner,Emergency fund,Medium
+36,45000,7.7,0.15,15,Beginner,Retirement,Medium
+27,45000,10.9,0.0,10,Advanced,Retirement,Medium
+51,45000,12.6,0.28,25,Intermediate,Retirement,Medium
+59,90000,7.3,0.51,25,Beginner,Wealth building,Medium
+23,90000,13.1,0.49,15,Intermediate,Retirement,Medium
+36,75000,5.2,0.34,25,Advanced,Retirement,Medium
+32,110000,20.0,0.2,15,Intermediate,Wealth building,High
+29,180000,21.6,0.35,25,Advanced,Wealth building,High
+47,110000,8.4,0.24,10,Beginner,Income,Medium
+66,90000,7.9,0.2,10,Advanced,Wealth building,Medium
+65,75000,15.4,0.44,15,Intermediate,Wealth building,Low
+26,75000,24.1,0.2,20,Beginner,Wealth building,High
+27,45000,25.9,0.45,20,Intermediate,Retirement,High
+47,75000,2.8,0.19,15,Advanced,Education,Medium
+25,140000,22.1,0.59,5,Intermediate,Wealth building,Medium
+40,110000,13.5,0.03,15,Intermediate,Retirement,Medium
+41,60000,13.7,0.14,20,Beginner,Education,Medium
+54,75000,18.0,0.26,20,Intermediate,Retirement,Medium
+41,110000,10.2,0.0,10,Beginner,Income,Medium
+33,30000,22.8,0.0,5,Beginner,Education,Medium
+22,75000,25.4,0.0,25,Intermediate,Wealth building,High
+47,110000,25.7,0.24,10,Advanced,Retirement,Medium
+35,75000,0.0,0.24,5,Intermediate,Retirement,Medium
+59,30000,12.2,0.33,5,Beginner,Retirement,Low
+58,75000,0.0,0.25,15,Intermediate,Retirement,Medium
+32,110000,7.9,0.32,20,Advanced,Wealth building,High
+57,90000,0.0,0.21,20,Intermediate,Income,Medium
+34,60000,17.6,0.39,15,Intermediate,Wealth building,Medium
+64,75000,15.8,0.37,25,Advanced,Emergency fund,Medium
+24,75000,10.5,0.23,10,Intermediate,Emergency fund,Medium
+54,75000,7.7,0.36,25,Beginner,Education,Medium
+27,90000,16.5,0.25,20,Beginner,Retirement,Medium
+31,45000,5.9,0.05,20,Advanced,Wealth building,Medium
+26,140000,5.4,0.42,10,Intermediate,Education,Medium
+44,30000,4.4,0.14,5,Beginner,Education,Medium
+31,60000,12.4,0.41,15,Intermediate,Income,Medium
+65,30000,9.3,0.33,20,Intermediate,Emergency fund,Medium
+23,75000,10.9,0.27,5,Advanced,Retirement,Medium
+34,75000,18.2,0.0,30,Beginner,Wealth building,High
+61,75000,21.7,0.51,30,Intermediate,Retirement,High
+23,45000,25.6,0.23,20,Advanced,Emergency fund,High
+41,90000,14.5,0.38,30,Beginner,Wealth building,Medium
+22,30000,16.8,0.26,10,Beginner,Emergency fund,Medium
+58,110000,15.5,0.24,5,Advanced,Income,Low
+30,140000,0.6,0.31,5,Intermediate,Emergency fund,Medium
+38,60000,11.0,0.28,20,Intermediate,Retirement,Medium
+30,75000,11.1,0.24,5,Intermediate,Retirement,Medium
+32,60000,9.9,0.27,30,Beginner,Education,High
+36,30000,13.7,0.34,10,Advanced,Retirement,Medium
+45,75000,12.2,0.35,15,Beginner,Retirement,Medium
+59,110000,6.1,0.29,25,Beginner,Retirement,Medium
+56,90000,12.8,0.37,10,Beginner,Wealth building,Low
+51,45000,8.9,0.22,10,Beginner,Retirement,Medium
+52,110000,0.0,0.61,20,Advanced,Income,Medium
+26,75000,2.8,0.5,10,Intermediate,Income,Medium
+65,110000,14.7,0.39,10,Advanced,Income,Medium
+35,90000,22.7,0.0,10,Intermediate,Retirement,Medium
+32,75000,0.0,0.37,20,Intermediate,Income,Medium
+30,45000,7.0,0.23,30,Intermediate,Income,High
+55,45000,17.5,0.13,25,Advanced,Income,Medium
+33,180000,21.0,0.23,15,Intermediate,Emergency fund,High
+56,60000,10.6,0.15,15,Beginner,Emergency fund,Medium
+56,180000,8.5,0.36,15,Beginner,Retirement,Medium
+22,75000,23.8,0.52,30,Beginner,Education,High
+61,45000,20.4,0.4,10,Intermediate,Retirement,Low
+43,45000,20.9,0.69,15,Advanced,Retirement,Medium
+50,60000,10.3,0.05,25,Beginner,Income,Medium
+29,140000,22.9,0.2,30,Beginner,Wealth building,High
+32,75000,0.0,0.14,10,Beginner,Retirement,Medium
+62,75000,23.0,0.46,10,Intermediate,Income,Medium
+58,60000,13.5,0.25,10,Beginner,Income,Low
+35,45000,15.0,0.31,5,Beginner,Retirement,Medium
+51,75000,6.4,0.38,20,Beginner,Education,Medium
+56,45000,0.0,0.06,20,Intermediate,Wealth building,Medium
+42,110000,14.9,0.19,20,Intermediate,Wealth building,Medium
+58,60000,18.4,0.43,5,Intermediate,Retirement,Low
+26,60000,19.6,0.2,5,Beginner,Retirement,Medium
+40,75000,18.8,0.02,10,Intermediate,Retirement,Medium
+35,75000,16.9,0.14,15,Beginner,Retirement,Medium
+47,180000,6.6,0.24,25,Beginner,Income,Medium
+25,75000,20.1,0.31,10,Intermediate,Emergency fund,Medium
+46,45000,5.7,0.27,5,Beginner,Education,Low
+66,90000,22.9,0.19,15,Intermediate,Emergency fund,Medium
+63,45000,13.3,0.42,15,Beginner,Retirement,Low
+46,30000,13.6,0.26,15,Beginner,Income,Medium
+39,180000,20.9,0.31,25,Advanced,Education,High
+61,110000,22.0,0.2,5,Intermediate,Retirement,Medium
+29,180000,20.2,0.51,25,Intermediate,Retirement,High
+60,75000,7.4,0.22,15,Advanced,Emergency fund,Low
+61,75000,20.1,0.29,15,Intermediate,Emergency fund,Medium
+35,45000,7.5,0.44,30,Intermediate,Education,High
+53,60000,20.3,0.32,10,Intermediate,Retirement,Medium
+59,110000,2.6,0.32,20,Beginner,Retirement,Low
+54,60000,13.3,0.0,10,Beginner,Wealth building,Medium
+44,110000,7.4,0.38,20,Intermediate,Emergency fund,Medium
+36,90000,21.0,0.29,25,Beginner,Retirement,High
+54,45000,22.9,0.36,30,Beginner,Wealth building,Medium
+46,75000,15.6,0.31,25,Beginner,Wealth building,Medium
+38,90000,15.3,0.2,20,Beginner,Emergency fund,Medium
+54,60000,19.6,0.41,10,Beginner,Retirement,Low
+23,110000,23.0,0.31,20,Beginner,Wealth building,High
+35,75000,14.3,0.09,25,Beginner,Education,High
+61,45000,10.0,0.48,5,Beginner,Income,Low
+61,90000,19.2,0.07,15,Intermediate,Retirement,Medium
+60,180000,0.0,0.42,25,Beginner,Retirement,Medium
+27,45000,21.3,0.5,20,Advanced,Income,High
+27,110000,8.3,0.11,15,Advanced,Wealth building,High
+24,60000,12.1,0.26,25,Intermediate,Emergency fund,High
+28,110000,21.3,0.25,10,Intermediate,Emergency fund,Medium
+29,90000,10.7,0.25,10,Beginner,Retirement,Medium
+63,60000,19.2,0.55,20,Beginner,Emergency fund,Low
+36,60000,23.1,0.12,15,Advanced,Emergency fund,High
+50,110000,14.9,0.23,25,Beginner,Wealth building,Medium
+54,75000,16.5,0.51,10,Advanced,Retirement,Medium
+51,90000,13.0,0.23,10,Intermediate,Income,Medium
+60,45000,14.9,0.14,10,Beginner,Wealth building,Low
+48,110000,5.1,0.32,30,Intermediate,Emergency fund,Medium
+57,90000,11.7,0.4,15,Intermediate,Education,Medium
+50,140000,3.7,0.22,15,Beginner,Wealth building,Medium
+59,45000,6.8,0.36,5,Beginner,Education,Low
+54,90000,0.0,0.07,10,Intermediate,Income,Low
+58,90000,16.1,0.08,15,Intermediate,Wealth building,Medium
+48,60000,27.5,0.21,5,Beginner,Wealth building,Medium
+54,75000,10.4,0.37,20,Beginner,Income,Medium
+25,30000,21.7,0.39,15,Advanced,Retirement,Medium
+43,90000,23.0,0.1,25,Intermediate,Retirement,High
+23,75000,4.4,0.39,20,Intermediate,Income,Medium
+31,30000,6.1,0.3,15,Advanced,Education,Medium
+26,90000,21.9,0.15,10,Beginner,Income,High
+31,75000,13.3,0.08,25,Intermediate,Retirement,High
+54,30000,3.7,0.31,25,Advanced,Retirement,Medium
+59,180000,8.9,0.47,10,Intermediate,Retirement,Low
+34,140000,17.4,0.29,30,Beginner,Emergency fund,High
+52,75000,7.6,0.14,5,Beginner,Emergency fund,Low
+57,45000,0.0,0.0,5,Intermediate,Wealth building,Low
+66,90000,11.4,0.51,10,Beginner,Retirement,Low
+45,75000,12.1,0.44,30,Advanced,Emergency fund,High
+36,60000,14.1,0.33,20,Beginner,Wealth building,Medium
+50,75000,24.1,0.5,25,Beginner,Retirement,Medium
+29,75000,14.4,0.31,10,Beginner,Income,Medium
+26,75000,15.9,0.2,20,Intermediate,Retirement,High
+50,75000,22.4,0.36,15,Advanced,Emergency fund,Medium
+25,90000,14.1,0.16,25,Intermediate,Education,High
+33,140000,31.1,0.13,5,Advanced,Wealth building,High
+66,60000,3.9,0.4,10,Beginner,Retirement,Low
+23,90000,6.5,0.41,10,Beginner,Retirement,Medium
+48,140000,18.9,0.09,25,Advanced,Education,High
+52,75000,24.0,0.09,15,Advanced,Retirement,Medium
+57,75000,12.4,0.21,15,Advanced,Emergency fund,Medium
+57,90000,5.9,0.17,15,Intermediate,Income,Medium
+47,90000,28.1,0.35,30,Beginner,Income,High
+64,110000,7.7,0.29,25,Beginner,Wealth building,Medium
+48,75000,16.7,0.45,25,Advanced,Education,High
+26,180000,24.5,0.33,15,Beginner,Income,High
+41,30000,10.5,0.18,10,Beginner,Wealth building,Low
+32,30000,9.0,0.0,30,Intermediate,Retirement,High
+31,90000,9.6,0.31,15,Beginner,Retirement,Medium
+61,60000,21.2,0.02,10,Advanced,Retirement,Medium
+59,60000,22.5,0.18,15,Beginner,Education,Medium
+27,60000,14.3,0.17,30,Intermediate,Wealth building,High
+29,60000,29.1,0.2,15,Intermediate,Education,Medium
+44,30000,14.3,0.08,20,Intermediate,Education,High
+47,180000,24.3,0.17,25,Intermediate,Emergency fund,High
+67,60000,10.5,0.45,15,Beginner,Emergency fund,Medium
+64,90000,32.7,0.45,10,Intermediate,Retirement,Medium
+33,110000,26.6,0.51,30,Intermediate,Education,High
+47,140000,13.0,0.28,30,Intermediate,Wealth building,High
+34,30000,25.5,0.32,25,Beginner,Wealth building,High
+61,110000,25.1,0.45,20,Beginner,Retirement,Medium
+39,75000,26.4,0.06,15,Beginner,Income,Medium
+46,90000,0.0,0.4,30,Intermediate,Income,Medium
+54,90000,19.8,0.48,10,Beginner,Wealth building,Low
+61,110000,18.3,0.15,25,Advanced,Wealth building,High
+64,60000,17.8,0.49,30,Intermediate,Emergency fund,Medium
+33,90000,15.7,0.59,20,Intermediate,Retirement,High
+65,75000,16.0,0.4,25,Advanced,Retirement,Medium
+57,110000,24.3,0.37,25,Beginner,Emergency fund,Medium
+25,180000,18.3,0.11,10,Advanced,Retirement,High
+26,60000,15.7,0.44,20,Intermediate,Wealth building,Medium
+58,180000,23.1,0.13,5,Advanced,Wealth building,Medium
+29,45000,17.3,0.34,20,Advanced,Wealth building,Medium
+63,30000,18.1,0.35,10,Beginner,Retirement,Low
+49,30000,28.9,0.0,15,Beginner,Wealth building,Medium
+52,60000,10.5,0.34,25,Intermediate,Retirement,Medium
+30,90000,1.9,0.67,30,Intermediate,Wealth building,High
+50,30000,14.6,0.0,15,Beginner,Emergency fund,Medium
+35,30000,15.7,0.27,20,Beginner,Income,Medium
+61,140000,19.8,0.0,20,Beginner,Retirement,Medium
+62,110000,14.9,0.15,30,Intermediate,Education,Medium
+43,110000,20.0,0.0,15,Advanced,Retirement,High
+32,140000,34.0,0.3,20,Intermediate,Wealth building,High
+44,90000,20.4,0.4,30,Intermediate,Wealth building,High
+22,45000,21.8,0.34,15,Beginner,Wealth building,Medium
+67,75000,13.0,0.14,30,Beginner,Emergency fund,Medium
+58,90000,2.9,0.19,30,Intermediate,Wealth building,Medium
+42,60000,0.0,0.32,30,Advanced,Retirement,Medium
+47,90000,9.9,0.15,10,Beginner,Education,Medium
+67,30000,0.0,0.08,15,Intermediate,Retirement,Low
+57,60000,18.1,0.24,25,Advanced,Retirement,Medium
+44,75000,10.9,0.14,15,Advanced,Retirement,Medium
+22,90000,3.5,0.34,20,Beginner,Retirement,Medium
+61,75000,15.0,0.47,10,Beginner,Wealth building,Low
+36,90000,8.1,0.67,5,Beginner,Wealth building,Low
+42,30000,17.6,0.33,15,Intermediate,Retirement,Medium
+30,45000,19.7,0.38,20,Advanced,Retirement,Medium
+30,110000,8.4,0.19,15,Beginner,Emergency fund,Medium
+31,90000,12.1,0.2,20,Beginner,Education,High
+47,45000,15.7,0.47,20,Advanced,Income,Medium
+62,110000,2.7,0.24,20,Intermediate,Income,Medium
+56,60000,15.7,0.29,20,Advanced,Income,Medium
+46,75000,2.6,0.46,15,Beginner,Education,Low
+47,45000,18.5,0.24,15,Intermediate,Emergency fund,Medium
+32,90000,10.5,0.51,10,Beginner,Retirement,Medium
+59,90000,2.5,0.37,20,Beginner,Emergency fund,Low
+23,60000,9.4,0.35,20,Intermediate,Retirement,High
+28,110000,9.7,0.18,15,Beginner,Education,Medium
+39,75000,22.5,0.36,15,Beginner,Wealth building,Medium
+48,60000,15.4,0.22,25,Advanced,Emergency fund,High
+55,45000,6.3,0.35,5,Beginner,Retirement,Low
+48,60000,27.2,0.26,30,Intermediate,Wealth building,High
+38,30000,19.0,0.43,5,Beginner,Retirement,Medium
+64,90000,11.3,0.28,30,Advanced,Retirement,Medium
+65,110000,1.6,0.59,15,Beginner,Wealth building,Low
+45,75000,10.6,0.24,15,Intermediate,Retirement,Medium
+46,60000,12.2,0.2,10,Beginner,Wealth building,Medium
+28,30000,17.0,0.33,5,Intermediate,Wealth building,Medium
+27,60000,18.9,0.44,10,Intermediate,Education,Medium
+45,75000,20.5,0.44,10,Beginner,Wealth building,Low
+54,90000,1.1,0.31,20,Beginner,Wealth building,Medium
+50,45000,15.7,0.33,15,Advanced,Income,Medium
+64,90000,12.7,0.33,25,Advanced,Wealth building,Medium
+43,110000,35.4,0.12,10,Beginner,Wealth building,High
+47,75000,14.5,0.43,30,Beginner,Wealth building,High
+49,110000,9.0,0.09,20,Beginner,Education,Medium
+42,75000,14.9,0.12,10,Beginner,Retirement,Medium
+28,90000,13.9,0.29,15,Advanced,Wealth building,High
+38,75000,0.0,0.23,10,Intermediate,Education,Low
+41,75000,17.3,0.4,10,Intermediate,Retirement,Medium
+62,60000,11.5,0.35,20,Advanced,Education,Medium
+41,60000,13.8,0.3,20,Intermediate,Wealth building,Medium
+43,60000,7.0,0.11,30,Intermediate,Wealth building,High
+49,75000,5.2,0.28,20,Beginner,Education,Medium
+61,45000,21.0,0.27,30,Beginner,Retirement,Medium
+28,140000,22.9,0.31,30,Intermediate,Education,High
+22,90000,17.3,0.22,25,Beginner,Income,High
+53,75000,0.0,0.36,20,Beginner,Wealth building,Medium
+34,45000,17.9,0.23,10,Beginner,Income,Medium
+51,140000,0.0,0.34,10,Beginner,Retirement,Low
+44,110000,8.7,0.4,20,Intermediate,Education,Medium
+40,90000,20.9,0.2,15,Intermediate,Retirement,Medium
+53,60000,19.3,0.16,10,Beginner,Retirement,Medium
+51,75000,17.7,0.35,15,Beginner,Retirement,Medium
+50,45000,24.5,0.08,5,Intermediate,Retirement,Medium
+66,45000,18.5,0.45,25,Beginner,Retirement,Medium
+50,110000,0.0,0.28,5,Intermediate,Income,Low
+51,90000,11.0,0.26,20,Intermediate,Education,Medium
+37,90000,13.7,0.36,25,Beginner,Retirement,Medium
+61,140000,12.7,0.35,10,Intermediate,Retirement,Medium
+40,90000,9.1,0.28,20,Intermediate,Education,Medium
+39,75000,5.8,0.41,25,Beginner,Wealth building,Medium
+22,60000,33.2,0.18,10,Beginner,Retirement,High
+35,140000,10.9,0.39,10,Advanced,Wealth building,Medium
+23,45000,32.8,0.12,15,Beginner,Wealth building,High
+49,140000,4.9,0.36,20,Advanced,Retirement,Medium
+51,110000,19.3,0.23,20,Intermediate,Emergency fund,Medium
+59,45000,15.8,0.08,10,Beginner,Emergency fund,Medium
+25,75000,6.6,0.32,15,Beginner,Retirement,Medium
+22,110000,10.3,0.27,10,Intermediate,Income,Medium
+29,75000,13.9,0.05,25,Intermediate,Wealth building,High
+50,140000,7.2,0.0,15,Intermediate,Retirement,Medium
+60,140000,12.0,0.26,25,Advanced,Retirement,Medium
+24,75000,0.0,0.52,15,Advanced,Retirement,Medium
+53,60000,19.7,0.33,25,Beginner,Wealth building,Medium
+31,140000,23.8,0.18,20,Advanced,Retirement,High
+31,90000,17.6,0.44,20,Advanced,Wealth building,High
+40,45000,32.1,0.42,15,Advanced,Retirement,Medium
+67,30000,19.5,0.47,25,Intermediate,Emergency fund,Medium
+55,75000,23.1,0.38,15,Intermediate,Education,Medium
+54,140000,23.9,0.41,15,Intermediate,Wealth building,Medium
+44,110000,0.0,0.39,20,Beginner,Emergency fund,Medium
+49,90000,17.4,0.21,25,Advanced,Income,High
+53,45000,2.9,0.03,20,Beginner,Emergency fund,Medium
+28,60000,4.6,0.2,15,Beginner,Wealth building,Medium
+50,110000,5.9,0.45,20,Advanced,Wealth building,Medium
+29,45000,11.5,0.22,20,Beginner,Education,High
+22,60000,19.2,0.26,30,Advanced,Retirement,High
+24,45000,17.5,0.11,25,Intermediate,Retirement,High
+45,90000,13.9,0.2,20,Beginner,Wealth building,Medium
+44,140000,19.8,0.28,15,Intermediate,Emergency fund,Medium
+29,60000,20.3,0.35,25,Intermediate,Education,High
+58,75000,17.5,0.21,20,Intermediate,Retirement,Medium
+24,90000,0.2,0.2,30,Advanced,Retirement,High
+54,180000,8.1,0.41,10,Advanced,Income,Low
+49,45000,14.2,0.33,5,Beginner,Retirement,Low
+29,75000,19.9,0.35,5,Beginner,Retirement,Medium
+55,75000,3.4,0.51,20,Advanced,Wealth building,Medium
+56,110000,13.9,0.2,30,Intermediate,Education,High
+53,75000,1.5,0.27,5,Beginner,Education,Low
+45,45000,22.2,0.36,25,Advanced,Income,High
+35,90000,15.9,0.15,20,Advanced,Retirement,High
+53,110000,3.2,0.31,25,Intermediate,Wealth building,Medium
+67,30000,3.2,0.28,15,Intermediate,Retirement,Low
+64,110000,17.1,0.7,25,Intermediate,Education,Medium
+37,45000,25.0,0.29,5,Intermediate,Wealth building,Medium
+25,75000,5.2,0.45,25,Advanced,Retirement,High
+58,75000,20.3,0.4,10,Advanced,Emergency fund,Low
+42,90000,9.7,0.11,15,Intermediate,Wealth building,Medium
+35,60000,20.6,0.05,25,Intermediate,Wealth building,High
+52,110000,19.5,0.32,10,Advanced,Education,Medium
+39,90000,15.2,0.47,10,Beginner,Retirement,Medium
+28,90000,0.0,0.32,20,Beginner,Retirement,Medium
+31,110000,19.4,0.29,20,Advanced,Retirement,High
+28,90000,18.0,0.24,20,Beginner,Retirement,High
+54,30000,17.3,0.08,10,Beginner,Retirement,Low
+44,75000,15.6,0.14,5,Beginner,Emergency fund,Medium
+42,140000,7.0,0.04,15,Beginner,Retirement,Medium
+40,45000,22.7,0.11,10,Beginner,Income,Medium
+40,90000,21.2,0.2,30,Beginner,Retirement,High
+57,180000,5.4,0.4,5,Advanced,Retirement,Medium
+50,30000,24.5,0.21,15,Intermediate,Retirement,Medium
+39,90000,15.1,0.32,5,Intermediate,Education,Medium
+23,75000,15.0,0.3,5,Beginner,Wealth building,Medium
+22,75000,12.6,0.35,20,Intermediate,Education,High
+26,45000,13.4,0.12,20,Intermediate,Education,Medium
+41,30000,25.0,0.44,5,Intermediate,Income,Medium
+32,90000,22.3,0.07,5,Beginner,Education,Medium
+63,110000,22.1,0.21,5,Intermediate,Retirement,Medium
+23,110000,15.5,0.28,25,Advanced,Education,High
+24,75000,21.1,0.39,20,Intermediate,Income,High
+44,45000,7.3,0.49,5,Intermediate,Income,Low
+33,90000,18.7,0.4,20,Intermediate,Retirement,High
+41,60000,12.8,0.49,25,Intermediate,Emergency fund,Medium
+26,140000,0.0,0.16,25,Intermediate,Retirement,High
+58,110000,1.3,0.46,30,Beginner,Retirement,Medium
+59,90000,8.7,0.43,15,Intermediate,Emergency fund,Medium
+51,140000,17.3,0.0,10,Advanced,Income,Medium
+30,30000,8.7,0.25,10,Intermediate,Wealth building,Medium
+55,90000,9.3,0.37,25,Beginner,Education,Medium
+65,60000,20.1,0.2,30,Beginner,Retirement,Medium
+56,140000,9.6,0.12,15,Intermediate,Retirement,Medium
+43,60000,24.6,0.6,15,Advanced,Wealth building,Medium
+65,90000,23.3,0.3,15,Intermediate,Wealth building,Medium
+45,110000,14.2,0.3,15,Intermediate,Education,Medium
+38,30000,20.0,0.08,10,Beginner,Retirement,Medium
+31,75000,18.9,0.19,20,Intermediate,Wealth building,High
+51,110000,12.0,0.15,5,Intermediate,Wealth building,Medium
+67,75000,20.9,0.44,10,Advanced,Retirement,Low
+44,60000,22.1,0.36,20,Beginner,Income,Medium
+53,60000,6.4,0.19,5,Intermediate,Wealth building,Low
+38,45000,15.2,0.36,5,Intermediate,Wealth building,Medium
+38,110000,15.1,0.24,15,Intermediate,Education,Medium
+35,75000,20.8,0.32,25,Advanced,Retirement,High
+30,30000,10.4,0.31,25,Beginner,Education,Medium
+61,75000,9.2,0.34,5,Beginner,Retirement,Low
+23,60000,15.4,0.32,20,Intermediate,Retirement,High
+66,45000,23.5,0.34,10,Intermediate,Income,Medium
+46,75000,4.4,0.47,20,Beginner,Education,Medium
+60,60000,5.8,0.38,25,Intermediate,Wealth building,Medium
+30,60000,9.8,0.23,25,Intermediate,Emergency fund,High
+43,90000,11.3,0.27,15,Advanced,Income,Medium
+64,60000,0.0,0.46,30,Beginner,Retirement,Medium
+67,90000,26.0,0.3,30,Advanced,Retirement,High
+25,75000,13.0,0.22,30,Beginner,Wealth building,High
+47,75000,11.8,0.19,20,Beginner,Retirement,Medium
+50,90000,27.0,0.32,15,Beginner,Retirement,Medium
+66,75000,19.7,0.15,15,Advanced,Education,Medium
+55,110000,9.7,0.47,5,Beginner,Retirement,Low
+44,90000,15.3,0.12,10,Intermediate,Education,Medium
+58,75000,13.7,0.5,25,Intermediate,Wealth building,Medium
+32,110000,25.6,0.24,20,Advanced,Wealth building,High
+27,90000,12.7,0.12,30,Advanced,Emergency fund,High
+39,60000,2.5,0.31,5,Intermediate,Wealth building,Low
+42,60000,0.0,0.14,10,Advanced,Retirement,Low
+63,45000,25.8,0.29,25,Intermediate,Retirement,Medium
+57,140000,7.7,0.19,15,Advanced,Education,Medium
+62,90000,19.4,0.42,10,Beginner,Retirement,Low
+59,140000,14.6,0.3,30,Beginner,Retirement,Medium
+55,90000,10.7,0.1,25,Intermediate,Income,Medium
+38,75000,11.9,0.19,15,Intermediate,Income,Medium
+58,30000,26.7,0.39,25,Intermediate,Wealth building,High
+46,90000,2.4,0.47,20,Intermediate,Retirement,Medium
+59,90000,10.9,0.27,25,Beginner,Emergency fund,Medium
+33,180000,21.3,0.12,25,Intermediate,Education,High
+44,60000,3.7,0.44,5,Beginner,Retirement,Low
+63,75000,24.5,0.39,20,Advanced,Retirement,Medium
+43,90000,21.1,0.48,5,Advanced,Education,Medium
+42,90000,16.2,0.32,5,Advanced,Income,Medium
+48,75000,10.0,0.2,30,Beginner,Education,Medium
+52,110000,2.7,0.36,20,Intermediate,Retirement,Medium
+27,60000,19.7,0.33,25,Advanced,Wealth building,High
+48,90000,36.0,0.19,25,Advanced,Emergency fund,High
+61,90000,15.2,0.31,30,Intermediate,Retirement,Medium
+55,140000,0.0,0.25,25,Intermediate,Retirement,Medium
+33,110000,17.7,0.39,20,Intermediate,Retirement,High
+66,60000,20.9,0.35,15,Intermediate,Wealth building,Medium
+28,60000,6.7,0.12,10,Beginner,Wealth building,Medium
+31,180000,8.8,0.11,15,Intermediate,Education,High
+66,75000,8.0,0.27,15,Advanced,Education,Medium
+38,140000,9.7,0.28,20,Intermediate,Income,Medium
+47,45000,12.6,0.39,20,Intermediate,Education,Medium
+42,90000,7.1,0.36,30,Intermediate,Retirement,High
+49,110000,4.1,0.5,25,Advanced,Retirement,Medium
+67,140000,15.4,0.21,20,Intermediate,Wealth building,Medium
+23,60000,12.5,0.2,15,Intermediate,Retirement,Medium
+64,90000,10.5,0.14,5,Intermediate,Income,Low
+22,75000,14.7,0.39,15,Intermediate,Retirement,Medium
+57,30000,1.8,0.28,25,Intermediate,Retirement,Medium
+47,90000,16.1,0.0,10,Intermediate,Wealth building,Medium
+50,90000,10.7,0.31,25,Intermediate,Wealth building,Medium
+42,140000,15.9,0.32,20,Intermediate,Emergency fund,Medium
+32,75000,17.2,0.26,10,Beginner,Wealth building,Medium
+61,60000,23.0,0.32,10,Beginner,Retirement,Low
+32,30000,14.8,0.1,20,Beginner,Retirement,Medium
+57,75000,22.5,0.53,15,Advanced,Income,Medium
+60,60000,11.4,0.34,25,Beginner,Retirement,Medium
+61,110000,11.8,0.01,25,Beginner,Retirement,Medium
+56,60000,13.3,0.28,20,Beginner,Wealth building,Medium
+55,140000,20.2,0.34,25,Intermediate,Retirement,High
+45,180000,19.0,0.11,20,Beginner,Wealth building,High
+43,90000,15.1,0.36,30,Intermediate,Emergency fund,High
+26,140000,4.2,0.53,10,Beginner,Education,Medium
+54,110000,18.9,0.18,25,Advanced,Emergency fund,High
+57,75000,7.1,0.34,15,Advanced,Retirement,Medium
+41,45000,6.7,0.31,10,Advanced,Wealth building,Medium
+40,75000,4.9,0.43,10,Intermediate,Retirement,Low
+56,75000,13.3,0.26,20,Intermediate,Retirement,Medium
+64,110000,23.7,0.12,10,Intermediate,Wealth building,Medium
+38,75000,6.3,0.42,10,Beginner,Retirement,Medium
+66,140000,27.4,0.13,30,Intermediate,Emergency fund,High
+64,90000,21.3,0.55,25,Beginner,Emergency fund,Medium
+55,45000,2.3,0.36,25,Intermediate,Education,Medium
+30,180000,10.9,0.19,25,Beginner,Education,High
+47,75000,5.7,0.45,30,Intermediate,Retirement,High
+23,75000,19.3,0.28,20,Intermediate,Wealth building,High
+30,90000,6.1,0.25,10,Intermediate,Retirement,Medium
+30,45000,1.0,0.18,25,Advanced,Wealth building,High
+61,90000,11.4,0.0,25,Intermediate,Retirement,Medium
+38,75000,23.4,0.37,15,Intermediate,Retirement,Medium
+22,75000,12.5,0.04,15,Intermediate,Wealth building,High
+46,140000,17.2,0.16,15,Beginner,Emergency fund,Medium
+64,75000,17.5,0.34,30,Intermediate,Emergency fund,Medium
+61,60000,1.9,0.2,15,Advanced,Wealth building,Low
+63,75000,6.8,0.3,30,Advanced,Wealth building,Medium
+46,140000,14.1,0.1,30,Intermediate,Wealth building,High
+60,45000,9.5,0.23,20,Beginner,Emergency fund,Medium
+56,60000,27.6,0.3,20,Beginner,Retirement,Medium
+24,30000,4.2,0.14,15,Intermediate,Emergency fund,Medium
+58,30000,6.7,0.53,5,Advanced,Wealth building,Low
+65,110000,16.3,0.18,10,Intermediate,Retirement,Medium
+65,90000,9.0,0.49,25,Advanced,Retirement,Medium
+51,60000,0.0,0.25,15,Intermediate,Retirement,Medium
+59,90000,29.5,0.04,10,Beginner,Wealth building,Medium
+55,75000,5.4,0.11,10,Beginner,Education,Medium
+33,140000,18.5,0.31,30,Beginner,Retirement,High
+40,180000,4.0,0.43,15,Intermediate,Wealth building,Medium
+58,75000,7.1,0.55,30,Beginner,Income,Medium
+65,110000,1.0,0.3,15,Intermediate,Retirement,Low
+38,110000,8.1,0.1,20,Intermediate,Retirement,Medium
+31,60000,8.8,0.32,5,Beginner,Retirement,Medium
+33,60000,12.9,0.16,20,Beginner,Emergency fund,High
+37,75000,11.0,0.34,20,Beginner,Emergency fund,Medium
+45,110000,2.5,0.14,10,Intermediate,Wealth building,Medium
+40,180000,9.8,0.0,20,Intermediate,Income,High
+29,110000,25.6,0.48,20,Beginner,Emergency fund,High
+52,110000,24.6,0.25,20,Advanced,Retirement,High
+42,90000,17.6,0.29,25,Intermediate,Emergency fund,High
+38,110000,19.3,0.43,15,Intermediate,Retirement,Medium
+44,110000,30.5,0.56,20,Intermediate,Emergency fund,High
+58,60000,18.6,0.39,30,Advanced,Retirement,High
+37,75000,19.2,0.3,30,Intermediate,Emergency fund,High
+27,110000,1.5,0.35,30,Intermediate,Retirement,High
+29,30000,5.1,0.24,15,Beginner,Education,Medium
+46,110000,13.7,0.29,25,Intermediate,Retirement,High
+39,45000,7.5,0.3,20,Intermediate,Emergency fund,Medium
+46,75000,6.0,0.16,5,Intermediate,Retirement,Medium
+33,110000,6.9,0.28,25,Advanced,Income,High
+36,60000,2.6,0.34,20,Advanced,Education,Medium
+47,60000,7.7,0.36,10,Beginner,Retirement,Low
+62,75000,16.7,0.35,5,Beginner,Income,Low
+66,140000,28.4,0.08,25,Beginner,Wealth building,Medium
+47,30000,20.4,0.46,5,Intermediate,Emergency fund,Medium
+53,140000,19.1,0.45,5,Beginner,Emergency fund,Medium
+31,45000,1.0,0.27,15,Beginner,Retirement,Medium
+37,180000,15.0,0.35,10,Beginner,Income,Medium
+28,140000,13.5,0.25,30,Beginner,Retirement,High
+38,75000,16.3,0.39,15,Beginner,Retirement,Medium
+44,75000,11.1,0.16,20,Beginner,Education,Medium
+47,75000,27.3,0.48,30,Intermediate,Emergency fund,High
+42,90000,14.4,0.39,20,Beginner,Retirement,Medium
+43,45000,15.2,0.39,15,Beginner,Retirement,Medium
+28,30000,0.0,0.26,25,Advanced,Emergency fund,Medium
+35,30000,13.1,0.07,15,Advanced,Retirement,High
+36,75000,23.2,0.41,15,Beginner,Income,Medium
+28,60000,18.4,0.07,25,Beginner,Emergency fund,High
+30,90000,0.0,0.41,25,Intermediate,Retirement,Medium
+29,180000,10.4,0.16,25,Beginner,Wealth building,High
+44,75000,27.9,0.04,30,Beginner,Wealth building,High
+50,75000,12.8,0.28,25,Beginner,Wealth building,Medium
+39,75000,16.6,0.46,25,Beginner,Education,Medium
+52,110000,27.0,0.14,25,Intermediate,Income,High
+51,140000,12.8,0.52,5,Advanced,Wealth building,Medium
+60,110000,20.3,0.38,15,Intermediate,Wealth building,Medium
+56,180000,17.3,0.3,25,Intermediate,Retirement,Medium
+39,30000,19.0,0.21,20,Intermediate,Emergency fund,High
+63,110000,17.0,0.23,10,Intermediate,Emergency fund,Medium
+60,90000,9.6,0.34,15,Intermediate,Emergency fund,Medium
+38,60000,10.4,0.41,15,Beginner,Retirement,Low
+35,140000,7.2,0.19,20,Intermediate,Education,Medium
+52,45000,0.9,0.16,25,Advanced,Retirement,Medium
+45,90000,24.0,0.25,30,Beginner,Emergency fund,High
+56,60000,14.1,0.49,25,Advanced,Education,Medium
+65,75000,23.6,0.1,25,Intermediate,Emergency fund,Medium
+66,90000,26.5,0.45,15,Intermediate,Wealth building,Medium
+55,75000,14.4,0.29,15,Beginner,Emergency fund,Low
+24,75000,3.5,0.03,15,Intermediate,Retirement,Medium
+58,60000,12.4,0.21,20,Advanced,Education,Medium
+64,110000,8.6,0.37,10,Intermediate,Retirement,Low
+61,45000,0.0,0.55,20,Beginner,Wealth building,Low
+47,75000,10.0,0.08,20,Beginner,Retirement,Medium
+44,140000,13.4,0.0,15,Intermediate,Education,Medium
+65,110000,8.9,0.08,30,Intermediate,Wealth building,Medium
+60,75000,7.8,0.45,20,Intermediate,Emergency fund,Medium
+36,110000,3.8,0.01,10,Advanced,Emergency fund,Medium
+25,110000,15.6,0.5,15,Intermediate,Education,Medium
+50,140000,29.0,0.46,20,Intermediate,Retirement,High
+43,75000,24.2,0.31,15,Beginner,Emergency fund,Medium
+46,60000,19.2,0.19,5,Beginner,Wealth building,Low
+34,60000,19.4,0.29,20,Intermediate,Retirement,Medium
+39,60000,12.9,0.37,30,Advanced,Retirement,High
+54,90000,0.0,0.35,20,Intermediate,Retirement,Medium
+37,30000,11.0,0.54,30,Intermediate,Retirement,Medium
+66,90000,6.2,0.24,25,Beginner,Wealth building,Medium
+63,60000,15.2,0.08,10,Advanced,Retirement,Medium
+65,60000,23.9,0.06,25,Advanced,Wealth building,Medium
+23,110000,29.8,0.03,15,Intermediate,Retirement,High
+56,75000,14.5,0.31,10,Beginner,Retirement,Low
+63,45000,0.7,0.24,20,Intermediate,Income,Medium
+55,110000,14.5,0.28,25,Advanced,Wealth building,Medium
+51,30000,14.7,0.2,10,Intermediate,Retirement,Low
+34,90000,19.4,0.11,30,Intermediate,Wealth building,High
+34,110000,13.8,0.37,25,Beginner,Retirement,High
+39,60000,14.5,0.0,30,Beginner,Retirement,High
+53,110000,8.9,0.16,15,Beginner,Retirement,Medium
+53,75000,11.5,0.4,30,Advanced,Income,Medium
+56,75000,18.1,0.14,15,Intermediate,Emergency fund,Medium
+60,30000,0.0,0.34,5,Intermediate,Education,Low
+67,60000,11.5,0.16,25,Beginner,Income,Medium
+50,140000,19.5,0.21,25,Advanced,Income,High
+50,75000,27.1,0.37,20,Advanced,Emergency fund,Medium
+65,75000,10.8,0.09,20,Beginner,Emergency fund,Medium
+37,75000,23.5,0.39,5,Advanced,Retirement,Medium
+65,90000,27.5,0.29,20,Beginner,Retirement,Medium
+31,30000,10.9,0.47,15,Beginner,Wealth building,Medium
+51,60000,9.5,0.31,20,Beginner,Wealth building,Medium
+46,90000,12.5,0.12,15,Advanced,Income,High
+60,60000,13.3,0.54,30,Advanced,Wealth building,Medium
+41,60000,22.7,0.13,20,Beginner,Emergency fund,Medium
+26,30000,7.8,0.25,25,Intermediate,Wealth building,High
+22,75000,26.3,0.42,30,Intermediate,Retirement,High
+51,140000,7.6,0.0,20,Advanced,Wealth building,Medium
+24,30000,3.9,0.5,5,Beginner,Wealth building,Low
+66,45000,18.2,0.11,5,Intermediate,Wealth building,Low
+35,60000,23.8,0.21,25,Intermediate,Wealth building,High
+51,90000,15.4,0.32,10,Beginner,Retirement,Medium
+25,90000,17.5,0.27,20,Beginner,Wealth building,High
+39,75000,29.6,0.4,10,Intermediate,Emergency fund,Medium
+58,90000,24.0,0.04,10,Beginner,Wealth building,Medium
+46,90000,14.2,0.39,20,Advanced,Wealth building,Medium
+22,140000,10.6,0.4,30,Beginner,Retirement,High
+67,110000,22.8,0.43,20,Advanced,Retirement,Medium
+36,60000,20.6,0.04,30,Beginner,Retirement,High
+30,60000,17.3,0.06,30,Beginner,Wealth building,High
+36,45000,11.4,0.23,10,Beginner,Wealth building,Medium
+45,60000,13.4,0.08,15,Intermediate,Education,Medium
+25,180000,12.8,0.01,25,Intermediate,Retirement,High
+33,75000,11.5,0.22,25,Beginner,Retirement,High
+58,60000,9.2,0.32,20,Beginner,Wealth building,Medium
+58,110000,16.1,0.7,30,Intermediate,Wealth building,Medium
+64,75000,8.8,0.36,5,Intermediate,Wealth building,Low
+27,45000,15.4,0.54,15,Intermediate,Education,Medium
+60,75000,0.0,0.27,20,Beginner,Education,Low
+67,75000,9.2,0.36,15,Intermediate,Retirement,Low
+45,90000,22.8,0.26,10,Intermediate,Income,Medium
+32,30000,6.8,0.68,15,Advanced,Retirement,Medium
+34,60000,18.7,0.18,5,Intermediate,Emergency fund,Medium
+55,75000,7.5,0.2,20,Beginner,Emergency fund,Medium
+46,60000,20.2,0.4,30,Beginner,Emergency fund,High
+28,90000,11.6,0.31,30,Intermediate,Retirement,High
+25,75000,11.3,0.22,20,Intermediate,Retirement,High
+29,60000,14.4,0.42,15,Advanced,Wealth building,High
+41,140000,3.3,0.27,20,Intermediate,Retirement,Medium
+50,90000,21.8,0.27,10,Intermediate,Retirement,Medium
+66,45000,24.4,0.31,15,Intermediate,Wealth building,Medium
+67,75000,11.1,0.02,10,Intermediate,Wealth building,Medium
+31,110000,18.2,0.04,25,Beginner,Emergency fund,High
+64,90000,20.2,0.44,30,Beginner,Retirement,Medium
+55,45000,13.3,0.18,20,Intermediate,Education,Medium
+47,180000,5.1,0.26,25,Beginner,Retirement,Medium
+62,75000,26.8,0.52,10,Beginner,Education,Low
+24,45000,10.9,0.27,20,Beginner,Wealth building,Medium
+27,45000,9.1,0.25,25,Beginner,Wealth building,High
+26,45000,27.1,0.41,15,Beginner,Education,Medium
+26,110000,18.9,0.19,10,Intermediate,Retirement,Medium
+44,45000,16.1,0.46,25,Intermediate,Retirement,Medium
+30,45000,6.2,0.41,25,Intermediate,Wealth building,Medium
+56,110000,20.4,0.55,30,Intermediate,Retirement,High
+41,60000,37.2,0.18,25,Advanced,Wealth building,High
+63,30000,21.0,0.49,30,Beginner,Retirement,Medium
+56,30000,18.0,0.36,10,Intermediate,Education,Low
+39,45000,19.8,0.08,5,Beginner,Emergency fund,Low
+38,60000,11.4,0.0,15,Intermediate,Retirement,Medium
+45,90000,11.3,0.16,10,Advanced,Education,Medium
+24,45000,11.2,0.32,20,Intermediate,Retirement,High
+53,45000,9.4,0.35,20,Intermediate,Retirement,Medium
+56,110000,11.2,0.27,20,Intermediate,Wealth building,Medium
+59,90000,11.1,0.27,10,Intermediate,Emergency fund,Medium
+34,75000,12.0,0.26,30,Beginner,Wealth building,High
+46,75000,11.8,0.43,5,Intermediate,Emergency fund,Low
+30,60000,15.9,0.06,15,Intermediate,Retirement,High
+25,75000,14.6,0.32,25,Beginner,Income,High
+35,75000,15.3,0.16,25,Beginner,Emergency fund,High
+58,75000,26.2,0.14,15,Advanced,Retirement,Medium
+55,140000,14.6,0.46,5,Beginner,Emergency fund,Low
+32,30000,31.7,0.13,20,Beginner,Wealth building,High
+62,110000,16.8,0.26,5,Intermediate,Retirement,Low
+24,45000,10.4,0.57,10,Beginner,Retirement,Medium
+49,110000,24.8,0.41,20,Intermediate,Retirement,Medium
+50,90000,13.4,0.21,15,Intermediate,Education,Medium
+30,110000,0.0,0.22,15,Intermediate,Wealth building,Medium
+24,45000,14.0,0.1,20,Beginner,Retirement,High
+46,75000,12.0,0.48,30,Intermediate,Retirement,Medium
+55,75000,26.9,0.43,30,Advanced,Wealth building,High
+33,90000,6.8,0.38,15,Beginner,Wealth building,Medium
+63,75000,11.3,0.4,10,Beginner,Emergency fund,Low
+30,75000,24.1,0.16,15,Advanced,Income,High
+36,75000,17.2,0.05,10,Beginner,Wealth building,Medium
+61,60000,12.6,0.36,20,Beginner,Wealth building,Low
+46,75000,7.9,0.41,20,Beginner,Wealth building,Medium
+26,45000,16.8,0.52,20,Beginner,Education,Medium
+32,180000,13.8,0.25,15,Beginner,Retirement,Medium
+55,90000,7.9,0.23,10,Intermediate,Retirement,Medium
+45,140000,8.3,0.24,20,Intermediate,Emergency fund,Medium
+36,60000,7.5,0.38,15,Beginner,Retirement,Medium
+59,110000,6.1,0.24,20,Advanced,Retirement,Medium
+29,110000,21.5,0.27,20,Intermediate,Emergency fund,High
+26,90000,20.4,0.4,20,Advanced,Retirement,High
+47,90000,21.5,0.19,15,Advanced,Retirement,Medium
+39,60000,14.0,0.49,20,Intermediate,Wealth building,Medium
+27,110000,12.1,0.37,15,Advanced,Wealth building,High
+58,75000,12.2,0.0,5,Intermediate,Retirement,Low
+34,30000,22.2,0.2,20,Advanced,Income,High
+49,60000,0.0,0.0,10,Beginner,Retirement,Low
+26,140000,9.9,0.25,20,Beginner,Emergency fund,Medium
+34,110000,6.9,0.21,25,Intermediate,Retirement,Medium
+38,180000,24.9,0.41,30,Intermediate,Wealth building,High
+61,90000,10.2,0.15,30,Advanced,Retirement,Medium
+66,60000,0.9,0.34,5,Advanced,Retirement,Low
+53,45000,15.8,0.37,30,Beginner,Retirement,Medium
+50,45000,11.0,0.32,20,Advanced,Wealth building,Medium
+24,30000,9.5,0.45,20,Beginner,Wealth building,Medium
+61,75000,8.7,0.59,5,Beginner,Retirement,Low
+55,45000,8.4,0.3,25,Intermediate,Income,Medium
+61,75000,19.7,0.34,10,Beginner,Retirement,Low
+48,140000,15.8,0.15,25,Intermediate,Wealth building,High
+34,75000,12.4,0.13,5,Intermediate,Retirement,Medium
+66,110000,5.2,0.44,20,Beginner,Wealth building,Low
+54,90000,12.6,0.42,15,Intermediate,Education,Low
+27,60000,16.1,0.13,10,Intermediate,Wealth building,Medium
+45,60000,16.4,0.08,10,Beginner,Retirement,Medium
+40,45000,15.3,0.18,15,Beginner,Retirement,Medium
+37,60000,6.6,0.26,10,Advanced,Education,Medium
+61,90000,0.0,0.22,20,Advanced,Retirement,Medium
+49,30000,28.4,0.3,20,Beginner,Wealth building,Medium
+54,60000,3.5,0.42,25,Beginner,Retirement,Medium
+62,75000,0.0,0.35,20,Advanced,Retirement,Medium
+34,180000,15.0,0.36,5,Intermediate,Retirement,Medium
+64,110000,0.3,0.0,15,Beginner,Education,Medium
+66,90000,7.6,0.04,15,Intermediate,Emergency fund,Medium
+46,45000,18.4,0.16,30,Intermediate,Wealth building,High
+63,110000,28.2,0.19,25,Intermediate,Retirement,Medium
+57,110000,17.1,0.41,15,Beginner,Wealth building,Low
+48,90000,10.5,0.15,5,Intermediate,Wealth building,Low
+59,180000,13.6,0.38,30,Beginner,Wealth building,Medium
+28,60000,0.0,0.16,30,Advanced,Retirement,High
+26,140000,10.4,0.1,25,Intermediate,Income,High
+64,140000,10.4,0.11,25,Intermediate,Wealth building,Medium
+66,30000,15.2,0.62,20,Intermediate,Income,Medium
+52,75000,29.5,0.16,10,Intermediate,Retirement,Medium
+44,180000,0.0,0.38,15,Advanced,Retirement,Medium
+63,45000,10.7,0.05,20,Beginner,Retirement,Medium
+31,75000,0.0,0.49,20,Advanced,Education,Medium
+53,180000,10.0,0.33,20,Beginner,Retirement,Medium
+64,75000,7.1,0.32,10,Beginner,Education,Low
+51,45000,2.0,0.34,15,Intermediate,Education,Low
+60,90000,21.3,0.36,15,Intermediate,Emergency fund,Medium
+52,60000,16.0,0.4,10,Advanced,Emergency fund,Medium
+39,75000,20.4,0.19,15,Intermediate,Emergency fund,Medium
+57,30000,9.7,0.18,25,Intermediate,Emergency fund,Medium
+23,90000,13.4,0.29,25,Advanced,Wealth building,High
+35,75000,26.8,0.38,15,Beginner,Emergency fund,Medium
+34,90000,14.0,0.27,20,Advanced,Education,Medium
+50,90000,20.5,0.4,5,Intermediate,Retirement,Low
+33,75000,9.1,0.37,20,Beginner,Income,Medium
+60,90000,19.7,0.25,15,Beginner,Retirement,Low
+23,45000,9.6,0.02,15,Intermediate,Retirement,Medium
+53,90000,0.0,0.2,25,Beginner,Retirement,Medium
+34,45000,13.9,0.54,15,Beginner,Retirement,Medium
+67,140000,10.2,0.33,5,Beginner,Education,Low
+48,30000,1.0,0.18,10,Beginner,Income,Low
+62,75000,15.5,0.32,15,Intermediate,Education,Medium
+38,90000,6.9,0.38,15,Advanced,Income,Medium
+61,75000,38.7,0.18,25,Beginner,Retirement,High
+52,45000,2.3,0.47,20,Intermediate,Retirement,Medium
+55,75000,4.3,0.35,20,Beginner,Wealth building,Medium
+45,90000,21.0,0.12,15,Intermediate,Education,High
+66,90000,12.9,0.41,15,Advanced,Retirement,Low
+56,60000,20.8,0.22,15,Intermediate,Income,Medium
+27,75000,17.0,0.25,15,Advanced,Emergency fund,Medium
+40,75000,9.3,0.13,20,Intermediate,Income,Medium
+51,90000,3.0,0.37,10,Intermediate,Wealth building,Low
+28,90000,22.6,0.26,30,Intermediate,Wealth building,High
+31,75000,3.7,0.38,15,Advanced,Education,Medium
+62,60000,18.5,0.2,10,Advanced,Education,Low
+53,30000,21.4,0.18,5,Intermediate,Retirement,Low
+55,45000,13.0,0.17,5,Advanced,Income,Low
+49,45000,11.6,0.34,15,Beginner,Education,Medium
+36,75000,6.1,0.18,10,Advanced,Retirement,Medium
+51,90000,17.7,0.25,5,Beginner,Retirement,Low
+58,60000,0.0,0.2,20,Beginner,Wealth building,Low
+50,140000,19.7,0.35,20,Beginner,Wealth building,Medium
+43,30000,15.0,0.02,5,Advanced,Emergency fund,Medium
+25,110000,12.2,0.32,15,Advanced,Retirement,Medium
+41,90000,15.9,0.54,25,Advanced,Emergency fund,Medium
+53,60000,3.0,0.47,30,Advanced,Emergency fund,High
+57,30000,0.0,0.19,20,Intermediate,Retirement,Medium
+25,90000,17.7,0.35,10,Advanced,Wealth building,Medium
+48,75000,24.5,0.33,25,Advanced,Retirement,High
+38,140000,0.1,0.5,20,Intermediate,Retirement,Medium
+33,75000,5.6,0.0,10,Beginner,Wealth building,Medium
+43,140000,20.0,0.45,25,Intermediate,Income,High
+38,60000,16.9,0.24,15,Advanced,Retirement,Medium
+31,90000,37.7,0.17,30,Advanced,Wealth building,High
+22,90000,22.6,0.16,25,Advanced,Retirement,High
+43,90000,20.7,0.09,20,Advanced,Retirement,High
+47,60000,7.9,0.19,25,Advanced,Wealth building,Medium
+39,90000,18.2,0.12,15,Intermediate,Emergency fund,Medium
+35,75000,26.0,0.31,20,Intermediate,Retirement,Medium
+50,90000,12.7,0.37,25,Beginner,Income,Medium
+33,60000,13.1,0.24,20,Intermediate,Retirement,Medium
+57,140000,15.1,0.5,30,Intermediate,Education,High
+56,45000,8.7,0.2,30,Advanced,Education,Medium
+33,110000,16.2,0.23,30,Intermediate,Wealth building,High
+28,110000,16.0,0.21,25,Beginner,Retirement,High
+50,110000,25.8,0.37,20,Beginner,Wealth building,Medium
+32,75000,12.5,0.38,10,Intermediate,Emergency fund,Medium
+54,75000,19.4,0.35,25,Intermediate,Education,High
+27,180000,12.7,0.26,15,Beginner,Wealth building,Medium
+36,60000,19.1,0.08,15,Beginner,Wealth building,Medium
+53,75000,12.0,0.23,10,Intermediate,Education,Medium
+32,90000,18.6,0.5,25,Beginner,Income,Medium
+44,90000,19.8,0.43,25,Beginner,Emergency fund,Medium
+47,60000,5.5,0.32,20,Beginner,Education,Medium
+55,90000,22.8,0.22,15,Intermediate,Wealth building,Medium
+67,110000,12.7,0.28,20,Intermediate,Emergency fund,Medium
+55,30000,10.2,0.22,20,Beginner,Emergency fund,Medium
+50,140000,8.3,0.46,15,Advanced,Emergency fund,Medium
+25,30000,16.4,0.15,15,Beginner,Retirement,Medium
+38,60000,14.0,0.42,15,Beginner,Wealth building,Medium
+56,30000,17.0,0.2,20,Beginner,Wealth building,Medium
+34,30000,17.1,0.48,20,Beginner,Retirement,Medium
+62,140000,18.9,0.34,15,Beginner,Retirement,Medium
+60,60000,36.2,0.17,30,Beginner,Education,High
+36,75000,14.3,0.23,5,Intermediate,Wealth building,Medium
+50,60000,8.1,0.39,15,Intermediate,Retirement,Medium
+50,90000,0.0,0.21,15,Intermediate,Education,Medium
+32,90000,4.4,0.28,5,Intermediate,Education,Medium
+53,60000,23.9,0.2,15,Beginner,Wealth building,Medium
+23,60000,19.8,0.54,10,Advanced,Retirement,High
+35,140000,3.2,0.57,20,Beginner,Income,Medium
+41,75000,33.7,0.5,15,Intermediate,Education,High
+43,75000,16.6,0.26,25,Beginner,Retirement,Medium
+32,60000,17.7,0.22,20,Advanced,Retirement,High
+48,110000,32.0,0.16,10,Intermediate,Wealth building,Medium
+24,75000,27.9,0.51,25,Beginner,Emergency fund,High
+38,75000,20.2,0.42,5,Intermediate,Retirement,Medium
+65,60000,20.6,0.43,25,Beginner,Wealth building,Medium
+49,180000,21.4,0.24,30,Intermediate,Wealth building,High
+50,60000,12.1,0.02,15,Intermediate,Education,Medium
+42,110000,16.3,0.05,30,Beginner,Wealth building,High
+37,75000,18.6,0.29,25,Beginner,Wealth building,High
+58,60000,13.0,0.2,30,Beginner,Income,Medium
+41,110000,6.3,0.18,20,Intermediate,Retirement,Medium
+27,60000,11.9,0.33,10,Beginner,Retirement,Medium
+40,110000,6.1,0.43,30,Intermediate,Education,High
+26,140000,14.5,0.17,10,Advanced,Retirement,High
+24,110000,0.0,0.08,10,Beginner,Education,Medium
+22,30000,16.7,0.18,10,Advanced,Retirement,Medium
+59,110000,0.9,0.12,15,Intermediate,Retirement,Medium
+36,75000,10.8,0.37,20,Beginner,Income,Medium
+55,110000,18.0,0.28,25,Intermediate,Wealth building,High
+56,90000,20.3,0.56,30,Intermediate,Emergency fund,Medium
+46,110000,19.4,0.39,5,Intermediate,Retirement,Low
+45,75000,16.6,0.55,30,Beginner,Retirement,Medium
+33,75000,5.0,0.07,30,Beginner,Education,High
+39,45000,21.8,0.0,5,Intermediate,Wealth building,Medium
+36,110000,5.2,0.32,15,Intermediate,Wealth building,Medium
+65,75000,22.8,0.3,25,Intermediate,Retirement,Medium
+37,75000,19.0,0.26,20,Beginner,Wealth building,Medium
+48,110000,24.9,0.29,25,Advanced,Education,High
+29,90000,14.2,0.11,25,Advanced,Education,High
+67,60000,7.4,0.36,20,Beginner,Emergency fund,Low
+46,90000,3.7,0.39,5,Beginner,Emergency fund,Low
+38,75000,4.5,0.1,20,Advanced,Wealth building,Medium
+50,75000,0.9,0.23,5,Advanced,Wealth building,Medium
+29,30000,21.5,0.24,20,Intermediate,Emergency fund,High
+36,60000,22.5,0.18,25,Advanced,Retirement,High
+48,60000,18.4,0.11,20,Intermediate,Retirement,Medium
+67,90000,13.7,0.28,30,Beginner,Income,Medium
+28,30000,30.5,0.32,15,Intermediate,Retirement,High
+24,75000,13.2,0.19,25,Intermediate,Retirement,High
+50,140000,15.8,0.12,20,Advanced,Wealth building,High
+65,45000,13.6,0.34,30,Beginner,Emergency fund,Medium
+45,75000,11.3,0.16,25,Intermediate,Wealth building,High
+24,110000,19.0,0.23,10,Intermediate,Wealth building,Medium
+41,140000,8.9,0.21,30,Beginner,Income,High
+67,90000,8.4,0.47,20,Beginner,Emergency fund,Low
+36,90000,19.5,0.17,5,Advanced,Education,Medium
+46,110000,10.0,0.54,20,Intermediate,Retirement,Medium
+51,75000,15.1,0.39,30,Intermediate,Retirement,High
+35,110000,11.3,0.55,20,Advanced,Wealth building,Medium
+28,30000,13.9,0.38,15,Beginner,Retirement,Medium
+38,140000,8.6,0.25,25,Advanced,Retirement,High
+65,75000,8.9,0.14,25,Intermediate,Retirement,Medium
+41,75000,7.4,0.23,20,Intermediate,Wealth building,Medium
+57,60000,20.7,0.5,10,Intermediate,Emergency fund,Low
+30,90000,15.4,0.27,10,Advanced,Education,High
+59,30000,21.3,0.38,25,Beginner,Retirement,Medium
+43,110000,22.2,0.31,25,Beginner,Wealth building,Medium
+23,110000,10.3,0.32,10,Beginner,Retirement,Medium
+45,60000,21.1,0.32,15,Beginner,Wealth building,Medium
+29,110000,13.9,0.35,5,Intermediate,Wealth building,Medium
+32,110000,12.7,0.16,25,Advanced,Wealth building,High
+34,90000,24.0,0.24,5,Advanced,Education,Medium
+38,60000,18.4,0.33,5,Beginner,Education,Low
+29,60000,11.2,0.3,5,Intermediate,Emergency fund,Medium
+42,60000,17.9,0.21,20,Intermediate,Education,Medium
+39,60000,3.9,0.34,15,Beginner,Emergency fund,Medium
+51,140000,16.0,0.16,15,Advanced,Education,Medium
+39,30000,2.0,0.1,30,Advanced,Wealth building,High
+67,110000,6.1,0.32,10,Advanced,Wealth building,Low
+52,60000,18.7,0.1,15,Beginner,Emergency fund,Medium
+59,75000,0.0,0.32,30,Intermediate,Retirement,Medium
+53,110000,28.4,0.0,15,Beginner,Emergency fund,Medium
+32,140000,20.7,0.17,20,Beginner,Income,High
+66,60000,0.0,0.23,5,Intermediate,Emergency fund,Low
+46,75000,33.2,0.04,25,Advanced,Retirement,High
+54,75000,35.4,0.22,15,Advanced,Wealth building,High
+59,30000,12.6,0.46,25,Advanced,Education,Medium
+62,60000,6.6,0.09,10,Advanced,Income,Low
+29,75000,27.5,0.23,15,Beginner,Wealth building,Medium
+32,75000,11.2,0.54,25,Intermediate,Education,High
+43,90000,15.3,0.12,30,Beginner,Education,High
+45,75000,23.7,0.49,5,Beginner,Retirement,Medium
+62,75000,12.8,0.24,25,Intermediate,Education,Medium
+38,75000,12.1,0.3,15,Intermediate,Retirement,Medium
+33,90000,3.8,0.47,20,Intermediate,Wealth building,Medium
+67,110000,9.0,0.21,15,Beginner,Wealth building,Medium
+53,75000,11.9,0.37,20,Beginner,Emergency fund,Medium
+36,110000,4.1,0.41,15,Beginner,Emergency fund,Medium
+37,60000,4.8,0.18,15,Beginner,Wealth building,Medium
+43,75000,14.3,0.17,5,Beginner,Education,Medium
+49,60000,0.0,0.25,10,Intermediate,Education,Low
+41,75000,7.0,0.25,30,Advanced,Education,High
+54,90000,29.6,0.12,30,Intermediate,Wealth building,High
+31,140000,11.2,0.18,25,Intermediate,Retirement,High
+61,45000,10.2,0.0,15,Beginner,Wealth building,Medium
+53,90000,11.2,0.23,15,Advanced,Education,Medium
+54,90000,11.3,0.41,25,Beginner,Retirement,Medium
+23,45000,18.6,0.03,30,Advanced,Income,High
+54,60000,18.0,0.21,15,Advanced,Education,Medium
+54,60000,10.9,0.65,25,Advanced,Emergency fund,Medium
+62,45000,12.3,0.28,30,Beginner,Emergency fund,Medium
+34,60000,24.5,0.48,25,Intermediate,Wealth building,Medium
+51,60000,1.9,0.13,10,Beginner,Emergency fund,Low
+54,60000,13.5,0.35,5,Beginner,Wealth building,Low
+34,90000,15.1,0.1,20,Beginner,Education,High
+47,75000,7.8,0.34,20,Advanced,Emergency fund,Medium
+43,180000,13.1,0.41,10,Advanced,Education,Medium
+60,75000,6.7,0.37,15,Beginner,Education,Low
+23,90000,19.1,0.23,25,Intermediate,Retirement,High
+59,110000,3.3,0.32,15,Advanced,Retirement,Medium
+60,90000,22.5,0.32,15,Intermediate,Education,Medium
+47,75000,13.4,0.38,20,Beginner,Retirement,Medium
+67,90000,10.4,0.26,20,Intermediate,Wealth building,Medium
+36,60000,6.0,0.42,25,Intermediate,Wealth building,Medium
+55,60000,22.2,0.5,10,Intermediate,Retirement,Medium
+63,75000,8.8,0.23,25,Intermediate,Retirement,Medium
+65,75000,4.7,0.29,20,Intermediate,Education,Low
+61,30000,22.4,0.14,5,Beginner,Emergency fund,Low
+32,140000,6.8,0.33,25,Beginner,Wealth building,High
+24,90000,13.2,0.33,15,Beginner,Income,High
+27,75000,20.6,0.29,15,Intermediate,Retirement,High
+30,140000,15.3,0.3,15,Beginner,Retirement,Medium
+27,75000,27.8,0.57,15,Advanced,Education,Medium
+30,180000,7.3,0.0,15,Intermediate,Education,High
+60,75000,12.3,0.21,25,Intermediate,Wealth building,Medium
+52,45000,12.9,0.23,10,Advanced,Income,Medium
+53,110000,19.0,0.5,30,Advanced,Income,High
+62,90000,24.3,0.35,20,Advanced,Retirement,Medium
+33,110000,14.6,0.35,10,Intermediate,Retirement,Medium
+29,140000,12.9,0.47,10,Beginner,Education,Medium
+29,110000,2.1,0.25,20,Advanced,Retirement,Medium
+49,90000,14.9,0.38,20,Advanced,Retirement,High
+41,110000,8.8,0.2,5,Advanced,Education,Medium
+28,90000,18.9,0.12,10,Intermediate,Wealth building,High
+32,75000,10.7,0.55,25,Intermediate,Wealth building,Medium
+41,140000,12.1,0.34,5,Beginner,Retirement,Medium
+37,60000,2.3,0.38,25,Intermediate,Emergency fund,Medium
+25,90000,0.0,0.12,20,Beginner,Wealth building,Medium
+27,140000,28.9,0.36,15,Beginner,Retirement,High
+43,90000,15.0,0.55,15,Intermediate,Retirement,Medium
+47,90000,17.2,0.24,5,Intermediate,Wealth building,Low
+24,90000,6.7,0.09,25,Beginner,Income,High
+62,75000,21.0,0.31,10,Advanced,Income,Medium
+63,110000,19.6,0.12,15,Advanced,Retirement,Medium
+35,60000,7.6,0.05,20,Intermediate,Emergency fund,Medium
+32,45000,5.5,0.17,10,Intermediate,Education,Medium
+39,60000,8.1,0.21,20,Advanced,Education,Medium
+33,75000,13.8,0.13,25,Beginner,Wealth building,High
+44,75000,15.3,0.48,15,Intermediate,Retirement,Medium
+33,110000,14.3,0.56,30,Beginner,Education,Medium
+34,75000,24.4,0.37,25,Beginner,Retirement,High
+46,75000,8.3,0.34,15,Intermediate,Retirement,Medium
+66,30000,5.3,0.26,15,Intermediate,Emergency fund,Low
+40,75000,14.0,0.15,15,Beginner,Income,Medium
+67,90000,0.5,0.52,20,Beginner,Retirement,Low
+57,30000,19.6,0.27,15,Intermediate,Emergency fund,Medium
+66,60000,14.8,0.21,30,Intermediate,Retirement,Medium
+29,60000,11.3,0.43,20,Intermediate,Education,Medium
+50,30000,10.9,0.27,15,Beginner,Wealth building,Medium
+53,75000,21.3,0.43,20,Intermediate,Retirement,Medium
+65,45000,21.0,0.22,15,Beginner,Retirement,Medium
+39,90000,12.0,0.43,25,Beginner,Wealth building,Medium
+27,110000,18.7,0.43,20,Intermediate,Retirement,High
+39,75000,20.9,0.48,5,Intermediate,Retirement,Medium
+40,180000,16.7,0.17,10,Beginner,Emergency fund,Medium
+43,75000,12.4,0.27,25,Beginner,Wealth building,Medium
+58,75000,17.0,0.57,20,Intermediate,Emergency fund,Medium
+53,180000,5.7,0.24,30,Beginner,Retirement,Medium
+62,60000,14.6,0.4,5,Beginner,Emergency fund,Low
+24,140000,12.1,0.62,15,Intermediate,Wealth building,Medium
+49,30000,10.9,0.0,10,Beginner,Retirement,Medium
+31,75000,0.2,0.24,20,Beginner,Wealth building,Medium
+56,30000,5.8,0.28,15,Advanced,Retirement,Medium
+50,90000,10.1,0.01,10,Intermediate,Education,Medium
+36,90000,21.2,0.21,20,Intermediate,Emergency fund,Medium
+54,90000,16.3,0.13,20,Intermediate,Wealth building,Medium
+28,60000,21.5,0.41,10,Intermediate,Retirement,Medium
+33,60000,23.9,0.02,15,Advanced,Retirement,Medium
+51,30000,16.6,0.56,25,Intermediate,Wealth building,Medium
+42,60000,15.1,0.38,10,Beginner,Emergency fund,Medium
+52,140000,6.2,0.12,15,Intermediate,Retirement,Medium
+45,60000,29.9,0.43,15,Intermediate,Retirement,Medium
+41,110000,2.7,0.37,25,Intermediate,Retirement,Medium
+58,110000,14.9,0.27,25,Intermediate,Wealth building,Medium
+25,60000,20.7,0.17,15,Advanced,Retirement,High
+49,90000,20.8,0.36,15,Intermediate,Wealth building,Medium
+65,45000,4.8,0.3,30,Beginner,Retirement,Medium
+41,45000,10.6,0.18,30,Beginner,Wealth building,Medium
+45,30000,7.6,0.08,20,Intermediate,Retirement,Medium
+53,90000,0.0,0.15,30,Beginner,Emergency fund,Medium
+62,75000,15.0,0.2,20,Beginner,Retirement,Medium
+57,75000,8.3,0.45,25,Beginner,Retirement,Medium
+55,75000,26.0,0.41,15,Beginner,Wealth building,Medium
+57,60000,18.9,0.21,15,Advanced,Wealth building,Medium
+23,90000,14.3,0.22,10,Beginner,Wealth building,Medium
+36,90000,10.2,0.43,25,Beginner,Education,High
+55,30000,14.9,0.32,30,Beginner,Education,Medium
+57,60000,12.0,0.32,20,Intermediate,Retirement,Medium
+27,90000,14.6,0.17,15,Beginner,Education,High
+60,75000,29.2,0.26,10,Intermediate,Wealth building,Medium
+63,90000,5.5,0.28,10,Beginner,Retirement,Low
+33,60000,12.7,0.27,10,Intermediate,Income,Medium
+24,75000,19.7,0.39,20,Advanced,Education,High
+66,45000,10.8,0.39,30,Beginner,Income,Medium
+39,60000,26.6,0.14,5,Intermediate,Retirement,Medium
+61,90000,19.4,0.2,5,Intermediate,Retirement,Low
+42,75000,8.2,0.18,20,Intermediate,Wealth building,Medium
+36,110000,15.6,0.49,15,Intermediate,Emergency fund,Medium
+54,110000,8.4,0.62,30,Intermediate,Retirement,Medium
+56,75000,7.6,0.21,15,Intermediate,Education,Medium
+47,90000,12.9,0.25,15,Intermediate,Wealth building,Medium
+29,60000,24.1,0.41,10,Beginner,Wealth building,Medium
+57,75000,20.0,0.17,10,Beginner,Emergency fund,Medium
+51,90000,13.8,0.41,20,Intermediate,Emergency fund,Medium
+44,75000,20.2,0.28,10,Advanced,Retirement,Medium
+63,90000,16.1,0.02,15,Advanced,Income,Medium
+65,45000,4.6,0.08,15,Advanced,Wealth building,Medium
+35,90000,12.8,0.23,5,Intermediate,Retirement,Medium
+35,110000,13.4,0.46,5,Intermediate,Education,Medium
+23,110000,20.1,0.15,20,Intermediate,Income,High
+58,90000,9.5,0.2,20,Intermediate,Education,Medium
+26,90000,6.7,0.31,30,Intermediate,Education,High
+59,75000,13.6,0.03,10,Beginner,Emergency fund,Low
+66,90000,8.8,0.32,10,Beginner,Income,Low
+62,45000,11.4,0.05,5,Intermediate,Retirement,Low
+35,75000,13.4,0.37,15,Intermediate,Education,Medium
+60,75000,10.9,0.16,20,Beginner,Emergency fund,Medium
+46,140000,21.7,0.14,25,Beginner,Retirement,Medium
+41,75000,25.3,0.32,20,Advanced,Wealth building,High
+23,75000,20.9,0.4,10,Intermediate,Wealth building,Medium
+60,75000,0.0,0.34,15,Intermediate,Emergency fund,Low
+27,90000,8.9,0.31,30,Intermediate,Retirement,High
+38,90000,12.6,0.31,15,Intermediate,Education,Medium
+46,60000,0.0,0.34,20,Beginner,Retirement,Medium
+49,75000,7.0,0.35,30,Intermediate,Wealth building,High
+23,110000,12.5,0.22,25,Intermediate,Education,High
+56,75000,10.4,0.38,25,Beginner,Wealth building,Medium
+58,60000,14.1,0.16,10,Beginner,Wealth building,Medium
+26,90000,3.0,0.44,15,Beginner,Retirement,Medium
+22,110000,10.3,0.4,5,Intermediate,Emergency fund,Medium
+61,30000,15.2,0.61,20,Beginner,Income,Medium
+33,110000,14.1,0.36,10,Intermediate,Income,Medium
+57,110000,17.6,0.42,25,Intermediate,Emergency fund,Medium
+66,75000,17.1,0.05,25,Advanced,Retirement,High
+44,180000,10.7,0.42,20,Intermediate,Retirement,Medium
+52,110000,15.0,0.46,10,Beginner,Retirement,Low
+32,110000,7.6,0.51,5,Intermediate,Wealth building,Medium
+31,90000,11.8,0.3,25,Intermediate,Retirement,High
+24,45000,5.6,0.23,20,Beginner,Retirement,Medium
+35,60000,22.5,0.12,25,Intermediate,Emergency fund,High
+37,75000,11.8,0.13,15,Advanced,Retirement,Medium
+31,60000,22.5,0.28,20,Beginner,Emergency fund,High
+50,75000,16.5,0.02,25,Intermediate,Income,Medium
+31,140000,6.9,0.16,15,Advanced,Emergency fund,Medium
+33,110000,16.0,0.29,20,Intermediate,Education,High
+51,90000,20.5,0.29,25,Intermediate,Education,Medium
+62,110000,13.4,0.13,10,Beginner,Retirement,Medium
+22,110000,14.6,0.09,5,Beginner,Retirement,Medium
+26,75000,9.6,0.12,20,Intermediate,Retirement,High
+41,60000,14.2,0.25,5,Intermediate,Retirement,Medium
+29,75000,15.9,0.6,25,Advanced,Emergency fund,High
+64,90000,9.4,0.44,25,Beginner,Income,Medium
+33,75000,5.4,0.31,30,Intermediate,Income,Medium
+22,90000,24.3,0.36,20,Beginner,Retirement,High
+41,45000,18.8,0.43,5,Beginner,Income,Medium
+49,90000,9.6,0.38,10,Intermediate,Retirement,Low
+64,110000,15.8,0.23,25,Beginner,Education,Medium
+58,90000,2.2,0.15,10,Beginner,Retirement,Low
+58,180000,0.0,0.26,20,Beginner,Retirement,Medium
+33,110000,22.7,0.43,25,Beginner,Wealth building,Medium
+58,140000,15.8,0.24,15,Advanced,Education,Medium
+65,140000,13.6,0.11,15,Intermediate,Retirement,Medium
+49,110000,15.9,0.02,20,Beginner,Retirement,Medium
+36,90000,39.8,0.26,25,Advanced,Income,High
+27,30000,21.0,0.13,10,Intermediate,Income,Medium
+65,75000,5.6,0.21,30,Advanced,Retirement,Medium
+41,75000,0.6,0.5,20,Beginner,Emergency fund,Medium
+35,60000,22.4,0.27,30,Intermediate,Retirement,High
+23,60000,20.8,0.17,5,Advanced,Wealth building,Medium
+30,180000,18.6,0.33,10,Beginner,Wealth building,Medium
+58,140000,7.5,0.57,25,Advanced,Wealth building,Medium
+41,110000,16.9,0.26,25,Advanced,Wealth building,High
+47,75000,8.2,0.0,15,Advanced,Wealth building,High
+50,30000,19.3,0.38,25,Beginner,Wealth building,Medium
