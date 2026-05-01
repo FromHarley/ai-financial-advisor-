@@ -20,8 +20,6 @@ env/
 .ipynb_checkpoints/
 
 # ML artifacts (produced by train.py, don't commit)
-layer1_ml/model.pkl
-layer1_ml/*.joblib
 
 # Cached market data (for demo fallback)
 layer3_agentic/etf_cache.json

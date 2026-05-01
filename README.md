@@ -4,7 +4,7 @@ An autonomous financial advisor that profiles investor risk tolerance, recommend
 
 **Course:** MIS 02.303 — AI in Business, Spring 2026
 **Instructor:** Prof. Hema Kadali
-**Team:** Alexander Harley (Project Lead), Daniel Duffy, Anurag Pratapbhai Luhar, Kimberly Ting
+**Team:** Alexander Harley (Project Lead), Daniel Duffy, Anurag Luhar, Kimberly Ting
 **Due:** Tuesday, May 5, 2026
 
 ---
