@@ -46,9 +46,9 @@ ai-financial-advisor/
 ├── data/                   ← The two CSVs we use. Don't modify these.
 │
 ├── layer1_ml/              ← Alex's folder — ML model training & prediction.
-├── layer2_genai/           ← 's folder — Claude API + prompts.
-├── layer3_agentic/         ← 's folder — ETF agent + yfinance.
-├── layer4_respai/          ← 's folder — bias audit, model card, decision log.
+├── layer2_genai/           ← Anurag's folder — Claude API + prompts.
+├── layer3_agentic/         ← Kimberly's folder — ETF agent + yfinance.
+├── layer4_respai/          ← Daniel's folder — bias audit, model card, decision log.
 └── voice_ux/               ← Deferred (out of scope). Stretch goal only.
 ```
 
@@ -157,10 +157,10 @@ Full timeline is in the team blueprint document.
 
 | Layer | Owner | GitHub Handle |
 |---|---|---|
-| Layer 1 — ML |  | `[handle]` |
-| Layer 2 — GenAI |  | `[handle]` |
-| Layer 3 — Agentic | | `[handle]` |
-| Layer 4 — Responsible AI + Project Lead | | `FromHarley` |
+| Layer 1 — ML | Alex Harley | `FromHarley` |
+| Layer 2 — GenAI | Anurag Luhar | ` ` |
+| Layer 3 — Agentic | Kimberly Ting | ` ` |
+| Layer 4 — Responsible AI | Daniel Duffy | ` ` |
 
 If you need API keys, deployment access, or have a question that affects multiple layers — DM Alex.
 

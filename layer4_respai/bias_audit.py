@@ -1,7 +1,7 @@
 """
 Layer 4 · Bias audit.
 
-OWNER: Alex Harley
+OWNER: 
 BRANCH: layer4-respai
 
 The spec requires a bias audit across at least one demographic slice. Our
