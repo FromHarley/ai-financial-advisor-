@@ -157,10 +157,10 @@ Full timeline is in the team blueprint document.
 
 | Layer | Owner | GitHub Handle |
 |---|---|---|
-| Layer 1 — ML |  | `[handle]` |
-| Layer 2 — GenAI |  | `[handle]` |
-| Layer 3 — Agentic |  | `[handle]` |
-| Layer 4 — Responsible AI |  | `[handle]` |
+| Layer 1 — ML | Alex Harley | `FromHarley` |
+| Layer 2 — GenAI | Anurag Luhar | ` ` |
+| Layer 3 — Agentic | Kimberly Ting | ` ` |
+| Layer 4 — Responsible AI | Daniel Duffy | ` ` |
 
 If you need API keys, deployment access, or have a question that affects multiple layers — DM Alex.
 
