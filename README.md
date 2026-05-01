@@ -31,7 +31,7 @@ Roles assigned at the kickoff meeting on **04-20**.
 | Layer | Owner | Branch | What they'll do |
 |---|---|---|---|
 | Layer 1 — ML + SHAP | Alex Harley | `layer1-ml` | Train a classifier on `financial_risk_profiles.csv`, produce SHAP visualizations, write the metrics section of the model card. |
-| Layer 2 — GenAI (Claude) | Anurag Luhar] | `layer2-genai` | Design the Claude prompt that turns tier + SHAP + ETFs into a 2–3 sentence explanation. Enforce guardrails. |
+| Layer 2 — GenAI (Claude) | Anurag Luhar | `layer2-genai` | Design the Claude prompt that turns tier + SHAP + ETFs into a 2–3 sentence explanation. Enforce guardrails. |
 | Layer 3 — Agentic | Kimberly Ting | `layer3-agentic` | Build the tier→ETF mapping and the yfinance fetch. Make it robust enough to demo on stage. |
 | Layer 4 — Responsible AI | Daniel Duffy | `layer4-respai` | Bias audit, model card, decision logging, integration merge on 04-30, and Streamlit Cloud deployment. |
 | Voice / UX | **Out of scope** (deferred) | `voice-ux` | Stretch goal only — Alex may explore independently if Layer 1 finishes ahead of schedule. Documented in Future Directions slide. |
