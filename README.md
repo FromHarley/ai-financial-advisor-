@@ -61,7 +61,7 @@ ai-financial-advisor/
 │   └── cfpb_financial_wellbeing.csv  # Bias audit data (2,000 rows)
 ├── layer1_ml/
 │   ├── __init__.py
-│   ├── train.py             # Offline: trains RandomForest, saves model.pkl
+│   ├── train.py             # Offline: trains XGBoost, saves model.pkl
 │   ├── predict.py           # Runtime: predict_risk_tier(profile) → dict
 │   └── model.pkl            # Gitignored — produced by train.py
 ├── layer2_genai/
