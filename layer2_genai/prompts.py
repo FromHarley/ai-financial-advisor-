@@ -1,65 +1,27 @@
 """
-Layer 2 · Prompt templates for Claude.
-
-OWNER: [TBD at kickoff]
-BRANCH: layer2-genai
-
-Separating prompts from the API call makes them easier to iterate on and
-easier to explain in the presentation.
-
-Design goals for the prompt:
-1. Hedged language — no "this will definitely work" claims.
-2. No specific return figures (no "you'll make 8% a year").
-3. Mandatory "not financial advice" disclaimer appended to every response.
-4. ONLY reference the ETFs that were passed in — no hallucinated tickers.
-5. 2-3 sentences total (the spec's requirement).
-6. Plain English — the user is not a finance major.
-"""
-
-SYSTEM_PROMPT = """You are a financial advisor assistant helping a non-expert user understand \
-a portfolio recommendation from an automated system. Write in warm, clear, \
-plain English — no jargon, no specific return predictions, no overconfident claims.
-
-Rules you MUST follow:
-- Write exactly 2-3 sentences.
-- Only reference ETFs by the ticker and name that were provided to you. Never \
-  invent or mention any fund that wasn't in the input list.
-- Use hedged language: "may", "can help", "is generally suited for" — not "will" \
-  or "guarantees".
-- Do NOT cite specific return percentages or dollar figures.
-- End your response with this exact disclaimer on a new line: \
-  "This is not financial advice."
+Layer 2 — Prompt builders
+All prompt logic lives here so claude_client.py stays clean.
 """
 
 
-def build_user_prompt(
-    profile: dict,
-    tier: str,
-    top_factors: list[dict],
-    etfs: list[dict],
-) -> str:
-    """
-    Build the user message for Claude given the upstream layer outputs.
+def build_system_prompt() -> str:
+    return """You are a plain-English financial explanation assistant built into a responsible AI application.
 
-    Args:
-        profile: The user's financial profile dict.
-        tier: Risk tier from Layer 1 ('Low' | 'Medium' | 'High').
-        top_factors: Top SHAP factors from Layer 1.
-        etfs: ETF shortlist from Layer 3.
+RULES — follow every one, no exceptions:
+1. Write exactly 2–3 sentences. No more, no less.
+2. Use hedged language only: words like "may", "could", "based on your profile", "appears", "suggests".
+3. Never mention specific percentages, dollar amounts, or projected returns.
+4. Only refer to the fund names and tickers listed in the RECOMMENDED ETFs section. Do not invent or imply any other fund.
+5. End your response with this exact sentence (verbatim): "This is not financial advice — please consult a licensed financial professional before making investment decisions."
+6. Write for a non-technical reader. No jargon."""
 
-    Returns:
-        A formatted user message string.
-    """
-    # TODO: format the profile, tier, SHAP factors, and ETF list into a
-    #       clean prompt. Claude reads this and writes the explanation.
-    # TODO: decide how much detail to include. More context = better
-    #       explanation, but also more tokens = more cost.
-    # TODO: test with real outputs from Layers 1 and 3 before finalizing.
 
+def build_user_prompt(profile: dict, tier: str, top_factors: list, etfs: list) -> str:
     etf_lines = "\n".join(
         f"- {etf.get('ticker', '?')} ({etf.get('name', '')})"
         for etf in etfs
     )
+
     factor_lines = "\n".join(
         f"- {f.get('feature', '?')}: pushed tier {f.get('direction', '?')}"
         for f in top_factors
@@ -71,8 +33,11 @@ RISK TIER: {tier}
 
 USER PROFILE:
 - Age: {profile.get('age')}
-- Investment horizon: {profile.get('investment_horizon_years')} years
-- Experience level: {profile.get('investment_experience')}
+- Annual Income: {profile.get('annual_income_usd')}
+- Savings Rate: {profile.get('savings_rate_pct')}%
+- Debt-to-Income Ratio: {profile.get('debt_to_income_ratio')}
+- Investment Horizon: {profile.get('investment_horizon_years')} years
+- Experience Level: {profile.get('investment_experience')}
 
 KEY FACTORS (why the model picked this tier):
 {factor_lines}
@@ -80,5 +45,4 @@ KEY FACTORS (why the model picked this tier):
 RECOMMENDED ETFs (these are the ONLY ones you may mention):
 {etf_lines}
 
-Write a 2-3 sentence explanation for the user.
-"""
+Write a 2-3 sentence explanation for the user."""
