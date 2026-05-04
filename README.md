@@ -4,7 +4,7 @@ An autonomous financial advisor that profiles investor risk tolerance, recommend
 
 **Course:** MIS 02.303 — AI in Business, Spring 2026
 **Instructor:** Prof. Hema Kadali
-**Team:** Alexander Harley (Project Lead), Daniel Duffy, Anurag Pratapbhai Luhar, Kimberly Ting
+**Team:** Alexander Harley (Project Lead), Daniel Duffy, Anurag Luhar, Kimberly Ting
 **Due:** Tuesday, May 5, 2026
 
 ---
@@ -31,9 +31,9 @@ Roles assigned at the kickoff meeting on **04-20**.
 | Layer | Owner | Branch | What they'll do |
 |---|---|---|---|
 | Layer 1 — ML + SHAP | Alex Harley | `layer1-ml` | Train a classifier on `financial_risk_profiles.csv`, produce SHAP visualizations, write the metrics section of the model card. |
-| Layer 2 — GenAI (Claude) | [TBD] | `layer2-genai` | Design the Claude prompt that turns tier + SHAP + ETFs into a 2–3 sentence explanation. Enforce guardrails. |
-| Layer 3 — Agentic | [TBD] | `layer3-agentic` | Build the tier→ETF mapping and the yfinance fetch. Make it robust enough to demo on stage. |
-| Layer 4 — Responsible AI | [TBD] | `layer4-respai` | Bias audit, model card, decision logging, integration merge on 04-30, and Streamlit Cloud deployment. |
+| Layer 2 — GenAI (Claude) | Anurag Luhar | `layer2-genai` | Design the Claude prompt that turns tier + SHAP + ETFs into a 2–3 sentence explanation. Enforce guardrails. |
+| Layer 3 — Agentic | Kimberly Ting | `layer3-agentic` | Build the tier→ETF mapping and the yfinance fetch. Make it robust enough to demo on stage. |
+| Layer 4 — Responsible AI | Daniel Duffy | `layer4-respai` | Bias audit, model card, decision logging, integration merge on 04-30, and Streamlit Cloud deployment. |
 | Voice / UX | **Out of scope** (deferred) | `voice-ux` | Stretch goal only — Alex may explore independently if Layer 1 finishes ahead of schedule. Documented in Future Directions slide. |
 
 **Project Lead responsibilities (Alex, in addition to Layer 1):**
@@ -61,7 +61,7 @@ ai-financial-advisor/
 │   └── cfpb_financial_wellbeing.csv  # Bias audit data (2,000 rows)
 ├── layer1_ml/
 │   ├── __init__.py
-│   ├── train.py             # Offline: trains RandomForest, saves model.pkl
+│   ├── train.py             # Offline: trains XGBoost, saves model.pkl
 │   ├── predict.py           # Runtime: predict_risk_tier(profile) → dict
 │   └── model.pkl            # Gitignored — produced by train.py
 ├── layer2_genai/
