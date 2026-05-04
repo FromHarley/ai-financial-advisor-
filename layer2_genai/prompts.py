@@ -50,12 +50,6 @@ def build_user_prompt(
     Returns:
         A formatted user message string.
     """
-    # TODO: format the profile, tier, SHAP factors, and ETF list into a
-    #       clean prompt. Claude reads this and writes the explanation.
-    # TODO: decide how much detail to include. More context = better
-    #       explanation, but also more tokens = more cost.
-    # TODO: test with real outputs from Layers 1 and 3 before finalizing.
-
     etf_lines = "\n".join(
         f"- {etf.get('ticker', '?')} ({etf.get('name', '')})"
         for etf in etfs

@@ -1,29 +1,23 @@
 """
 Layer 2 · Claude API client.
 
-OWNER: [TBD at kickoff]
 BRANCH: layer2-genai
 
 This is the one spot in the app where we call the Anthropic API.
 Keep it isolated — don't sprinkle API calls across other files.
 
-What you need to do:
-
-1. Read ANTHROPIC_API_KEY from the environment.
-2. Construct the Anthropic client.
-3. Call client.messages.create() with the system + user prompts from prompts.py.
-4. Post-check the response for hallucinated tickers (a ticker appeared that
-   wasn't in the etfs list — this is a safety issue, flag it).
-5. Return the text.
-
-Stub behavior: returns a generic message so the app runs end-to-end before
-the real API is wired up.
+Falls back to a stub response when ANTHROPIC_API_KEY is not set, so the
+app still runs end-to-end during development.
 """
 
+import logging
 import os
+import re
 
-# TODO: from anthropic import Anthropic
+from anthropic import Anthropic
 from layer2_genai.prompts import SYSTEM_PROMPT, build_user_prompt
+
+logger = logging.getLogger(__name__)
 
 
 def generate_explanation(
@@ -55,22 +49,39 @@ def generate_explanation(
             "This is not financial advice."
         )
 
-    # TODO: client = Anthropic(api_key=api_key)
-    # TODO: user_prompt = build_user_prompt(profile, tier, top_factors, etfs)
-    # TODO: response = client.messages.create(
-    #           model=model,
-    #           max_tokens=200,
-    #           system=SYSTEM_PROMPT,
-    #           messages=[{"role": "user", "content": user_prompt}],
-    #       )
-    # TODO: text = response.content[0].text
-    # TODO: safety check — scan for tickers not in etfs list, log warning if found
-    # TODO: return text
+    client = Anthropic(api_key=api_key)
+    user_prompt = build_user_prompt(profile, tier, top_factors, etfs)
 
-    # --- STUB RESPONSE ---
-    return (
-        f"[STUB] Your profile was classified as {tier} risk, which may be "
-        f"suitable for the recommended ETFs. Consider reviewing each fund "
-        f"carefully before making a decision.\n\n"
-        f"This is not financial advice."
+    response = client.messages.create(
+        model=model,
+        max_tokens=200,
+        system=SYSTEM_PROMPT,
+        messages=[{"role": "user", "content": user_prompt}],
     )
+    text = response.content[0].text
+
+    # Safety check: flag any ticker symbols that weren't in the ETF list
+    allowed_tickers = {etf.get("ticker", "").upper() for etf in etfs}
+    mentioned_tickers = set(re.findall(r"\b[A-Z]{2,5}\b", text))
+    # Filter to likely tickers by removing common English words
+    common_words = {"THE", "AND", "FOR", "ARE", "BUT", "NOT", "YOU", "ALL",
+                    "CAN", "HER", "WAS", "ONE", "OUR", "OUT", "MAY", "ETF",
+                    "WITH", "HIS", "HOW", "ITS", "LET", "SAY", "SHE", "TOO",
+                    "USE", "WAY", "WHO", "DID", "GET", "HAS", "HIM", "HAD",
+                    "ANY", "NEW", "NOW", "OLD", "SEE", "TWO", "BOY", "OWN",
+                    "ALSO", "BACK", "BEEN", "CALL", "COME", "EACH", "FIND",
+                    "FROM", "GIVE", "HAVE", "HELP", "HERE", "HIGH", "JUST",
+                    "KNOW", "LAST", "LIKE", "LINE", "LONG", "LOOK", "MADE",
+                    "MAKE", "MANY", "MORE", "MOST", "MUCH", "MUST", "NAME",
+                    "ONLY", "OVER", "PART", "SOME", "SUCH", "TAKE", "THAN",
+                    "THAT", "THEM", "THEN", "THIS", "TIME", "VERY", "WHAT",
+                    "WHEN", "WILL", "WITH", "WORD", "WORK", "YOUR", "RISK",
+                    "LOW", "FUND", "FUNDS", "PORTFOLIO", "THESE"}
+    mentioned_tickers -= common_words
+    hallucinated = mentioned_tickers - allowed_tickers
+    if hallucinated:
+        logger.warning(
+            "Claude mentioned tickers not in the ETF list: %s", hallucinated
+        )
+
+    return text
