@@ -49,6 +49,10 @@ def predict_risk_tier(profile: dict) -> dict:
             - investment_horizon_years (int)
             - investment_experience (str: 'Beginner' | 'Intermediate' | 'Advanced')
 
+        Feature vector built internally (7 features, must match FEATURE_COLS from training):
+            [age, years_to_retirement, annual_income_usd, savings_rate_pct,
+             debt_to_income_ratio, investment_horizon_years, experience_encoded]
+
     Returns:
         dict with keys:
             - tier (str: 'Low' | 'Medium' | 'High')
@@ -57,11 +61,22 @@ def predict_risk_tier(profile: dict) -> dict:
             - top_factors (list of dicts: [{"feature": str, "impact": float, "direction": str}])
     """
     # TODO: load model from MODEL_PATH if not already loaded (cache it)
-    # TODO: build feature vector from profile in the same order as FEATURE_COLS in train.py
     # TODO: model.predict() and model.predict_proba()
     # TODO: shap.TreeExplainer(model).shap_values(X_single)
     # TODO: extract top 3 features by absolute SHAP value
     # TODO: return the structured dict
+
+    # Build 7-feature vector matching FEATURE_COLS order from training
+    # exp_map = bundle['exp_map'] loaded from model.pkl
+    # row = [
+    #     profile['age'],
+    #     max(0, 65 - profile['age']),                    # years_to_retirement
+    #     profile['annual_income_usd'],
+    #     profile['savings_rate_pct'],
+    #     profile['debt_to_income_ratio'],
+    #     profile['investment_horizon_years'],
+    #     exp_map[profile['investment_experience']],
+    # ]
 
     # --- STUB RESPONSE so the app runs end-to-end before real implementation ---
     return {

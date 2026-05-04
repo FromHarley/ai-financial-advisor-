@@ -45,10 +45,10 @@ ai-financial-advisor/
 │
 ├── data/                   ← The two CSVs we use. Don't modify these.
 │
-├── layer1_ml/              ← Daniel's folder — ML model training & prediction.
+├── layer1_ml/              ← Alex's folder — ML model training & prediction.
 ├── layer2_genai/           ← Anurag's folder — Claude API + prompts.
 ├── layer3_agentic/         ← Kimberly's folder — ETF agent + yfinance.
-├── layer4_respai/          ← Alex's folder — bias audit, model card, decision log.
+├── layer4_respai/          ← Daniel's folder — bias audit, model card, decision log.
 └── voice_ux/               ← Deferred (out of scope). Stretch goal only.
 ```
 
