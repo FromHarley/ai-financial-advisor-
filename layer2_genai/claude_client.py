@@ -1,76 +1,92 @@
 """
-Layer 2 · Claude API client.
-
-OWNER: [TBD at kickoff]
-BRANCH: layer2-genai
-
-This is the one spot in the app where we call the Anthropic API.
-Keep it isolated — don't sprinkle API calls across other files.
-
-What you need to do:
-
-1. Read ANTHROPIC_API_KEY from the environment.
-2. Construct the Anthropic client.
-3. Call client.messages.create() with the system + user prompts from prompts.py.
-4. Post-check the response for hallucinated tickers (a ticker appeared that
-   wasn't in the etfs list — this is a safety issue, flag it).
-5. Return the text.
-
-Stub behavior: returns a generic message so the app runs end-to-end before
-the real API is wired up.
+Layer 2 — Claude API client
+Autonomous Financial Advisor | MIS 02.303 | Spring 2026
 """
 
 import os
-
-# TODO: from anthropic import Anthropic
-from layer2_genai.prompts import SYSTEM_PROMPT, build_user_prompt
+import re
+import anthropic
+from .prompts import build_system_prompt, build_user_prompt
 
 
 def generate_explanation(
     profile: dict,
     tier: str,
-    top_factors: list[dict],
+    top_factors: list,
     etfs: list[dict],
 ) -> str:
     """
-    Generate a 2-3 sentence plain-English explanation of the recommendation.
+    Calls Claude and returns a 2-3 sentence plain-English explanation.
 
     Args:
-        profile: The user's financial profile.
-        tier: Risk tier from Layer 1.
-        top_factors: Top SHAP factors from Layer 1.
-        etfs: ETF shortlist from Layer 3.
+        profile:      investor profile dict from voice/keyboard input
+        tier:         "Low" | "Medium" | "High"  (from Layer 1)
+        top_factors:  SHAP factor list            (from Layer 1)
+        etfs:         ETF list                    (from Layer 3)
 
     Returns:
-        A 2-3 sentence explanation string, ending with the disclaimer.
+        Explanation string with disclaimer, or safe fallback if API fails.
     """
-    api_key = os.getenv("ANTHROPIC_API_KEY")
-    model = os.getenv("CLAUDE_MODEL", "claude-opus-4-7")
+    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
-    if not api_key:
-        return (
-            "⚠️ ANTHROPIC_API_KEY not set — showing stub response. "
-            "Based on your profile, a diversified ETF portfolio aligned with "
-            f"a {tier.lower()}-risk profile may be a reasonable starting point. "
-            "This is not financial advice."
+    # Track allowed tickers for hallucination check
+    allowed_tickers = {e.get("ticker", "").upper() for e in etfs}
+
+    try:
+        message = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=300,
+            system=build_system_prompt(),
+            messages=[
+                {"role": "user", "content": build_user_prompt(profile, tier, top_factors, etfs)}
+            ],
         )
+        explanation = message.content[0].text.strip()
 
-    # TODO: client = Anthropic(api_key=api_key)
-    # TODO: user_prompt = build_user_prompt(profile, tier, top_factors, etfs)
-    # TODO: response = client.messages.create(
-    #           model=model,
-    #           max_tokens=200,
-    #           system=SYSTEM_PROMPT,
-    #           messages=[{"role": "user", "content": user_prompt}],
-    #       )
-    # TODO: text = response.content[0].text
-    # TODO: safety check — scan for tickers not in etfs list, log warning if found
-    # TODO: return text
+        # Block hallucinated tickers before returning
+        return _check_for_hallucinated_tickers(explanation, allowed_tickers)
 
-    # --- STUB RESPONSE ---
+    except Exception as e:
+        print(f"[Layer2] API error: {e}")
+        return _safe_fallback(tier, etfs)
+
+
+def _check_for_hallucinated_tickers(text: str, allowed_tickers: set) -> str:
+    """
+    Scans for ticker-like tokens (2-5 uppercase letters).
+    Blocks the response if any unrecognized ticker is found.
+    """
+    noise = {"ETF", "ETFS", "US", "AI", "OK", "A", "I"}
+    found = set(re.findall(r"\b[A-Z]{2,5}\b", text)) - noise
+    hallucinated = found - allowed_tickers
+
+    if hallucinated:
+        print(f"[Layer2] ⚠️ Hallucinated tickers blocked: {hallucinated}")
+        return (
+            "[Explanation unavailable — an unverified fund name was detected. "
+            "Please review the recommended funds listed above directly. "
+            "This is not financial advice — please consult a licensed financial "
+            "professional before making investment decisions.]"
+        )
+    return text
+
+
+def _safe_fallback(tier: str, etfs: list[dict]) -> str:
+    """Pre-written guardrail-safe fallback used when the API is unreachable."""
+    names = [e.get("name", e.get("ticker", "the recommended funds")) for e in etfs[:2]]
+    names_str = " and ".join(names) if names else "the recommended funds"
+
+    phrases = {
+        "Low":    "a conservative approach focused on stability",
+        "Medium": "a balanced approach between growth and stability",
+        "High":   "a growth-oriented approach that accepts higher short-term variability",
+    }
+    approach = phrases.get(tier, "an approach suited to your profile")
+
     return (
-        f"[STUB] Your profile was classified as {tier} risk, which may be "
-        f"suitable for the recommended ETFs. Consider reviewing each fund "
-        f"carefully before making a decision.\n\n"
-        f"This is not financial advice."
+        f"Based on your profile, your risk tier is {tier}, suggesting {approach}. "
+        f"The recommended funds — including {names_str} — reflect this assessment "
+        f"and were selected to align with your financial situation and goals. "
+        f"This is not financial advice — please consult a licensed financial professional "
+        f"before making investment decisions."
     )
