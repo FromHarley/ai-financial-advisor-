@@ -27,14 +27,20 @@ def generate_explanation(
     Returns:
         Explanation string with disclaimer, or safe fallback if API fails.
     """
-    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+    api_key = os.getenv("ANTHROPIC_API_KEY")
+    model = os.getenv("CLAUDE_MODEL", "claude-sonnet-4-20250514")
+
+    if not api_key:
+        return _safe_fallback(tier, etfs)
+
+    client = anthropic.Anthropic(api_key=api_key)
 
     # Track allowed tickers for hallucination check
     allowed_tickers = {e.get("ticker", "").upper() for e in etfs}
 
     try:
         message = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model=model,
             max_tokens=300,
             system=build_system_prompt(),
             messages=[
@@ -56,7 +62,20 @@ def _check_for_hallucinated_tickers(text: str, allowed_tickers: set) -> str:
     Scans for ticker-like tokens (2-5 uppercase letters).
     Blocks the response if any unrecognized ticker is found.
     """
-    noise = {"ETF", "ETFS", "US", "AI", "OK", "A", "I"}
+    noise = {"ETF", "ETFS", "US", "AI", "OK", "A", "I",
+             "THE", "AND", "FOR", "ARE", "BUT", "NOT", "YOU", "ALL",
+             "CAN", "HER", "WAS", "ONE", "OUR", "OUT", "MAY",
+             "WITH", "HIS", "HOW", "ITS", "LET", "SAY", "SHE", "TOO",
+             "USE", "WAY", "WHO", "DID", "GET", "HAS", "HIM", "HAD",
+             "ANY", "NEW", "NOW", "OLD", "SEE", "TWO", "BOY", "OWN",
+             "ALSO", "BACK", "BEEN", "CALL", "COME", "EACH", "FIND",
+             "FROM", "GIVE", "HAVE", "HELP", "HERE", "HIGH", "JUST",
+             "KNOW", "LAST", "LIKE", "LINE", "LONG", "LOOK", "MADE",
+             "MAKE", "MANY", "MORE", "MOST", "MUCH", "MUST", "NAME",
+             "ONLY", "OVER", "PART", "SOME", "SUCH", "TAKE", "THAN",
+             "THAT", "THEM", "THEN", "THIS", "TIME", "VERY", "WHAT",
+             "WHEN", "WILL", "WORD", "WORK", "YOUR", "RISK",
+             "LOW", "FUND", "FUNDS", "PORTFOLIO", "THESE"}
     found = set(re.findall(r"\b[A-Z]{2,5}\b", text)) - noise
     hallucinated = found - allowed_tickers
 
