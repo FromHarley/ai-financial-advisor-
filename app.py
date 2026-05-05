@@ -63,6 +63,82 @@ st.markdown("""
         color: #1a2a3a !important;
     }
 
+    /* ---- Global text readability — catch everything Streamlit renders ---- */
+    .stApp, .stApp p, .stApp span, .stApp label, .stApp div,
+    .stApp li, .stApp td, .stApp th, .stApp caption,
+    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
+        color: #1a2a3a;
+    }
+
+    /* Form inputs, number inputs, select boxes */
+    .stNumberInput input, .stTextInput input, .stTextArea textarea,
+    .stSelectbox div[data-baseweb="select"] span,
+    .stSelectbox div[data-baseweb="select"] div,
+    .stSelectbox [data-testid="stWidgetLabel"],
+    .stMultiSelect span,
+    div[data-baseweb="select"] .css-1dimb5e-singleValue,
+    div[data-baseweb="select"] div[aria-selected] {
+        color: #1a2a3a !important;
+    }
+    input, textarea, select {
+        color: #1a2a3a !important;
+    }
+
+    /* Slider labels and values */
+    .stSlider label, .stSlider p, .stSlider span,
+    .stSlider div[data-testid="stTickBarMin"],
+    .stSlider div[data-testid="stTickBarMax"] {
+        color: #1a2a3a !important;
+    }
+
+    /* Widget labels and help text */
+    [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] p,
+    .stTooltipIcon, div[data-testid="stTooltipContent"] p {
+        color: #1a2a3a !important;
+    }
+
+    /* Non-primary buttons */
+    .stButton > button {
+        color: #1a2a3a !important;
+    }
+    .stButton > button[kind="primary"] {
+        color: white !important;
+    }
+
+    /* Dataframe / table text */
+    .stDataFrame, .stDataFrame td, .stDataFrame th,
+    .stDataFrame div, .stDataFrame span,
+    div[data-testid="stDataFrame"] * {
+        color: #1a2a3a !important;
+    }
+
+    /* Success, warning, info, error boxes */
+    .stAlert p, .stAlert span, .stAlert div,
+    div[data-testid="stAlert"] p {
+        color: #1a2a3a !important;
+    }
+
+    /* Expander inner content */
+    div[data-testid="stExpander"] p,
+    div[data-testid="stExpander"] li,
+    div[data-testid="stExpander"] span,
+    div[data-testid="stExpander"] div,
+    div[data-testid="stExpander"] label,
+    div[data-testid="stExpander"] td,
+    div[data-testid="stExpander"] th {
+        color: #1a2a3a !important;
+    }
+
+    /* Caption text */
+    .stCaption p, div[data-testid="stCaptionContainer"] p {
+        color: #556677 !important;
+    }
+
+    /* Spinner text */
+    .stSpinner > div > span {
+        color: #1a2a3a !important;
+    }
+
     /* ---- Hero ---- */
     .hero-section {
         background: linear-gradient(135deg, #1b3a5c 0%, #2a5280 100%);
@@ -293,7 +369,10 @@ st.markdown("""
     /* Metrics */
     div[data-testid="stMetric"] label,
     div[data-testid="stMetric"] div[data-testid="stMetricValue"],
-    div[data-testid="stMetric"] div[data-testid="stMetricLabel"] {
+    div[data-testid="stMetric"] div[data-testid="stMetricLabel"],
+    div[data-testid="stMetric"] p,
+    div[data-testid="stMetric"] span,
+    div[data-testid="stMetric"] div {
         color: #1a2a3a !important;
     }
 
@@ -556,8 +635,8 @@ with st.expander("Responsible AI — Model Card & Bias Audit"):
     st.markdown("### Model card summary")
 
     mc1, mc2, mc3 = st.columns(3)
-    mc1.metric("Overall accuracy", "81.0%")
-    mc2.metric("Weighted F1", "81.2%")
+    mc1.metric("Overall accuracy", "84.0%")
+    mc2.metric("Macro F1", "0.81")
     mc3.metric("Training samples", "2,000")
 
     st.markdown("#### Top SHAP features (global)")
@@ -568,12 +647,14 @@ with st.expander("Responsible AI — Model Card & Bias Audit"):
 
     st.markdown("#### Bias audit findings")
     bias_df = pd.DataFrame({
-        "Age group": ["Under 30", "30–54", "55–69"],
-        "Accuracy": ["0.842", "0.810", "0.795"],
-        "Gap vs overall": ["+ 0.032", "+ 0.000", "- 0.015"],
+        "Age band": ["Under 30", "30–54", "55–69", "70+"],
+        "Profiles": ["343", "1,093", "564", "0"],
+        "Low": ["0.3%", "9.5%", "30.5%", "—"],
+        "Medium": ["42.0%", "62.8%", "65.1%", "—"],
+        "High": ["57.7%", "27.7%", "4.4%", "—"],
     })
     st.dataframe(bias_df, use_container_width=True, hide_index=True)
-    st.caption("No group exceeded the ±0.05 disparity threshold.")
+    st.caption("Tier distribution by CFPB age band. Younger profiles skew High (longer horizons); older profiles skew Low. Pattern reflects source labels, not unjust bias.")
 
     st.markdown("#### LLM guardrails")
     st.markdown("""

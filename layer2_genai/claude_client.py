@@ -28,7 +28,7 @@ def generate_explanation(
         Explanation string with disclaimer, or safe fallback if API fails.
     """
     api_key = os.getenv("ANTHROPIC_API_KEY")
-    model = os.getenv("CLAUDE_MODEL", "claude-sonnet-4-20250514")
+    model = os.getenv("CLAUDE_MODEL", "claude-opus-4-7")
 
     if not api_key:
         return _safe_fallback(tier, etfs)

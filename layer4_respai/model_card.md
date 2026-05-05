@@ -36,7 +36,7 @@ This system is a class project designed to demonstrate an end-to-end AI applicat
 
 **Layer 2 — Language Model**
 - Provider: Anthropic
-- Model: Claude Opus 4.7
+- Model: Claude Opus 4.7 (`claude-opus-4-7`)
 - Usage: Generates 2–3 sentence plain-English explanation of each recommendation
 - Rationale for choice: Claude produces warmer, clearer natural language than alternatives we tested for user-facing financial prose. The assignment explicitly leaves LLM choice to the team.
 
@@ -49,13 +49,16 @@ This system is a class project designed to demonstrate an end-to-end AI applicat
 
 ## 3. Performance metrics
 
-- Overall accuracy: 81.0%
+- Overall accuracy: 84.0%
+- Macro F1: 0.81
 - Model: XGBoost (n_estimators=300, max_depth=5, learning_rate=0.05)
 - Class imbalance: handled via compute_class_weight balanced (from y_train)
 - Features (7): age, years_to_retirement, annual_income_usd, savings_rate_pct, debt_to_income_ratio, investment_horizon_years, experience_encoded
 - Training set size: 1,600 (80% split)
 - Test set size: 400 (20% split)
-- Per-class F1: Low 0.65, Medium 0.86, High 0.75
+- Per-class F1: Low 0.77, Medium 0.87, High 0.80
+- Per-class precision: Low 0.73, Medium 0.89, High 0.77
+- Per-class recall: Low 0.82, Medium 0.85, High 0.82
 
 ---
 
@@ -75,7 +78,9 @@ This system is a class project designed to demonstrate an end-to-end AI applicat
 
 **Method:** Because our training data lacks direct demographic fields, we audit using an age-band proxy. We bin training ages into the CFPB's standard buckets (under 30, 30–54, 55–69, 70+) and compare the distribution of predicted tiers across buckets.
 
-**Findings:** Younger profiles are assigned higher-risk tiers more frequently (Under 30: 53.9% High, 0.3% Low), while older profiles skew toward lower-risk tiers (55–69: 26.2% Low, 3.9% High). The 30–54 band is predominantly Medium (66.8%). The 70+ band has zero profiles in the dataset — a real gap, not a model output. The model is reproducing the age-horizon relationship present in the source labels, not inventing a pattern.
+**Findings:** Younger profiles are assigned higher-risk tiers more frequently (Under 30: 57.7% High, 0.3% Low), while older profiles skew toward lower-risk tiers (55–69: 30.5% Low, 4.4% High). The 30–54 band is predominantly Medium (62.8%). The 70+ band has zero profiles in the dataset — a real gap, not a model output. The model is reproducing the age-horizon relationship present in the source labels, not inventing a pattern.
+
+**Sample sizes:** Under 30: 343 · 30–54: 1,093 · 55–69: 564 · 70+: 0
 
 **Honest caveat:** This is a proxy, not a true demographic fairness test. We cannot directly measure disparate impact across gender, race, or education with the data we have. A production system handling real investor money would need richer demographic data and a full fairness-audit framework.
 
