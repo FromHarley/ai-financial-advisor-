@@ -30,14 +30,13 @@ st.set_page_config(
 # ---------- Custom CSS ----------
 st.markdown("""
 <style>
-    /* ---- Global ---- */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
     .stApp {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: #f0f2f6;
     }
 
-    /* Hide default Streamlit header/footer */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
@@ -47,36 +46,30 @@ st.markdown("""
         background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
         border-right: 1px solid #334155;
     }
-
     section[data-testid="stSidebar"] .stMarkdown p,
     section[data-testid="stSidebar"] .stMarkdown li {
         color: #cbd5e1;
     }
 
-    /* ---- Cards ---- */
-    .advisor-card {
+    /* ---- Section wrapper ---- */
+    .section-box {
         background: #ffffff;
         border: 1px solid #e2e8f0;
         border-radius: 16px;
-        padding: 24px;
-        margin-bottom: 16px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-        transition: box-shadow 0.2s ease;
+        padding: 28px 32px;
+        margin-bottom: 24px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
 
-    .advisor-card:hover {
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    /* ---- Hero header ---- */
+    /* ---- Hero ---- */
     .hero-section {
         background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
         border-radius: 20px;
-        padding: 40px 36px;
-        margin-bottom: 32px;
+        padding: 44px 40px;
+        margin-bottom: 28px;
         color: white;
+        border: 1px solid #334155;
     }
-
     .hero-title {
         font-size: 2.2rem;
         font-weight: 700;
@@ -84,7 +77,6 @@ st.markdown("""
         letter-spacing: -0.5px;
         color: white;
     }
-
     .hero-subtitle {
         font-size: 1.05rem;
         color: #94a3b8;
@@ -98,9 +90,8 @@ st.markdown("""
         align-items: center;
         gap: 12px;
         margin-bottom: 20px;
-        margin-top: 8px;
+        margin-top: 4px;
     }
-
     .step-number {
         background: linear-gradient(135deg, #3b82f6, #2563eb);
         color: white;
@@ -114,14 +105,13 @@ st.markdown("""
         font-size: 0.95rem;
         flex-shrink: 0;
     }
-
     .step-title {
-        font-size: 1.35rem;
+        font-size: 1.3rem;
         font-weight: 600;
         color: #0f172a;
     }
 
-    /* ---- Risk tier badge ---- */
+    /* ---- Tier badge ---- */
     .tier-badge {
         display: inline-flex;
         align-items: center;
@@ -132,69 +122,84 @@ st.markdown("""
         font-weight: 700;
         margin-bottom: 8px;
     }
-
     .tier-low {
         background: linear-gradient(135deg, #d1fae5, #a7f3d0);
         color: #065f46;
+        border: 1px solid #6ee7b7;
     }
-
     .tier-medium {
         background: linear-gradient(135deg, #fef3c7, #fde68a);
         color: #92400e;
+        border: 1px solid #fcd34d;
     }
-
     .tier-high {
         background: linear-gradient(135deg, #fee2e2, #fecaca);
         color: #991b1b;
+        border: 1px solid #fca5a5;
     }
 
     /* ---- ETF cards ---- */
     .etf-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
+        background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+        border: 1px solid #cbd5e1;
         border-radius: 14px;
-        padding: 20px;
+        padding: 24px 20px;
         text-align: center;
         transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
-
     .etf-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        border-color: #3b82f6;
     }
-
     .etf-ticker {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #0f172a;
-        margin-bottom: 4px;
-    }
-
-    .etf-name {
-        font-size: 0.8rem;
-        color: #64748b;
-        margin-bottom: 12px;
-        min-height: 2.4em;
-    }
-
-    .etf-price {
         font-size: 1.6rem;
         font-weight: 700;
-        color: #16a34a;
-        margin-bottom: 4px;
+        color: #0f172a;
+        margin-bottom: 2px;
     }
-
+    .etf-name {
+        font-size: 0.78rem;
+        color: #64748b;
+        margin-bottom: 16px;
+        min-height: 2.4em;
+        line-height: 1.4;
+    }
+    .etf-price {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #16a34a;
+        margin-bottom: 2px;
+    }
+    .etf-price-label {
+        font-size: 0.7rem;
+        color: #94a3b8;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 12px;
+    }
+    .etf-category {
+        display: inline-block;
+        background: #e0e7ff;
+        color: #3730a3;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
     .etf-rationale {
         font-size: 0.75rem;
-        color: #94a3b8;
-        margin-top: 8px;
+        color: #64748b;
+        margin-top: 10px;
         line-height: 1.4;
+        font-style: italic;
     }
 
     /* ---- Explanation box ---- */
     .explanation-box {
         background: linear-gradient(135deg, #eff6ff, #dbeafe);
-        border: 1px solid #bfdbfe;
+        border: 1px solid #93c5fd;
         border-radius: 14px;
         padding: 24px 28px;
         font-size: 1.05rem;
@@ -202,51 +207,127 @@ st.markdown("""
         color: #1e3a5f;
     }
 
-    /* ---- Decision buttons ---- */
+    /* ---- Decision ---- */
     .decision-section {
-        background: #f8fafc;
-        border: 2px dashed #cbd5e1;
+        background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+        border: 2px dashed #94a3b8;
         border-radius: 16px;
         padding: 28px;
         text-align: center;
     }
 
+    /* ---- Model card ---- */
+    .model-card-section {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 28px 32px;
+        margin-top: 8px;
+    }
+    .mc-header {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 20px;
+    }
+    .mc-subheader {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #0f172a;
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+    .mc-stat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+    .mc-stat {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 16px;
+    }
+    .mc-stat-label {
+        font-size: 0.75rem;
+        color: #64748b;
+        margin-bottom: 4px;
+    }
+    .mc-stat-value {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #0f172a;
+    }
+    .mc-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 12px 0;
+        font-size: 0.9rem;
+    }
+    .mc-table th {
+        text-align: left;
+        padding: 10px 16px;
+        background: #f8fafc;
+        color: #64748b;
+        font-weight: 600;
+        font-size: 0.8rem;
+        border-bottom: 2px solid #e2e8f0;
+    }
+    .mc-table td {
+        padding: 10px 16px;
+        border-bottom: 1px solid #f1f5f9;
+        color: #334155;
+    }
+    .mc-gap-pos { color: #16a34a; font-weight: 500; }
+    .mc-gap-neg { color: #dc2626; font-weight: 500; }
+    .mc-note {
+        font-size: 0.8rem;
+        color: #94a3b8;
+        font-style: italic;
+        margin-top: 8px;
+    }
+    .mc-guardrail-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .mc-guardrail-list li {
+        padding: 6px 0;
+        font-size: 0.9rem;
+        color: #334155;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .mc-guardrail-list li::before {
+        content: "•";
+        color: #3b82f6;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
     /* ---- Footer ---- */
     .app-footer {
-        background: #f1f5f9;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
         border-radius: 12px;
-        padding: 16px 24px;
+        padding: 20px 24px;
         text-align: center;
         color: #64748b;
         font-size: 0.85rem;
-        margin-top: 40px;
+        margin-top: 32px;
     }
 
     /* ---- Responsive ---- */
     @media (max-width: 768px) {
-        .hero-section {
-            padding: 28px 20px;
-        }
-
-        .hero-title {
-            font-size: 1.6rem;
-        }
-
-        .hero-subtitle {
-            font-size: 0.95rem;
-        }
-
-        .step-title {
-            font-size: 1.1rem;
-        }
-
-        .advisor-card {
-            padding: 16px;
-        }
-
-        .etf-card {
-            padding: 14px;
-        }
+        .hero-section { padding: 28px 20px; }
+        .hero-title { font-size: 1.6rem; }
+        .hero-subtitle { font-size: 0.95rem; }
+        .step-title { font-size: 1.1rem; }
+        .section-box { padding: 20px 16px; }
+        .etf-card { padding: 16px 12px; }
+        .mc-stat-grid { grid-template-columns: 1fr; }
     }
 
     /* ---- Streamlit overrides ---- */
@@ -259,19 +340,23 @@ st.markdown("""
         font-size: 1rem;
         transition: transform 0.1s ease;
     }
-
-    .stButton > button[kind="primary"]:hover {
-        transform: scale(1.02);
-    }
-
-    .stButton > button[kind="primary"]:active {
-        transform: scale(0.98);
-    }
+    .stButton > button[kind="primary"]:hover { transform: scale(1.02); }
+    .stButton > button[kind="primary"]:active { transform: scale(0.98); }
 
     div[data-testid="stExpander"] {
         border: 1px solid #e2e8f0;
         border-radius: 14px;
         overflow: hidden;
+        background: #ffffff;
+    }
+
+    /* Form styling */
+    div[data-testid="stForm"] {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 24px 28px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -401,8 +486,10 @@ if st.session_state.tier_result:
 
     conf_text = f" · {confidence:.0%} confidence" if confidence is not None else ""
     st.markdown(f"""
-    <div class="tier-badge {tier_class.get(tier, '')}">
-        {tier_icon.get(tier, '⚪')} {tier} Risk{conf_text}
+    <div class="section-box">
+        <div class="tier-badge {tier_class.get(tier, '')}">
+            {tier_icon.get(tier, '⚪')} {tier} Risk{conf_text}
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -433,11 +520,14 @@ if st.session_state.etfs:
         with col:
             price = etf.get("current_price")
             price_str = f"${price:,.2f}" if price is not None else "—"
+            category = etf.get("category", "")
             st.markdown(f"""
             <div class="etf-card">
                 <div class="etf-ticker">{etf.get('ticker', '?')}</div>
                 <div class="etf-name">{etf.get('name', '')}</div>
+                <div class="etf-category">{category}</div>
                 <div class="etf-price">{price_str}</div>
+                <div class="etf-price-label">Current Price</div>
                 <div class="etf-rationale">{etf.get('rationale', '')}</div>
             </div>
             """, unsafe_allow_html=True)
@@ -511,8 +601,73 @@ elif st.session_state.decision == "reject":
 
 # ---------- Responsible AI panel ----------
 with st.expander("Responsible AI — Model Card & Bias Audit"):
-    st.markdown("**Model card:** see `layer4_respai/model_card.md` in the repo.")
-    st.markdown("**Bias audit findings:**")
+    # Model card summary (inline, styled like the reference image)
+    st.markdown("""
+    <div class="model-card-section">
+        <div class="mc-header">Model card summary</div>
+        <div class="mc-stat-grid">
+            <div class="mc-stat">
+                <div class="mc-stat-label">Overall accuracy</div>
+                <div class="mc-stat-value">81.0%</div>
+            </div>
+            <div class="mc-stat">
+                <div class="mc-stat-label">Weighted F1</div>
+                <div class="mc-stat-value">81.2%</div>
+            </div>
+            <div class="mc-stat">
+                <div class="mc-stat-label">Training samples</div>
+                <div class="mc-stat-value">2,000</div>
+            </div>
+        </div>
+
+        <div class="mc-subheader">Top SHAP features (global)</div>
+        <p style="font-size: 0.9rem; color: #475569;">
+            Investment horizon and age are the strongest predictors.
+            See <code>model_card.md</code> for full details.
+        </p>
+
+        <div class="mc-subheader">Bias audit findings</div>
+        <table class="mc-table">
+            <thead>
+                <tr>
+                    <th>Age group</th>
+                    <th>Accuracy</th>
+                    <th>Gap vs overall</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Under 30</td>
+                    <td>0.842</td>
+                    <td class="mc-gap-pos">+ 0.032</td>
+                </tr>
+                <tr>
+                    <td>30–54</td>
+                    <td>0.810</td>
+                    <td class="mc-gap-pos">+ 0.000</td>
+                </tr>
+                <tr>
+                    <td>55–69</td>
+                    <td>0.795</td>
+                    <td class="mc-gap-neg">- 0.015</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mc-note">No group exceeded the ±0.05 disparity threshold.</div>
+
+        <div class="mc-subheader">LLM guardrails</div>
+        <ul class="mc-guardrail-list">
+            <li>Only mentions ETF tickers provided in the input context</li>
+            <li>No return figures cited</li>
+            <li>Hedged language enforced via system prompt</li>
+            <li>Disclaimer appended to every explanation</li>
+            <li>Human approval required before any action</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.write("")
+    st.markdown("**Bias audit — tier distribution by age band:**")
     from layer4_respai.bias_audit import render_bias_audit_summary
     render_bias_audit_summary()
 
@@ -522,7 +677,7 @@ st.markdown("""
 <div class="app-footer">
     This tool is a class project. It is <strong>not financial advice.</strong>
     It does not execute trades, hold funds, or produce legally binding recommendations.
-    <br>
+    <br><br>
     <span style="color: #94a3b8;">Built by Group 2 · MIS 02.303 · Rowan University · Spring 2026</span>
 </div>
 """, unsafe_allow_html=True)
