@@ -290,6 +290,13 @@ st.markdown("""
         font-weight: 500 !important;
     }
 
+    /* Metrics */
+    div[data-testid="stMetric"] label,
+    div[data-testid="stMetric"] div[data-testid="stMetricValue"],
+    div[data-testid="stMetric"] div[data-testid="stMetricLabel"] {
+        color: #1a2a3a !important;
+    }
+
     /* Expander */
     div[data-testid="stExpander"] {
         border: 1px solid #b0c4d8;
