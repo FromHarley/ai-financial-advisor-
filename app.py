@@ -72,7 +72,7 @@ st.markdown("""
         color: white;
         border: 1px solid #1b3a5c;
     }
-    .hero-section * { color: white !important; }
+    .hero-section, .hero-section * { color: #ffffff !important; }
     .hero-title {
         font-size: 2rem;
         font-weight: 700;
@@ -239,8 +239,8 @@ st.markdown("""
         font-size: 0.82rem;
         margin-top: 32px;
     }
-    .app-footer, .app-footer * { color: #c0d0e0 !important; }
-    .app-footer strong { color: #ffffff !important; }
+    .app-footer, .app-footer *, .app-footer p, .app-footer span,
+    .app-footer strong, .app-footer br { color: #ffffff !important; }
 
     /* ---- Responsive ---- */
     @media (max-width: 768px) {
