@@ -332,7 +332,7 @@ for key in ["profile", "tier_result", "etfs", "explanation", "decision"]:
 # ---------- Hero ----------
 st.markdown("""
 <div class="hero-section">
-    <div class="hero-title">Autonomous Financial Advisor</div>
+    <div class="hero-title">Buffert AI</div>
     <div class="hero-subtitle">
         Tell us about yourself and we'll recommend an ETF portfolio that matches
         your risk profile. You stay in control — nothing is finalized until you approve.
