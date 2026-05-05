@@ -21,8 +21,8 @@ env/
 
 # ML artifacts (produced by train.py, don't commit)
 
-# Cached market data (for demo fallback)
-layer3_agentic/etf_cache.json
+# Cached market data (committed as fallback for Streamlit Cloud)
+# layer3_agentic/etf_cache.json
 
 # Decision log (runtime data)
 decisions.csv

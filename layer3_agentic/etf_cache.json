@@ -1,0 +1,10 @@
+{
+  "BND": {"price": 73.24, "name": "Vanguard Total Bond Market ETF"},
+  "SCHD": {"price": 29.47, "name": "Schwab U.S. Dividend Equity ETF"},
+  "VTIP": {"price": 48.54, "name": "Vanguard Short-Term Inflation-Protected Securities"},
+  "VTI": {"price": 356.99, "name": "Vanguard Total Stock Market ETF"},
+  "VEA": {"price": 68.98, "name": "Vanguard FTSE Developed Markets ETF"},
+  "QQQ": {"price": 681.61, "name": "Invesco QQQ Trust (Nasdaq-100)"},
+  "IWM": {"price": 279.28, "name": "iShares Russell 2000 ETF"},
+  "VUG": {"price": 83.86, "name": "Vanguard Growth ETF"}
+}
