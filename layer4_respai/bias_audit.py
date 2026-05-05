@@ -74,6 +74,10 @@ def run_bias_audit() -> None:
     # Sample sizes
     band_counts = df["age_band"].value_counts().reindex(band_order, fill_value=0)
 
+    # Drop age bands with zero profiles so they don't appear on the chart
+    nonempty = band_counts[band_counts > 0].index
+    ct = ct.loc[ct.index.isin(nonempty)]
+
     # Plot stacked bar chart
     colors = {"Low": "#27ae60", "Medium": "#f39c12", "High": "#e74c3c"}
     fig, ax = plt.subplots(figsize=(8, 5))

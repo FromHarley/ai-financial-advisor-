@@ -664,9 +664,9 @@ with st.expander("Responsible AI — Model Card & Bias Audit"):
     bias_df = pd.DataFrame({
         "Age band": ["Under 30", "30–54", "55–69", "70+"],
         "Profiles": ["343", "1,093", "564", "0"],
-        "Low": ["0.3%", "9.5%", "30.5%", "—"],
-        "Medium": ["42.0%", "62.8%", "65.1%", "—"],
-        "High": ["57.7%", "27.7%", "4.4%", "—"],
+        "Low": ["0.3%", "9.4%", "30.9%", "—"],
+        "Medium": ["43.1%", "62.8%", "64.7%", "—"],
+        "High": ["56.6%", "27.8%", "4.4%", "—"],
     })
     st.dataframe(bias_df, use_container_width=True, hide_index=True)
     st.caption("Tier distribution by CFPB age band. Younger profiles skew High (longer horizons); older profiles skew Low. Pattern reflects source labels, not unjust bias.")

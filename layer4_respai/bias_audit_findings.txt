@@ -9,10 +9,9 @@
 - 70+: 0 profiles
 
 **Tier distribution by band:**
-- Under 30: Low 0.3% · Medium 42.0% · High 57.7%
-- 30-54: Low 9.5% · Medium 62.8% · High 27.7%
-- 55-69: Low 30.5% · Medium 65.1% · High 4.4%
-- 70+: no profiles in dataset
+- Under 30: Low 0.3% · Medium 43.1% · High 56.6%
+- 30-54: Low 9.4% · Medium 62.8% · High 27.8%
+- 55-69: Low 30.9% · Medium 64.7% · High 4.4%
 
 **Observed pattern:** Younger profiles are assigned higher-risk tiers more frequently, while older profiles skew toward lower-risk tiers. This is consistent with the relationship between age, investment horizon, and risk tolerance in the source labels — the model is reproducing the labeling pattern, not inventing one.
 
