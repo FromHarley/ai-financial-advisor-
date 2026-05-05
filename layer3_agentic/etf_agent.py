@@ -46,7 +46,7 @@ def _fetch_price(ticker: str) -> float | None:
     try:
         yf_ticker = yf.Ticker(ticker)
         hist = yf_ticker.history(period='5d')
-        return float(hist['Close'].iloc[-1]) if not hist.empty else None
+        return round(float(hist['Close'].iloc[-1]), 2) if not hist.empty else None
     except Exception:
         return None
 

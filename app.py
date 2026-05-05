@@ -56,88 +56,60 @@ st.markdown("""
         color: #a0b8cc !important;
     }
 
-    /* ---- All text dark for readability ---- */
-    .stMarkdown p, .stMarkdown li, .stMarkdown h1, .stMarkdown h2,
-    .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6,
-    .stMarkdown span, .stMarkdown div, .stMarkdown label {
+    /* ---- MASTER TEXT OVERRIDE — force all text dark ---- */
+    .stApp *:not(.hero-section *):not(.app-footer *):not(section[data-testid="stSidebar"] *) {
         color: #1a2a3a !important;
     }
 
-    /* ---- Global text readability — catch everything Streamlit renders ---- */
-    .stApp, .stApp p, .stApp span, .stApp label, .stApp div,
-    .stApp li, .stApp td, .stApp th, .stApp caption,
-    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
-        color: #1a2a3a;
+    /* ---- Re-apply white text where needed ---- */
+    .hero-section, .hero-section * { color: #ffffff !important; }
+    .app-footer, .app-footer * { color: #ffffff !important; }
+    section[data-testid="stSidebar"] * { color: #e0e8f0 !important; }
+    section[data-testid="stSidebar"] .stCaption p { color: #a0b8cc !important; }
+    .step-number { color: #ffffff !important; }
+
+    /* ---- Primary buttons stay white ---- */
+    .stButton > button[kind="primary"],
+    .stButton > button[kind="primary"] * {
+        color: #ffffff !important;
     }
 
-    /* Form inputs, number inputs, select boxes */
-    .stNumberInput input, .stTextInput input, .stTextArea textarea,
-    .stSelectbox div[data-baseweb="select"] span,
-    .stSelectbox div[data-baseweb="select"] div,
-    .stSelectbox [data-testid="stWidgetLabel"],
-    .stMultiSelect span,
-    div[data-baseweb="select"] .css-1dimb5e-singleValue,
-    div[data-baseweb="select"] div[aria-selected] {
-        color: #1a2a3a !important;
-    }
-    input, textarea, select {
-        color: #1a2a3a !important;
-    }
-
-    /* Slider labels and values */
-    .stSlider label, .stSlider p, .stSlider span,
+    /* ---- Slider thumb value ---- */
+    .stSlider [data-testid="stThumbValue"],
+    .stSlider div[role="slider"],
     .stSlider div[data-testid="stTickBarMin"],
-    .stSlider div[data-testid="stTickBarMax"] {
+    .stSlider div[data-testid="stTickBarMax"],
+    .stSlider p, .stSlider span, .stSlider label {
         color: #1a2a3a !important;
     }
 
-    /* Widget labels and help text */
-    [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] p,
-    .stTooltipIcon, div[data-testid="stTooltipContent"] p {
+    /* ---- Form labels ---- */
+    label, [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] * {
         color: #1a2a3a !important;
     }
 
-    /* Non-primary buttons */
-    .stButton > button {
-        color: #1a2a3a !important;
-    }
-    .stButton > button[kind="primary"] {
-        color: white !important;
-    }
-
-    /* Dataframe / table text */
-    .stDataFrame, .stDataFrame td, .stDataFrame th,
-    .stDataFrame div, .stDataFrame span,
-    div[data-testid="stDataFrame"] * {
+    /* ---- Inputs ---- */
+    input, textarea, select,
+    div[data-baseweb="select"] *,
+    div[data-baseweb="input"] * {
         color: #1a2a3a !important;
     }
 
-    /* Success, warning, info, error boxes */
-    .stAlert p, .stAlert span, .stAlert div,
-    div[data-testid="stAlert"] p {
-        color: #1a2a3a !important;
-    }
-
-    /* Expander inner content */
-    div[data-testid="stExpander"] p,
-    div[data-testid="stExpander"] li,
-    div[data-testid="stExpander"] span,
-    div[data-testid="stExpander"] div,
-    div[data-testid="stExpander"] label,
-    div[data-testid="stExpander"] td,
-    div[data-testid="stExpander"] th {
-        color: #1a2a3a !important;
-    }
-
-    /* Caption text */
+    /* ---- Caption text slightly lighter ---- */
     .stCaption p, div[data-testid="stCaptionContainer"] p {
         color: #556677 !important;
     }
 
-    /* Spinner text */
-    .stSpinner > div > span {
-        color: #1a2a3a !important;
-    }
+    /* ---- Tier badge colors ---- */
+    .tier-low, .tier-low * { color: #155724 !important; }
+    .tier-medium, .tier-medium * { color: #856404 !important; }
+    .tier-high, .tier-high * { color: #721c24 !important; }
+
+    /* ---- ETF price green ---- */
+    .etf-price { color: #28a745 !important; }
+    .etf-price-label { color: #888888 !important; }
+    .etf-name { color: #556677 !important; }
+    .etf-rationale { color: #667788 !important; }
 
     /* ---- Hero ---- */
     .hero-section {
@@ -360,6 +332,43 @@ st.markdown("""
         padding: 24px 28px;
     }
 
+    /* Input boxes — force light background */
+    div[data-baseweb="input"],
+    div[data-baseweb="input"] input,
+    div[data-baseweb="select"],
+    div[data-baseweb="select"] div,
+    .stNumberInput input,
+    .stNumberInput div[data-baseweb="input"],
+    .stTextInput input,
+    .stSelectbox div[data-baseweb="select"],
+    .stSelectbox div[data-baseweb="select"] > div {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        color: #1a2a3a !important;
+        border-color: #b0c4d8 !important;
+    }
+
+    /* Number input +/- stepper buttons */
+    .stNumberInput button,
+    .stNumberInput button svg,
+    .stNumberInput button svg path,
+    .stNumberInput div[data-testid="stNumberInputStepUp"],
+    .stNumberInput div[data-testid="stNumberInputStepDown"],
+    div[data-baseweb="input"] button,
+    div[data-baseweb="input"] button svg,
+    div[data-baseweb="input"] button svg path {
+        color: #1a2a3a !important;
+        fill: #1a2a3a !important;
+        stroke: #1a2a3a !important;
+        background: #f0f4f8 !important;
+        border-color: #b0c4d8 !important;
+    }
+
+    /* Slider track background */
+    div[data-baseweb="slider"] {
+        background: transparent !important;
+    }
+
     /* Labels */
     .stNumberInput label, .stSlider label, .stSelectbox label {
         color: #1a2a3a !important;
@@ -386,6 +395,12 @@ st.markdown("""
     div[data-testid="stExpander"] summary span {
         color: #1a2a3a !important;
         font-weight: 600 !important;
+    }
+
+    /* Inline code spans */
+    code, .stMarkdown code, div[data-testid="stExpander"] code {
+        color: #1a2a3a !important;
+        background: #e8eef4 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -418,7 +433,7 @@ for key in ["profile", "tier_result", "etfs", "explanation", "decision"]:
 # ---------- Hero ----------
 st.markdown("""
 <div class="hero-section">
-    <div class="hero-title">Buffert AI</div>
+    <div class="hero-title">Buffett AI</div>
     <div class="hero-subtitle">
         Tell us about yourself and we'll recommend an ETF portfolio that matches
         your risk profile. You stay in control — nothing is finalized until you approve.
@@ -671,12 +686,70 @@ with st.expander("Responsible AI — Model Card & Bias Audit"):
     render_bias_audit_summary()
 
 
+# ---------- Admin Panel ----------
+with st.expander("Admin Panel — Decision Log"):
+    admin_pass = st.text_input("Enter admin passcode", type="password", key="admin_pass")
+    if admin_pass == "0000":
+        from layer4_respai.decision_log import LOG_PATH
+        if LOG_PATH.exists():
+            log_df = pd.read_csv(LOG_PATH)
+            st.success(f"Showing {len(log_df)} logged decisions.")
+
+            # Summary metrics
+            adm1, adm2, adm3 = st.columns(3)
+            total = len(log_df)
+            accepted = len(log_df[log_df["user_decision"] == "accept"])
+            rejected = len(log_df[log_df["user_decision"] == "reject"])
+            adm1.metric("Total decisions", total)
+            adm2.metric("Accepted", accepted)
+            adm3.metric("Rejected", rejected)
+
+            # Build a readable table
+            display_rows = []
+            for _, row in log_df.iterrows():
+                import json as _json
+                try:
+                    profile = _json.loads(row["profile_json"])
+                except Exception:
+                    profile = {}
+                try:
+                    etfs = _json.loads(row["etfs_json"])
+                    etf_str = ", ".join(e.get("ticker", "?") for e in etfs)
+                except Exception:
+                    etf_str = "—"
+
+                display_rows.append({
+                    "Time": row["timestamp"][:19].replace("T", " "),
+                    "Decision": row["user_decision"].upper(),
+                    "Tier": row["tier"],
+                    "Age": profile.get("age", "—"),
+                    "Income": f"${profile.get('annual_income_usd', 0):,}" if profile.get("annual_income_usd") else "—",
+                    "ETFs": etf_str,
+                })
+
+            st.dataframe(
+                pd.DataFrame(display_rows),
+                use_container_width=True,
+                hide_index=True,
+            )
+
+            # Full detail in expandable raw view
+            with st.expander("Raw log data"):
+                st.dataframe(log_df, use_container_width=True, hide_index=True)
+        else:
+            st.info("No decisions logged yet. Run a recommendation first.")
+    elif admin_pass:
+        st.error("Incorrect passcode.")
+
+
 # ---------- Footer ----------
 st.markdown("""
-<div class="app-footer">
-    This tool is a class project. It is <strong>not financial advice.</strong>
+<div class="app-footer" style="color:#ffffff !important;">
+    <span style="color:#ffffff !important;">
+    This tool is a class project. It is <strong style="color:#ffffff !important;">not financial advice.</strong>
     It does not execute trades, hold funds, or produce legally binding recommendations.
     <br><br>
     Built by Group 2 · MIS 02.303 · Rowan University · Spring 2026
+    </span>
 </div>
 """, unsafe_allow_html=True)
