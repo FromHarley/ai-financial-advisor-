@@ -27,14 +27,14 @@ st.set_page_config(
 )
 
 
-# ---------- Custom CSS ----------
+# ---------- Custom CSS — Schwab colorway ----------
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
     .stApp {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        background: #f0f2f6;
+        background: #f5f5f0;
     }
 
     #MainMenu {visibility: hidden;}
@@ -43,45 +43,44 @@ st.markdown("""
 
     /* ---- Sidebar ---- */
     section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-        border-right: 1px solid #334155;
+        background: #1a1a2e;
+        border-right: 1px solid #2d2d44;
     }
     section[data-testid="stSidebar"] .stMarkdown p,
     section[data-testid="stSidebar"] .stMarkdown li {
-        color: #cbd5e1;
+        color: #c8c8d0;
     }
 
-    /* ---- Section wrapper ---- */
-    .section-box {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 16px;
-        padding: 28px 32px;
-        margin-bottom: 24px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-    }
-
-    /* ---- Hero ---- */
+    /* ---- Hero / Top bar ---- */
     .hero-section {
-        background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
-        border-radius: 20px;
-        padding: 44px 40px;
-        margin-bottom: 28px;
+        background: linear-gradient(135deg, #00a0df 0%, #0078b3 100%);
+        border-radius: 0;
+        padding: 40px 40px 36px;
+        margin: -1rem -1rem 28px -1rem;
         color: white;
-        border: 1px solid #334155;
+        border-bottom: 4px solid #005f8a;
     }
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
         font-weight: 700;
-        margin-bottom: 8px;
-        letter-spacing: -0.5px;
+        margin-bottom: 6px;
+        letter-spacing: -0.3px;
         color: white;
     }
     .hero-subtitle {
-        font-size: 1.05rem;
-        color: #94a3b8;
+        font-size: 1rem;
+        color: rgba(255,255,255,0.85);
         line-height: 1.6;
         max-width: 640px;
+    }
+
+    /* ---- Section cards ---- */
+    .section-box {
+        background: #ffffff;
+        border: 1px solid #d9d9d0;
+        border-radius: 8px;
+        padding: 24px 28px;
+        margin-bottom: 20px;
     }
 
     /* ---- Step headers ---- */
@@ -89,26 +88,26 @@ st.markdown("""
         display: flex;
         align-items: center;
         gap: 12px;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
         margin-top: 4px;
     }
     .step-number {
-        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        background: #00a0df;
         color: white;
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 700;
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         flex-shrink: 0;
     }
     .step-title {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         font-weight: 600;
-        color: #0f172a;
+        color: #1a1a2e;
     }
 
     /* ---- Tier badge ---- */
@@ -116,81 +115,81 @@ st.markdown("""
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        padding: 16px 28px;
-        border-radius: 14px;
-        font-size: 1.4rem;
+        padding: 14px 24px;
+        border-radius: 8px;
+        font-size: 1.3rem;
         font-weight: 700;
-        margin-bottom: 8px;
     }
     .tier-low {
-        background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-        color: #065f46;
-        border: 1px solid #6ee7b7;
+        background: #e8f5e9;
+        color: #2e7d32;
+        border: 1px solid #a5d6a7;
     }
     .tier-medium {
-        background: linear-gradient(135deg, #fef3c7, #fde68a);
-        color: #92400e;
-        border: 1px solid #fcd34d;
+        background: #fff8e1;
+        color: #f57f17;
+        border: 1px solid #ffe082;
     }
     .tier-high {
-        background: linear-gradient(135deg, #fee2e2, #fecaca);
-        color: #991b1b;
-        border: 1px solid #fca5a5;
+        background: #fce4ec;
+        color: #c62828;
+        border: 1px solid #ef9a9a;
     }
 
     /* ---- ETF cards ---- */
     .etf-card {
-        background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
-        border: 1px solid #cbd5e1;
-        border-radius: 14px;
-        padding: 24px 20px;
+        background: #ffffff;
+        border: 1px solid #d9d9d0;
+        border-top: 4px solid #00a0df;
+        border-radius: 8px;
+        padding: 24px 18px;
         text-align: center;
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        transition: box-shadow 0.15s ease;
     }
     .etf-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-        border-color: #3b82f6;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     }
     .etf-ticker {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        color: #0f172a;
+        color: #1a1a2e;
         margin-bottom: 2px;
     }
     .etf-name {
         font-size: 0.78rem;
-        color: #64748b;
-        margin-bottom: 16px;
+        color: #666;
+        margin-bottom: 14px;
         min-height: 2.4em;
         line-height: 1.4;
     }
+    .etf-category {
+        display: inline-block;
+        background: #e3f2fd;
+        color: #0078b3;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 4px;
+        margin-bottom: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
     .etf-price {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         font-weight: 700;
-        color: #16a34a;
+        color: #2e7d32;
         margin-bottom: 2px;
     }
     .etf-price-label {
         font-size: 0.7rem;
-        color: #94a3b8;
+        color: #999;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         margin-bottom: 12px;
     }
-    .etf-category {
-        display: inline-block;
-        background: #e0e7ff;
-        color: #3730a3;
-        font-size: 0.7rem;
-        font-weight: 600;
-        padding: 3px 10px;
-        border-radius: 20px;
-        margin-bottom: 10px;
-    }
     .etf-rationale {
         font-size: 0.75rem;
-        color: #64748b;
+        color: #888;
         margin-top: 10px;
         line-height: 1.4;
         font-style: italic;
@@ -198,42 +197,45 @@ st.markdown("""
 
     /* ---- Explanation box ---- */
     .explanation-box {
-        background: linear-gradient(135deg, #eff6ff, #dbeafe);
-        border: 1px solid #93c5fd;
-        border-radius: 14px;
-        padding: 24px 28px;
-        font-size: 1.05rem;
+        background: #ffffff;
+        border-left: 4px solid #00a0df;
+        border-radius: 0 8px 8px 0;
+        padding: 22px 26px;
+        font-size: 1rem;
         line-height: 1.7;
-        color: #1e3a5f;
+        color: #333;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
     /* ---- Decision ---- */
     .decision-section {
-        background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-        border: 2px dashed #94a3b8;
-        border-radius: 16px;
-        padding: 28px;
+        background: #ffffff;
+        border: 2px solid #d9d9d0;
+        border-radius: 8px;
+        padding: 24px;
         text-align: center;
     }
 
     /* ---- Model card ---- */
     .model-card-section {
         background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 16px;
+        border: 1px solid #d9d9d0;
+        border-radius: 8px;
         padding: 28px 32px;
         margin-top: 8px;
     }
     .mc-header {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         font-weight: 700;
-        color: #0f172a;
+        color: #1a1a2e;
         margin-bottom: 20px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #00a0df;
     }
     .mc-subheader {
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 600;
-        color: #0f172a;
+        color: #1a1a2e;
         margin-top: 24px;
         margin-bottom: 12px;
     }
@@ -244,46 +246,50 @@ st.markdown("""
         margin-bottom: 20px;
     }
     .mc-stat {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-radius: 10px;
+        background: #f5f5f0;
+        border: 1px solid #e0e0d8;
+        border-radius: 6px;
         padding: 16px;
     }
     .mc-stat-label {
-        font-size: 0.75rem;
-        color: #64748b;
+        font-size: 0.72rem;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
         margin-bottom: 4px;
     }
     .mc-stat-value {
         font-size: 1.6rem;
         font-weight: 700;
-        color: #0f172a;
+        color: #1a1a2e;
     }
     .mc-table {
         width: 100%;
         border-collapse: collapse;
         margin: 12px 0;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
     .mc-table th {
         text-align: left;
         padding: 10px 16px;
-        background: #f8fafc;
-        color: #64748b;
+        background: #f5f5f0;
+        color: #666;
         font-weight: 600;
-        font-size: 0.8rem;
-        border-bottom: 2px solid #e2e8f0;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        border-bottom: 2px solid #d9d9d0;
     }
     .mc-table td {
         padding: 10px 16px;
-        border-bottom: 1px solid #f1f5f9;
-        color: #334155;
+        border-bottom: 1px solid #eee;
+        color: #333;
     }
-    .mc-gap-pos { color: #16a34a; font-weight: 500; }
-    .mc-gap-neg { color: #dc2626; font-weight: 500; }
+    .mc-gap-pos { color: #2e7d32; font-weight: 600; }
+    .mc-gap-neg { color: #c62828; font-weight: 600; }
     .mc-note {
-        font-size: 0.8rem;
-        color: #94a3b8;
+        font-size: 0.78rem;
+        color: #999;
         font-style: italic;
         margin-top: 8px;
     }
@@ -293,70 +299,72 @@ st.markdown("""
         margin: 0;
     }
     .mc-guardrail-list li {
-        padding: 6px 0;
-        font-size: 0.9rem;
-        color: #334155;
+        padding: 7px 0;
+        font-size: 0.88rem;
+        color: #333;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
+        border-bottom: 1px solid #f5f5f0;
     }
+    .mc-guardrail-list li:last-child { border-bottom: none; }
     .mc-guardrail-list li::before {
-        content: "•";
-        color: #3b82f6;
+        content: "✓";
+        color: #00a0df;
         font-weight: 700;
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     /* ---- Footer ---- */
     .app-footer {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
+        background: #1a1a2e;
+        border-radius: 8px;
         padding: 20px 24px;
         text-align: center;
-        color: #64748b;
-        font-size: 0.85rem;
+        color: #c8c8d0;
+        font-size: 0.82rem;
         margin-top: 32px;
     }
+    .app-footer strong { color: #ffffff; }
 
     /* ---- Responsive ---- */
     @media (max-width: 768px) {
-        .hero-section { padding: 28px 20px; }
-        .hero-title { font-size: 1.6rem; }
-        .hero-subtitle { font-size: 0.95rem; }
-        .step-title { font-size: 1.1rem; }
-        .section-box { padding: 20px 16px; }
+        .hero-section { padding: 28px 20px 24px; }
+        .hero-title { font-size: 1.5rem; }
+        .hero-subtitle { font-size: 0.9rem; }
+        .step-title { font-size: 1.05rem; }
+        .section-box { padding: 18px 16px; }
         .etf-card { padding: 16px 12px; }
         .mc-stat-grid { grid-template-columns: 1fr; }
     }
 
     /* ---- Streamlit overrides ---- */
     .stButton > button[kind="primary"] {
-        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        background: #00a0df;
         border: none;
-        border-radius: 10px;
+        border-radius: 6px;
         padding: 12px 32px;
         font-weight: 600;
         font-size: 1rem;
-        transition: transform 0.1s ease;
+        color: white;
+        transition: background 0.15s ease;
     }
-    .stButton > button[kind="primary"]:hover { transform: scale(1.02); }
-    .stButton > button[kind="primary"]:active { transform: scale(0.98); }
+    .stButton > button[kind="primary"]:hover {
+        background: #0078b3;
+    }
 
     div[data-testid="stExpander"] {
-        border: 1px solid #e2e8f0;
-        border-radius: 14px;
+        border: 1px solid #d9d9d0;
+        border-radius: 8px;
         overflow: hidden;
         background: #ffffff;
     }
 
-    /* Form styling */
     div[data-testid="stForm"] {
         background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 16px;
+        border: 1px solid #d9d9d0;
+        border-radius: 8px;
         padding: 24px 28px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -560,7 +568,7 @@ if st.session_state.explanation and st.session_state.decision is None:
 
     st.markdown("""
     <div class="decision-section">
-        <p style="color: #475569; font-size: 0.95rem; margin-bottom: 4px;">
+        <p style="color: #555; font-size: 0.95rem; margin-bottom: 4px;">
             <strong>Nothing is logged until you approve.</strong> This is the human-in-the-loop
             checkpoint — we never act on a recommendation without your explicit OK.
         </p>
@@ -601,7 +609,6 @@ elif st.session_state.decision == "reject":
 
 # ---------- Responsible AI panel ----------
 with st.expander("Responsible AI — Model Card & Bias Audit"):
-    # Model card summary (inline, styled like the reference image)
     st.markdown("""
     <div class="model-card-section">
         <div class="mc-header">Model card summary</div>
@@ -621,7 +628,7 @@ with st.expander("Responsible AI — Model Card & Bias Audit"):
         </div>
 
         <div class="mc-subheader">Top SHAP features (global)</div>
-        <p style="font-size: 0.9rem; color: #475569;">
+        <p style="font-size: 0.88rem; color: #555;">
             Investment horizon and age are the strongest predictors.
             See <code>model_card.md</code> for full details.
         </p>
@@ -678,6 +685,6 @@ st.markdown("""
     This tool is a class project. It is <strong>not financial advice.</strong>
     It does not execute trades, hold funds, or produce legally binding recommendations.
     <br><br>
-    <span style="color: #94a3b8;">Built by Group 2 · MIS 02.303 · Rowan University · Spring 2026</span>
+    <span style="color: #888;">Built by Group 2 · MIS 02.303 · Rowan University · Spring 2026</span>
 </div>
 """, unsafe_allow_html=True)
