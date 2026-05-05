@@ -1,0 +1,19 @@
+## Bias Audit Findings
+
+**Method:** The trained classifier was run across all 2,000 training profiles, binned into four CFPB-standard age bands. The table below shows the share of each band predicted into each risk tier.
+
+**Sample sizes by band:**
+- Under 30: 343 profiles
+- 30-54: 1,093 profiles
+- 55-69: 564 profiles
+- 70+: 0 profiles
+
+**Tier distribution by band:**
+- Under 30: Low 0.3% · Medium 42.0% · High 57.7%
+- 30-54: Low 9.5% · Medium 62.8% · High 27.7%
+- 55-69: Low 30.5% · Medium 65.1% · High 4.4%
+- 70+: no profiles in dataset
+
+**Observed pattern:** Younger profiles are assigned higher-risk tiers more frequently, while older profiles skew toward lower-risk tiers. This is consistent with the relationship between age, investment horizon, and risk tolerance in the source labels — the model is reproducing the labeling pattern, not inventing one.
+
+**Honest caveat:** This is a proxy analysis, not a true demographic fairness test. Age is not equivalent to gender, race, or socioeconomic status. The training data lacks those columns, so we cannot directly measure disparate impact on protected classes. A production deployment would need a richer dataset and a full fairness framework (demographic parity, equalized odds across protected slices). For a class project, the age-band view is the most honest fairness signal we can extract from the data we have.

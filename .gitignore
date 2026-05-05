@@ -28,8 +28,7 @@ layer3_agentic/etf_cache.json
 decisions.csv
 layer4_respai/decisions.csv
 
-# Bias audit outputs (regenerate from source)
-layer4_respai/bias_audit_chart.png
+# Bias audit outputs
 layer4_respai/bias_audit_output/
 
 # OS
