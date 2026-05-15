@@ -554,7 +554,7 @@ if st.session_state.tier_result:
     </div>
     """, unsafe_allow_html=True)
 
-    with st.expander("Why did the model predict this tier?", expanded=False):
+    with st.expander("Why did the model predict this tier?", expanded=True):
         st.markdown(
             "The chart below shows which features pushed your prediction up or down. "
             "This is our explainability layer — we show the math, not just the answer."
@@ -565,6 +565,57 @@ if st.session_state.tier_result:
             render_shap_plot(shap_values, st.session_state.profile)
         else:
             st.caption("SHAP plot not available.")
+
+        # Feature breakdown — explain what each top factor means
+        top_factors = st.session_state.tier_result.get("top_factors", [])
+        if top_factors:
+            st.markdown("#### What drove this prediction")
+            for i, factor in enumerate(top_factors):
+                display_name = factor.get("display_name", factor["feature"])
+                direction = factor["direction"]
+                impact = factor["impact"]
+                explanation = factor.get("explanation", {})
+
+                direction_label = "higher risk" if direction == "up" else "lower risk"
+                arrow = "↑" if direction == "up" else "↓"
+                color = "#721c24" if direction == "up" else "#155724"
+
+                st.markdown(f"""
+                <div class="section-box" style="border-left: 4px solid {color}; margin-bottom: 12px; padding: 16px 20px;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                        <span style="font-size: 1.3rem; color: {color}; font-weight: 700;">{arrow}</span>
+                        <span style="font-size: 1.05rem; font-weight: 600; color: #1a2a3a;">
+                            {display_name}
+                        </span>
+                        <span style="font-size: 0.8rem; color: {color}; font-weight: 600; background: {'#f8d7da' if direction == 'up' else '#d4edda'}; padding: 2px 10px; border-radius: 4px;">
+                            pushed toward {direction_label}
+                        </span>
+                    </div>
+                    <div style="font-size: 0.85rem; color: #556677; line-height: 1.6;">
+                        <strong>What it is:</strong> {explanation.get('what', 'N/A')}<br>
+                        <strong>How it's scored:</strong> {explanation.get('scoring', 'N/A')}<br>
+                        <strong>Why it matters:</strong> {explanation.get('influence', 'N/A')}
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
+            # Connect the dots: tier → ETF logic
+            tier_etf_logic = {
+                "Low": "Your lower risk tier means the system selected ETFs focused on **capital preservation and income**: bonds, inflation-protected securities, and dividend-paying equities. These are designed to minimize volatility.",
+                "Medium": "Your medium risk tier triggered a **balanced portfolio**: broad U.S. market exposure, international diversification, and either bond ballast or dividend growth depending on your horizon and income.",
+                "High": "Your higher risk tier unlocked **growth-oriented ETFs**: large-cap growth, small/mid-cap exposure, and potentially sector-specific or thematic funds. These have higher volatility but stronger long-term growth potential.",
+            }
+            st.markdown(f"""
+            <div class="section-box" style="border-left: 4px solid #2a5280; margin-top: 16px; padding: 16px 20px;">
+                <div style="font-size: 0.95rem; font-weight: 600; color: #1a2a3a; margin-bottom: 6px;">
+                    How this connects to your ETF recommendations
+                </div>
+                <div style="font-size: 0.85rem; color: #556677; line-height: 1.6;">
+                    {tier_etf_logic.get(tier, '')}
+                    Your specific profile details (horizon, income, experience) further personalized which ETFs within this tier were selected for you.
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
 
 
 # ---------- Step 4: ETF recommendations ----------
