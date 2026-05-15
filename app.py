@@ -825,7 +825,7 @@ st.markdown("""
     This tool is a class project. It is <strong style="color:#ffffff !important;">not financial advice.</strong>
     It does not execute trades, hold funds, or produce legally binding recommendations.
     <br><br>
-    Built by Alexander Harley, Daniel Duffy, Anurag Luhar &amp; Kimberly Ting
+    Built by Alexander Harley, Anurag Luhar, Kimberly Ting &amp; Daniel Duffy
     </span>
 </div>
 """, unsafe_allow_html=True)

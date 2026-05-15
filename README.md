@@ -153,9 +153,9 @@ Copy `.env.example` to `.env` and add your keys. Never commit `.env`.
 Built by a four-person team at Rowan University:
 
 - **Alexander Harley** — ML layer, project lead, deployment
-- **Daniel Duffy** — Responsible AI, bias audit, model card
 - **Anurag Luhar** — Generative AI, Claude integration
 - **Kimberly Ting** — Agentic AI, ETF agent, market data
+- **Daniel Duffy** — Responsible AI, bias audit, model card
 
 ## License
 
