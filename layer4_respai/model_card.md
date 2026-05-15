@@ -1,21 +1,20 @@
-# Model Card — AI Financial Advisor
+# Model Card — Buffett AI
 
-**Team:** Group 2 (Harley, Duffy, Luhar, Ting)
-**Course:** MIS 02.303 — AI in Business, Spring 2026
-**Date:** May 5, 2026
+**Team:** Alexander Harley, Daniel Duffy, Anurag Luhar, Kimberly Ting
+**Date:** May 2026
 **Version:** 1.0
 
 ---
 
 ## 1. Intended use
 
-This system is a class project designed to demonstrate an end-to-end AI application combining machine learning, generative AI, agentic AI, and responsible AI practices. It is **not** a production financial advisor and should not be used to make real investment decisions.
+This system demonstrates an end-to-end AI application combining machine learning, generative AI, agentic AI, and responsible AI practices. It is **not** a production financial advisor and should not be used to make real investment decisions.
 
-**Intended users:** The instructor, classmates, and potential employers evaluating the team's work.
+**Intended users:** Anyone exploring how multi-layer AI systems work in a financial context.
 
 **Intended use cases:**
 - Educational demonstration of multi-layer AI systems
-- Portfolio artifact for team members' future job applications
+- Reference implementation for responsible AI practices in financial applications
 
 **Out-of-scope uses:**
 - Any real financial advice

@@ -1,208 +1,162 @@
-# AI Financial Advisor
+<div align="center">
 
-An autonomous financial advisor that profiles investor risk tolerance, recommends an ETF portfolio, and explains its reasoning in plain English — with a conversational voice interface and a human approval step before any recommendation is finalized.
+# Buffett AI
 
-**Course:** MIS 02.303 — AI in Business, Spring 2026
-**Instructor:** Prof. Hema Kadali
-**Team:** Alexander Harley (Project Lead), Daniel Duffy, Anurag Luhar, Kimberly Ting
-**Due:** Tuesday, May 5, 2026
+**An AI-powered financial advisor that profiles your risk tolerance, recommends an ETF portfolio, and explains its reasoning in plain English.**
 
----
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/streamlit-1.39+-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
+[![XGBoost](https://img.shields.io/badge/XGBoost-ML-blue)](https://xgboost.readthedocs.io)
+[![Anthropic](https://img.shields.io/badge/Claude_API-Anthropic-D4A574)](https://docs.anthropic.com)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-## What this project is
+[Try the Demo](https://aibuffett.streamlit.app) &bull; [Architecture](#architecture) &bull; [Quick Start](#quick-start) &bull; [Contributing](CONTRIBUTING.md)
 
-This is a working end-to-end AI system with four integrated layers, deployed to a public URL accessible from any device:
-
-1. **Machine Learning (Layer 1)** — A trained classifier predicts risk tier (Low/Medium/High) from the user's financial profile. SHAP explains which features drove the prediction.
-2. **Generative AI (Layer 2)** — Claude (Anthropic API) writes a plain-English explanation of the recommendation for a non-technical user.
-3. **Agentic AI (Layer 3)** — An agent fetches live market data via `yfinance` and selects an ETF shortlist matching the user's risk tier.
-4. **Responsible AI (Layer 4)** — SHAP plots are visible in the UI, a bias audit is documented in the model card, and no decision is logged without explicit user approval.
-
-The app is deployed to **Streamlit Community Cloud** so Prof. Kadali can access it from a phone or laptop browser via a shared URL.
-
-> **Stretch goal (not committed):** A conversational voice interface (speech-to-text input, text-to-speech output) is scaffolded in `voice_ux/` for possible deployment if the team finishes ahead of schedule. The voice layer is documented in our Future Directions slide as the next iteration of the system.
+</div>
 
 ---
 
-## Team roles
+Buffett AI is a four-layer AI system that takes a user's financial profile, predicts their risk tolerance with an XGBoost classifier, selects ETFs with live market data, and generates a personalized explanation using Claude — all with a human-in-the-loop approval step before any recommendation is finalized.
 
-Roles assigned at the kickoff meeting on **04-20**.
+> **Disclaimer:** This is an educational project. It does not execute trades, hold funds, or produce legally binding recommendations. Consult a licensed professional before making investment decisions.
 
-| Layer | Owner | Branch | What they'll do |
-|---|---|---|---|
-| Layer 1 — ML + SHAP | Alex Harley | `layer1-ml` | Train a classifier on `financial_risk_profiles.csv`, produce SHAP visualizations, write the metrics section of the model card. |
-| Layer 2 — GenAI (Claude) | Anurag Luhar | `layer2-genai` | Design the Claude prompt that turns tier + SHAP + ETFs into a 2–3 sentence explanation. Enforce guardrails. |
-| Layer 3 — Agentic | Kimberly Ting | `layer3-agentic` | Build the tier→ETF mapping and the yfinance fetch. Make it robust enough to demo on stage. |
-| Layer 4 — Responsible AI | Daniel Duffy | `layer4-respai` | Bias audit, model card, decision logging, integration merge on 04-30, and Streamlit Cloud deployment. |
-| Voice / UX | **Out of scope** (deferred) | `voice-ux` | Stretch goal only — Alex may explore independently if Layer 1 finishes ahead of schedule. Documented in Future Directions slide. |
+<p align="center"><img src="docs/screenshot-hero.png" alt="Buffett AI — profile input form" width="720"></p>
 
-**Project Lead responsibilities (Alex, in addition to Layer 1):**
-- Holds the overall schedule and unblocks teammates
-- Owns the integration merge on 04-30
-- Deploys the final app to Streamlit Community Cloud
-- Submits to Canvas by 6 PM on 05-05
+## Architecture
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow each owner follows.
-
----
-
-## Project structure
+The system is built as four independent layers that compose through a shared Streamlit interface:
 
 ```
-ai-financial-advisor/
-├── app.py                   # Streamlit entry point — the full UI lives here
-├── requirements.txt         # Pinned dependencies (Python 3.11)
-├── .env.example             # Template for API keys (copy to .env)
-├── .gitignore
-├── README.md
-├── CONTRIBUTING.md
-├── data/
-│   ├── financial_risk_profiles.csv   # ML training data (2,000 rows)
-│   └── cfpb_financial_wellbeing.csv  # Bias audit data (2,000 rows)
-├── layer1_ml/
-│   ├── __init__.py
-│   ├── train.py             # Offline: trains XGBoost, saves model.pkl
-│   ├── predict.py           # Runtime: predict_risk_tier(profile) → dict
-│   └── model.pkl            # Gitignored — produced by train.py
-├── layer2_genai/
-│   ├── __init__.py
-│   ├── claude_client.py     # generate_explanation(...) → str
-│   └── prompts.py           # System + user prompt templates
-├── layer3_agentic/
-│   ├── __init__.py
-│   ├── etf_agent.py         # get_etf_recommendations(tier) → list[dict]
-│   └── tier_mapping.py      # Hard-coded tier → ETF rules
-├── layer4_respai/
-│   ├── __init__.py
-│   ├── bias_audit.py        # Produces the audit chart + finding
-│   ├── model_card.md        # Final deliverable document
-│   └── decision_log.py      # log_decision(...) — writes to decisions.csv
-├── voice_ux/
-│   ├── __init__.py
-│   ├── transcribe.py        # transcribe_profile(audio) → dict
-│   ├── speak.py             # speak(text) — browser SpeechSynthesis
-│   └── parser.py            # Extracts structured fields from transcript
-└── .github/
-    └── pull_request_template.md
+User Input
+    |
+    v
+[ Layer 1: ML Risk Classifier ]      XGBoost model trained on 2,000 investor profiles
+    |                                  SHAP explainability on every prediction
+    v
+[ Layer 2: Generative AI ]            Claude API generates plain-English explanations
+    |                                  Guardrails prevent hallucinated tickers & return claims
+    v
+[ Layer 3: Agentic AI ]               Live ETF selection via yfinance
+    |                                  Deterministic tier-to-ETF mapping with price fallback
+    v
+[ Layer 4: Responsible AI ]           Bias audit across age bands
+    |                                  Model card, decision logging, human approval gate
+    v
+User Approval (accept / reject)
 ```
 
----
+| Layer | What it does | Key tech |
+|-------|-------------|----------|
+| **ML Risk Classifier** | Predicts Low / Medium / High risk tier from financial profile | XGBoost, SHAP, scikit-learn |
+| **Generative AI** | Writes a 2-3 sentence explanation of the recommendation | Claude API (Anthropic) |
+| **Agentic AI** | Fetches live ETF prices and builds a shortlist for the user's tier | yfinance, rule-based agent |
+| **Responsible AI** | Bias audit, model card, decision log, human-in-the-loop gate | SHAP, pandas |
 
-## Setup (first time)
-
-**Requires Python 3.11.** Check with `python --version` — if you have 3.10 or older, upgrade before starting.
-
-### 1. Clone the repo
+## Quick Start
 
 ```bash
-git clone https://github.com/[ORG]/ai-financial-advisor.git
-cd ai-financial-advisor
-```
+# Clone the repo
+git clone https://github.com/FromHarley/ai-financial-advisor-.git
+cd ai-financial-advisor-
 
-### 2. Create a virtual environment
-
-```bash
+# Create a virtual environment
 python -m venv .venv
-source .venv/bin/activate       # macOS/Linux
-# or
-.venv\Scripts\activate          # Windows
-```
+source .venv/bin/activate   # macOS/Linux
+# .venv\Scripts\activate    # Windows
 
-### 3. Install dependencies
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
-### 4. Set up API keys
-
-Copy the template:
-
-```bash
+# Configure API keys
 cp .env.example .env
-```
+# Edit .env and add your ANTHROPIC_API_KEY
 
-Then open `.env` and fill in:
-
-- **`ANTHROPIC_API_KEY`** — Ask Alex directly (DM, not group chat). We are using one shared key for this project. Do not post this key anywhere.
-- **`OPENAI_API_KEY`** — Only required if you're working on the voice feature (used for Whisper transcription). If you're only touching Layers 1/2/3/4, you can leave this blank.
-
-**Never commit `.env`.** It's in `.gitignore` and must stay there.
-
-### 5. Run the app
-
-```bash
+# Run the app
 streamlit run app.py
 ```
 
-The app will open in your browser at `http://localhost:8501`.
+The app opens at `http://localhost:8501`. Enter a financial profile, get a risk tier, ETF recommendations, and a plain-English explanation — then approve or reject.
 
----
+## How It Works
 
-## Running without voice (fallback mode)
+1. **You enter your profile** — age, income, savings rate, debt-to-income ratio, investment horizon, and experience level
+2. **The ML model predicts your risk tier** — XGBoost classifies you as Low, Medium, or High risk (84% accuracy, macro F1 0.81) with a SHAP waterfall plot showing exactly which features drove the prediction
+3. **The agent picks ETFs** — a rule-based agent maps your tier to an ETF shortlist and pulls live prices via yfinance
+4. **Claude explains the recommendation** — Anthropic's Claude API generates a 2-3 sentence explanation using hedged language, restricted to only the ETFs in context
+5. **You decide** — nothing is logged until you explicitly accept or reject. This is the human-in-the-loop checkpoint
 
-Voice is optional — the app works without it. If you don't want to set up the OpenAI key or your microphone isn't cooperating, click the **"Use keyboard input"** toggle in the sidebar. You'll get a normal form instead of the microphone button. Everything else (ML, GenAI, agent, bias audit) works identically.
+## Model Performance
 
-**On demo day, keyboard is our backup.** If voice breaks on stage, we switch to keyboard without narrating the failure.
+| Metric | Value |
+|--------|-------|
+| Overall accuracy | 84.0% |
+| Macro F1 | 0.81 |
+| Training samples | 2,000 (80/20 split) |
+| Per-class F1 | Low 0.77 · Medium 0.87 · High 0.80 |
 
----
+Full details in the [model card](layer4_respai/model_card.md).
 
-## What each layer owner needs to do
+## Project Structure
 
-Every layer has a stub function with the correct signature and a `NotImplementedError`. Open your layer's folder, find your stub, and replace the body. The function signatures are contracts — don't change the inputs or outputs without discussing at a meeting.
+```
+ai-financial-advisor/
+├── app.py                    # Streamlit entry point
+├── requirements.txt          # Pinned dependencies
+├── .env.example              # API key template
+│
+├── layer1_ml/                # XGBoost risk classifier + SHAP
+│   ├── train.py              # Offline training script
+│   ├── predict.py            # Runtime inference + SHAP plots
+│   └── model.pkl             # Trained model artifact
+│
+├── layer2_genai/             # Claude-powered explanation layer
+│   ├── claude_client.py      # API client
+│   └── prompts.py            # System + user prompt templates
+│
+├── layer3_agentic/           # ETF recommendation agent
+│   ├── etf_agent.py          # yfinance integration + caching
+│   └── tier_mapping.py       # Tier-to-ETF rules
+│
+├── layer4_respai/            # Responsible AI layer
+│   ├── bias_audit.py         # Age-band fairness audit
+│   ├── decision_log.py       # Append-only CSV logger
+│   └── model_card.md         # Full model documentation
+│
+├── data/
+│   ├── financial_risk_profiles.csv   # Training data (2,000 rows)
+│   └── cfpb_financial_wellbeing.csv  # Bias audit reference data
+│
+└── docs/                     # Internal documentation
+```
 
-- **Layer 1 (ML):** Open `layer1_ml/train.py` first. Run it once to produce `model.pkl`. Then fill in `layer1_ml/predict.py`. Build training in a Colab notebook for clarity, then export to a script.
-- **Layer 2 (GenAI):** Open `layer2_genai/prompts.py` to design your prompt, then `layer2_genai/claude_client.py` to wire the API call.
-- **Layer 3 (Agentic):** Open `layer3_agentic/tier_mapping.py` (decide which ETFs go with which tier), then `layer3_agentic/etf_agent.py` (yfinance calls).
-- **Layer 4 (Responsible AI):** `layer4_respai/bias_audit.py` generates the chart and writes findings to the model card. Also owns `decision_log.py`. Owns Streamlit Cloud deployment after integration.
+## Responsible AI
 
----
+We take transparency seriously, even in a demo:
 
-## Deliverables checklist
+- **Explainability** — every prediction includes a SHAP waterfall plot showing which features pushed the risk tier up or down
+- **Bias audit** — tier distributions are analyzed across CFPB age bands; findings are documented in the [model card](layer4_respai/model_card.md) with honest caveats about proxy limitations
+- **Guardrails** — Claude's system prompt enforces hedged language, prohibits return projections, and restricts output to only the ETFs provided in context
+- **Human oversight** — no recommendation is logged without explicit user approval
+- **Disclaimer** — every AI-generated explanation ends with a mandatory disclaimer
 
-- [ ] `app.py` — end-to-end demo runs in under 45 seconds
-- [ ] `layer1_ml/model.pkl` — trained, with metrics documented
-- [ ] `layer1_ml/training_notebook.ipynb` — accuracy, precision/recall, confusion matrix, SHAP
-- [ ] `layer4_respai/model_card.md` — 1-2 pages, complete
-- [ ] `layer4_respai/bias_audit_chart.png` — produced by `bias_audit.py`
-- [ ] **Deployed to Streamlit Community Cloud** — public URL accessible from any device
-- [ ] Presentation slides — 10 minutes, includes Future Directions slide
-- [ ] This README — reviewed and current
+## API Keys
 
-## Deployment
+| Key | Required | Used by |
+|-----|----------|---------|
+| `ANTHROPIC_API_KEY` | Yes | Layer 2 — Claude generates explanations |
+| `OPENAI_API_KEY` | No | Voice interface only (Whisper transcription) |
 
-The app is deployed to **Streamlit Community Cloud** (free tier).
+Copy `.env.example` to `.env` and add your keys. Never commit `.env`.
 
-To deploy or redeploy:
+## Team
 
-1. Sign in at [share.streamlit.io](https://share.streamlit.io) with your GitHub account
-2. Click **New app** → select this repo → set main file to `app.py`
-3. Add API keys under **Advanced settings → Secrets**:
-   ```toml
-   ANTHROPIC_API_KEY = "sk-ant-..."
-   ```
-4. Click **Deploy** — app is live at a public URL in 2-3 minutes
+Built by a four-person team at Rowan University:
 
-Owner: Alex (Project Lead). Deployment happens after integration on 04-30 and is locked in by the dress rehearsal on 05-05 6pm.
+- **Alexander Harley** — ML layer, project lead, deployment
+- **Daniel Duffy** — Responsible AI, bias audit, model card
+- **Anurag Luhar** — Generative AI, Claude integration
+- **Kimberly Ting** — Agentic AI, ETF agent, market data
 
----
+## License
 
-## Timeline
-
-See the full [blueprint doc](../Autonomous_Financial_Advisor_Team_Blueprint_v2.docx) for dates. Key checkpoints:
-
-- **Thu 04-30** — Integration day
-- **Mon 05-04** — Testing, full end-to-end demo
-- **Tue 05-05** — Dress rehearsal
-
----
-
-## Getting help
-
-- Technical blocker on your layer? Post in the Discord with the branch name and what you tried.
-- Blueprint question? Bring it to the 04-21 in-class working session with Prof. Kadali.
-- API key issue? DM Alex directly.
-
----
-
-*Built with Claude Opus 4.7 as a development assistant. All design choices, code review, and final deliverables are the team's own work per the course AI-use policy.*
+[MIT](LICENSE)

@@ -56,44 +56,10 @@ st.markdown("""
         color: #a0b8cc !important;
     }
 
-    /* ---- MASTER TEXT OVERRIDE — force all text dark ---- */
-    .stApp *:not(.hero-section *):not(.app-footer *):not(section[data-testid="stSidebar"] *) {
-        color: #1a2a3a !important;
-    }
-
-    /* ---- Re-apply white text where needed ---- */
+    /* ---- Scoped white text for dark-background sections ---- */
     .hero-section, .hero-section * { color: #ffffff !important; }
     .app-footer, .app-footer * { color: #ffffff !important; }
-    section[data-testid="stSidebar"] * { color: #e0e8f0 !important; }
-    section[data-testid="stSidebar"] .stCaption p { color: #a0b8cc !important; }
     .step-number { color: #ffffff !important; }
-
-    /* ---- Primary buttons stay white ---- */
-    .stButton > button[kind="primary"],
-    .stButton > button[kind="primary"] * {
-        color: #ffffff !important;
-    }
-
-    /* ---- Slider thumb value ---- */
-    .stSlider [data-testid="stThumbValue"],
-    .stSlider div[role="slider"],
-    .stSlider div[data-testid="stTickBarMin"],
-    .stSlider div[data-testid="stTickBarMax"],
-    .stSlider p, .stSlider span, .stSlider label {
-        color: #1a2a3a !important;
-    }
-
-    /* ---- Form labels ---- */
-    label, [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] * {
-        color: #1a2a3a !important;
-    }
-
-    /* ---- Inputs ---- */
-    input, textarea, select,
-    div[data-baseweb="select"] *,
-    div[data-baseweb="input"] * {
-        color: #1a2a3a !important;
-    }
 
     /* ---- Caption text slightly lighter ---- */
     .stCaption p, div[data-testid="stCaptionContainer"] p {
@@ -313,15 +279,16 @@ st.markdown("""
     .stButton > button[kind="primary"]:hover {
         background: #1b3a5c !important;
     }
-
-    /* Sliders — override red to blue */
-    .stSlider [data-testid="stThumbValue"] { color: #2a5280 !important; }
-    div[data-baseweb="slider"] div[role="slider"] {
-        background: #2a5280 !important;
-        border-color: #2a5280 !important;
+    /* Secondary buttons */
+    .stButton > button:not([kind="primary"]) {
+        background: #ffffff !important;
+        border: 1px solid #b0c4d8 !important;
+        border-radius: 8px !important;
+        color: #1a2a3a !important;
     }
-    div[data-baseweb="slider"] div[data-testid="stTickBar"] > div {
-        background: #2a5280 !important;
+    .stButton > button:not([kind="primary"]):hover {
+        background: #f0f4f8 !important;
+        border-color: #2a5280 !important;
     }
 
     /* Form */
@@ -332,7 +299,7 @@ st.markdown("""
         padding: 24px 28px;
     }
 
-    /* Input boxes — force light background */
+    /* Input boxes */
     div[data-baseweb="input"],
     div[data-baseweb="input"] input,
     div[data-baseweb="select"],
@@ -348,12 +315,10 @@ st.markdown("""
         border-color: #b0c4d8 !important;
     }
 
-    /* Number input +/- stepper buttons */
+    /* Number input stepper buttons */
     .stNumberInput button,
     .stNumberInput button svg,
     .stNumberInput button svg path,
-    .stNumberInput div[data-testid="stNumberInputStepUp"],
-    .stNumberInput div[data-testid="stNumberInputStepDown"],
     div[data-baseweb="input"] button,
     div[data-baseweb="input"] button svg,
     div[data-baseweb="input"] button svg path {
@@ -362,11 +327,6 @@ st.markdown("""
         stroke: #1a2a3a !important;
         background: #f0f4f8 !important;
         border-color: #b0c4d8 !important;
-    }
-
-    /* Slider track background */
-    div[data-baseweb="slider"] {
-        background: transparent !important;
     }
 
     /* Labels */
@@ -392,8 +352,25 @@ st.markdown("""
         overflow: hidden;
         background: #ffffff;
     }
-    div[data-testid="stExpander"] summary span {
+    div[data-testid="stExpander"] summary span,
+    div[data-testid="stExpander"] summary p {
+        color: #2a5280 !important;
+        font-weight: 600 !important;
+    }
+
+    /* Dataframe / table overrides — force light readable style */
+    div[data-testid="stDataFrame"],
+    div[data-testid="stDataFrame"] * {
         color: #1a2a3a !important;
+    }
+    div[data-testid="stDataFrame"] [role="gridcell"],
+    div[data-testid="stDataFrame"] [role="columnheader"] {
+        background: #ffffff !important;
+        color: #1a2a3a !important;
+        border-color: #e0e8f0 !important;
+    }
+    div[data-testid="stDataFrame"] [role="columnheader"] {
+        background: #f0f4f8 !important;
         font-weight: 600 !important;
     }
 
@@ -402,6 +379,13 @@ st.markdown("""
         color: #1a2a3a !important;
         background: #e8eef4 !important;
     }
+
+    /* Password input */
+    .stTextInput input[type="password"] {
+        background: #ffffff !important;
+        color: #1a2a3a !important;
+        border-color: #b0c4d8 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -409,7 +393,7 @@ st.markdown("""
 # ---------- Sidebar ----------
 with st.sidebar:
     st.markdown("### AI Financial Advisor")
-    st.caption("Team Group 2 · MIS 02.303 · Spring 2026")
+    st.caption("AI-Powered Financial Advisory")
     st.divider()
 
     st.markdown("**API Status**")
@@ -749,7 +733,7 @@ st.markdown("""
     This tool is a class project. It is <strong style="color:#ffffff !important;">not financial advice.</strong>
     It does not execute trades, hold funds, or produce legally binding recommendations.
     <br><br>
-    Built by Group 2 · MIS 02.303 · Rowan University · Spring 2026
+    Built by Alexander Harley, Daniel Duffy, Anurag Luhar &amp; Kimberly Ting
     </span>
 </div>
 """, unsafe_allow_html=True)
