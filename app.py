@@ -6,6 +6,7 @@ and exposes a single public function with an agreed signature.
 """
 
 import os
+from datetime import date, datetime, timezone
 from dotenv import load_dotenv
 import streamlit as st
 import pandas as pd
@@ -19,6 +20,13 @@ from layer4_respai.decision_log import log_decision
 load_dotenv()
 
 
+# ---------- Demo window ----------
+# The app is publicly accessible until this date (inclusive).
+# After this date, visitors see a "demo ended" page instead of the full app.
+# To extend: change the date below and redeploy.
+DEMO_EXPIRES = date(2026, 5, 20)
+
+
 # ---------- Page config ----------
 st.set_page_config(
     page_title="AI Financial Advisor",
@@ -26,6 +34,30 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed",
 )
+
+# ---------- Demo expiry gate ----------
+if date.today() > DEMO_EXPIRES:
+    st.markdown("""
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        .stApp { font-family: 'Inter', sans-serif; background: #dce8f5; }
+        #MainMenu, footer, header { visibility: hidden; }
+    </style>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="max-width: 600px; margin: 120px auto; text-align: center;">
+        <h1 style="color: #1b3a5c; font-size: 2rem; margin-bottom: 8px;">Buffett AI</h1>
+        <p style="color: #556677; font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
+            Thanks for your interest! This live demo ran from May 15–20, 2026
+            and is no longer accepting new sessions.
+        </p>
+        <p style="color: #556677; font-size: 0.95rem;">
+            You can still explore the source code, architecture, and model card on
+            <a href="https://github.com/FromHarley/ai-financial-advisor-" style="color: #2a5280; font-weight: 600;">GitHub</a>.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.stop()
 
 
 # ---------- Custom CSS ----------
