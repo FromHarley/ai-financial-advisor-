@@ -441,7 +441,7 @@ with st.sidebar:
 
 
 # ---------- Session state ----------
-for key in ["profile", "tier_result", "etfs", "explanation", "decision"]:
+for key in ["profile", "tier_result", "etfs", "explanation", "decision", "feedback_text", "feedback_rating"]:
     if key not in st.session_state:
         st.session_state[key] = None
 
@@ -517,7 +517,8 @@ if st.session_state.profile and st.session_state.tier_result is None:
 
     with st.spinner("Finding ETFs that match your tier..."):
         st.session_state.etfs = get_etf_recommendations(
-            st.session_state.tier_result["tier"]
+            st.session_state.tier_result["tier"],
+            profile=st.session_state.profile,
         )
 
     with st.spinner("Writing your personalized explanation..."):
@@ -609,11 +610,47 @@ if st.session_state.explanation:
     """, unsafe_allow_html=True)
 
 
-# ---------- Step 6: Human-in-the-loop ----------
+# ---------- Step 6: Feedback (optional) ----------
 if st.session_state.explanation and st.session_state.decision is None:
     st.markdown("""
     <div class="step-header">
         <div class="step-number">5</div>
+        <div class="step-title">Quick feedback <span style="font-weight:400; font-size:0.85rem; color:#556677;">(optional)</span></div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="section-box" style="border-left: 4px solid #2a5280;">
+        <p style="margin-bottom: 12px;">
+            Help us improve — rate this recommendation and leave a note if you'd like.
+            This is completely optional.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    fb_col1, fb_col2 = st.columns([1, 2])
+    with fb_col1:
+        feedback_rating = st.select_slider(
+            "How useful was this recommendation?",
+            options=["Not useful", "Somewhat", "Useful", "Very useful", "Excellent"],
+            value="Useful",
+            key="fb_rating_slider",
+        )
+    with fb_col2:
+        feedback_text = st.text_area(
+            "Anything you'd change or want to see? (optional)",
+            placeholder="e.g. I'd prefer more international exposure, or the explanation was too vague...",
+            max_chars=500,
+            height=100,
+            key="fb_text_area",
+        )
+
+
+# ---------- Step 7: Human-in-the-loop ----------
+if st.session_state.explanation and st.session_state.decision is None:
+    st.markdown("""
+    <div class="step-header">
+        <div class="step-number">6</div>
         <div class="step-title">Your decision</div>
     </div>
     """, unsafe_allow_html=True)
@@ -630,33 +667,41 @@ if st.session_state.explanation and st.session_state.decision is None:
     st.write("")
     col1, col2, col3 = st.columns([1, 1, 4])
     with col1:
-        if st.button("✅ Accept", type="primary", use_container_width=True):
+        if st.button("Accept", type="primary", use_container_width=True):
+            st.session_state.feedback_rating = st.session_state.get("fb_rating_slider", None)
+            st.session_state.feedback_text = st.session_state.get("fb_text_area", "")
             log_decision(
                 profile=st.session_state.profile,
                 tier=st.session_state.tier_result["tier"],
                 etfs=st.session_state.etfs,
                 explanation=st.session_state.explanation,
                 user_decision="accept",
+                feedback_rating=st.session_state.feedback_rating,
+                feedback_text=st.session_state.feedback_text,
             )
             st.session_state.decision = "accept"
             st.rerun()
     with col2:
-        if st.button("❌ Reject", use_container_width=True):
+        if st.button("Reject", use_container_width=True):
+            st.session_state.feedback_rating = st.session_state.get("fb_rating_slider", None)
+            st.session_state.feedback_text = st.session_state.get("fb_text_area", "")
             log_decision(
                 profile=st.session_state.profile,
                 tier=st.session_state.tier_result["tier"],
                 etfs=st.session_state.etfs,
                 explanation=st.session_state.explanation,
                 user_decision="reject",
+                feedback_rating=st.session_state.feedback_rating,
+                feedback_text=st.session_state.feedback_text,
             )
             st.session_state.decision = "reject"
             st.rerun()
 
 
 if st.session_state.decision == "accept":
-    st.success("Recommendation accepted and logged. Thank you!")
+    st.success("Recommendation accepted and logged. Thank you for your feedback!")
 elif st.session_state.decision == "reject":
-    st.warning("Recommendation rejected and logged. Feel free to try again.")
+    st.warning("Recommendation rejected and logged. Feel free to try again with different inputs.")
 
 
 # ---------- Responsible AI panel ----------
@@ -712,18 +757,20 @@ with st.expander("Admin Panel — Decision Log"):
             st.success(f"Showing {len(log_df)} logged decisions.")
 
             # Summary metrics
-            adm1, adm2, adm3 = st.columns(3)
+            adm1, adm2, adm3, adm4 = st.columns(4)
             total = len(log_df)
             accepted = len(log_df[log_df["user_decision"] == "accept"])
             rejected = len(log_df[log_df["user_decision"] == "reject"])
+            has_feedback = len(log_df[log_df.get("feedback_text", pd.Series(dtype=str)).str.strip().astype(bool)]) if "feedback_text" in log_df.columns else 0
             adm1.metric("Total decisions", total)
             adm2.metric("Accepted", accepted)
             adm3.metric("Rejected", rejected)
+            adm4.metric("With feedback", has_feedback)
 
             # Build a readable table
+            import json as _json
             display_rows = []
             for _, row in log_df.iterrows():
-                import json as _json
                 try:
                     profile = _json.loads(row["profile_json"])
                 except Exception:
@@ -741,6 +788,8 @@ with st.expander("Admin Panel — Decision Log"):
                     "Age": profile.get("age", "—"),
                     "Income": f"${profile.get('annual_income_usd', 0):,}" if profile.get("annual_income_usd") else "—",
                     "ETFs": etf_str,
+                    "Rating": row.get("feedback_rating", ""),
+                    "Feedback": row.get("feedback_text", ""),
                 })
 
             st.dataframe(
@@ -748,6 +797,17 @@ with st.expander("Admin Panel — Decision Log"):
                 use_container_width=True,
                 hide_index=True,
             )
+
+            # Feedback highlights
+            if has_feedback > 0:
+                st.markdown("#### User feedback")
+                fb_rows = log_df[log_df["feedback_text"].str.strip().astype(bool)]
+                for _, row in fb_rows.iterrows():
+                    rating = row.get("feedback_rating", "")
+                    text = row.get("feedback_text", "")
+                    decision = row["user_decision"].upper()
+                    tier = row["tier"]
+                    st.markdown(f"**{rating}** ({decision}, {tier} tier) — {text}")
 
             # Full detail in expandable raw view
             with st.expander("Raw log data"):

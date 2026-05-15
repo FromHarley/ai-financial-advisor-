@@ -14,8 +14,8 @@ from layer3_agentic.tier_mapping import get_etfs_for_tier
 CACHE_PATH = Path(__file__).parent / "etf_cache.json"
 
 
-def get_etf_recommendations(tier: str) -> list[dict]:
-    base_etfs = get_etfs_for_tier(tier)
+def get_etf_recommendations(tier: str, profile: dict = None) -> list[dict]:
+    base_etfs = get_etfs_for_tier(tier, profile)
     rationale_template = _get_rationale_template(tier)
     results = []
     cache = _load_cache()
