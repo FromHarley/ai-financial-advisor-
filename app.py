@@ -24,7 +24,7 @@ load_dotenv()
 # The app is publicly accessible until this date (inclusive).
 # After this date, visitors see a "demo ended" page instead of the full app.
 # To extend: change the date below and redeploy.
-DEMO_EXPIRES = date(2026, 5, 20)
+DEMO_EXPIRES = date(2026, 5, 25)
 
 
 # ---------- Page config ----------
@@ -48,7 +48,7 @@ if date.today() > DEMO_EXPIRES:
     <div style="max-width: 600px; margin: 120px auto; text-align: center;">
         <h1 style="color: #1b3a5c; font-size: 2rem; margin-bottom: 8px;">Buffett AI</h1>
         <p style="color: #556677; font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
-            Thanks for your interest! This live demo ran from May 15–20, 2026
+            Thanks for your interest! This live demo ran from May 15–25, 2026
             and is no longer accepting new sessions.
         </p>
         <p style="color: #556677; font-size: 0.95rem;">
@@ -798,77 +798,6 @@ with st.expander("Responsible AI — Model Card & Bias Audit"):
     st.markdown("#### Bias audit — tier distribution by age band")
     from layer4_respai.bias_audit import render_bias_audit_summary
     render_bias_audit_summary()
-
-
-# ---------- Admin Panel ----------
-with st.expander("Admin Panel — Decision Log"):
-    admin_pass = st.text_input("Enter admin passcode", type="password", key="admin_pass")
-    if admin_pass == "0000":
-        from layer4_respai.decision_log import LOG_PATH
-        if LOG_PATH.exists():
-            log_df = pd.read_csv(LOG_PATH)
-            st.success(f"Showing {len(log_df)} logged decisions.")
-
-            # Summary metrics
-            adm1, adm2, adm3, adm4 = st.columns(4)
-            total = len(log_df)
-            accepted = len(log_df[log_df["user_decision"] == "accept"])
-            rejected = len(log_df[log_df["user_decision"] == "reject"])
-            has_feedback = len(log_df[log_df.get("feedback_text", pd.Series(dtype=str)).str.strip().astype(bool)]) if "feedback_text" in log_df.columns else 0
-            adm1.metric("Total decisions", total)
-            adm2.metric("Accepted", accepted)
-            adm3.metric("Rejected", rejected)
-            adm4.metric("With feedback", has_feedback)
-
-            # Build a readable table
-            import json as _json
-            display_rows = []
-            for _, row in log_df.iterrows():
-                try:
-                    profile = _json.loads(row["profile_json"])
-                except Exception:
-                    profile = {}
-                try:
-                    etfs = _json.loads(row["etfs_json"])
-                    etf_str = ", ".join(e.get("ticker", "?") for e in etfs)
-                except Exception:
-                    etf_str = "—"
-
-                display_rows.append({
-                    "Time": row["timestamp"][:19].replace("T", " "),
-                    "Decision": row["user_decision"].upper(),
-                    "Tier": row["tier"],
-                    "Age": profile.get("age", "—"),
-                    "Income": f"${profile.get('annual_income_usd', 0):,}" if profile.get("annual_income_usd") else "—",
-                    "ETFs": etf_str,
-                    "Rating": row.get("feedback_rating", ""),
-                    "Feedback": row.get("feedback_text", ""),
-                })
-
-            st.dataframe(
-                pd.DataFrame(display_rows),
-                use_container_width=True,
-                hide_index=True,
-            )
-
-            # Feedback highlights
-            if has_feedback > 0:
-                st.markdown("#### User feedback")
-                fb_rows = log_df[log_df["feedback_text"].str.strip().astype(bool)]
-                for _, row in fb_rows.iterrows():
-                    rating = row.get("feedback_rating", "")
-                    text = row.get("feedback_text", "")
-                    decision = row["user_decision"].upper()
-                    tier = row["tier"]
-                    st.markdown(f"**{rating}** ({decision}, {tier} tier) — {text}")
-
-            # Full detail in expandable raw view
-            with st.expander("Raw log data"):
-                st.dataframe(log_df, use_container_width=True, hide_index=True)
-        else:
-            st.info("No decisions logged yet. Run a recommendation first.")
-    elif admin_pass:
-        st.error("Incorrect passcode.")
 
 
 # ---------- Footer ----------

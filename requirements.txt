@@ -17,6 +17,10 @@ anthropic>=0.39.0
 # Layer 3 — Agentic (market data)
 yfinance>=0.2.48
 
+# Layer 4 — Decision logging (Google Sheets)
+gspread>=6.1.0
+google-auth>=2.29.0
+
 # Voice / UX
 streamlit-mic-recorder>=0.0.8
 openai>=1.54.3
