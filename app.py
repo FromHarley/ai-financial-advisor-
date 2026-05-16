@@ -800,6 +800,81 @@ with st.expander("Responsible AI — Model Card & Bias Audit"):
     render_bias_audit_summary()
 
 
+# ---------- Admin Panel ----------
+with st.expander("Admin Panel — Decision Log"):
+    admin_pass = st.text_input("Enter admin passcode", type="password", key="admin_pass")
+    if admin_pass == "0000":
+        from layer4_respai.decision_log import LOG_PATH
+        if LOG_PATH.exists():
+            log_df = pd.read_csv(LOG_PATH)
+            st.success(f"Showing {len(log_df)} logged decisions.")
+
+            # Summary metrics
+            adm1, adm2, adm3, adm4 = st.columns(4)
+            total = len(log_df)
+            accepted = len(log_df[log_df["user_decision"] == "accept"])
+            rejected = len(log_df[log_df["user_decision"] == "reject"])
+            has_feedback = len(log_df[log_df.get("feedback_text", pd.Series(dtype=str)).str.strip().astype(bool)]) if "feedback_text" in log_df.columns else 0
+            adm1.metric("Total decisions", total)
+            adm2.metric("Accepted", accepted)
+            adm3.metric("Rejected", rejected)
+            adm4.metric("With feedback", has_feedback)
+
+            # Build a readable table
+            import json as _json
+            display_rows = []
+            for _, row in log_df.iterrows():
+                try:
+                    profile = _json.loads(row["profile_json"])
+                except Exception:
+                    profile = {}
+                try:
+                    etfs = _json.loads(row["etfs_json"])
+                    etf_str = ", ".join(e.get("ticker", "?") for e in etfs)
+                except Exception:
+                    etf_str = "—"
+
+                display_rows.append({
+                    "Time": row["timestamp"][:19].replace("T", " "),
+                    "Decision": row["user_decision"].upper(),
+                    "Tier": row["tier"],
+                    "Age": profile.get("age", "—"),
+                    "Income": f"${profile.get('annual_income_usd', 0):,}" if profile.get("annual_income_usd") else "—",
+                    "ETFs": etf_str,
+                    "Rating": row.get("feedback_rating", ""),
+                    "Feedback": row.get("feedback_text", ""),
+                })
+
+            st.dataframe(
+                pd.DataFrame(display_rows),
+                use_container_width=True,
+                hide_index=True,
+            )
+
+            # Download button
+            st.download_button(
+                label="Download full log as CSV",
+                data=LOG_PATH.read_bytes(),
+                file_name="buffett_ai_decisions.csv",
+                mime="text/csv",
+            )
+
+            # Feedback highlights
+            if has_feedback > 0:
+                st.markdown("#### User feedback")
+                fb_rows = log_df[log_df["feedback_text"].str.strip().astype(bool)]
+                for _, row in fb_rows.iterrows():
+                    rating = row.get("feedback_rating", "")
+                    text = row.get("feedback_text", "")
+                    decision = row["user_decision"].upper()
+                    tier = row["tier"]
+                    st.markdown(f"**{rating}** ({decision}, {tier} tier) — {text}")
+        else:
+            st.info("No decisions logged yet. Run a recommendation first.")
+    elif admin_pass:
+        st.error("Incorrect passcode.")
+
+
 # ---------- Footer ----------
 st.markdown("""
 <div class="app-footer" style="color:#ffffff !important;">
