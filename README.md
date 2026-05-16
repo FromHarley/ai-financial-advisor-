@@ -22,6 +22,33 @@ Buffett AI is a four-layer AI system that takes a user's financial profile, pred
 
 <p align="center"><img src="docs/screenshot-hero.png" alt="Buffett AI — profile input form" width="720"></p>
 
+## App Walkthrough
+
+<p align="center">
+<strong>1. Enter your financial profile</strong><br>
+<img src="docs/screenshot-hero.png" alt="Profile input form" width="720">
+</p>
+
+<p align="center">
+<strong>2. SHAP waterfall — see which features drove the prediction</strong><br>
+<img src="docs/screenshot-shap.png" alt="SHAP waterfall plot" width="720">
+</p>
+
+<p align="center">
+<strong>3. Plain-English explainability for every factor</strong><br>
+<img src="docs/screenshot-explainability.png" alt="What drove this prediction" width="720">
+</p>
+
+<p align="center">
+<strong>4. Model card, bias audit & responsible AI panel</strong><br>
+<img src="docs/screenshot-model-card.png" alt="Model card and bias audit" width="720">
+</p>
+
+<p align="center">
+<strong>5. Bias audit — tier distribution by age band</strong><br>
+<img src="docs/screenshot-bias-chart.png" alt="Bias audit chart" width="720">
+</p>
+
 ## Architecture
 
 The system is built as four independent layers that compose through a shared Streamlit interface:
